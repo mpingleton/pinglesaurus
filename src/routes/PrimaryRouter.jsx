@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
+import Home from "../pages/Home";
 
 function PrimaryRouter() {
     return (
@@ -13,7 +14,7 @@ function PrimaryRouter() {
             <Routes>
                 <Route
                     path="/"
-                    element={<MainLayout title="Home"><h1>Hi</h1></MainLayout>}
+                    element={<MainLayout title="Home"><Home /></MainLayout>}
                 />
             </Routes>
         </BrowserRouter>

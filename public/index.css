@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     background-color: black;
+    background-image: url('images/background.jpg');
     font-family: Arial, sans-serif;
     font-size: 14pt;
 }
@@ -168,4 +169,20 @@ div.panel {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+}
+
+#homepage_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#homepage_picture {
+    display: flex;
+    justify-content: center;
+}
+
+#homepage_cat {
+    display: block;
+    width: 400px;
+    height: 400px;
 }
