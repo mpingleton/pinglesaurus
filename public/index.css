@@ -152,3 +152,20 @@ a.mainlayout_linkbar_item:hover {
         background-image: url('/images/gradient-bar.png');
     }
 }
+
+div.panel {
+    display: block;
+    box-sizing: border-box;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
