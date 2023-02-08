@@ -7,7 +7,7 @@ function Home() {
             <Panel>
                 <div id="homepage_wrapper">
                     <div id="homepage_picture">
-                        <img id="homepage_cat" src="/images/pinglesaurus.png" />
+                        <img id="homepage_pinglesaurus" src="/images/pinglesaurus.png" />
                     </div>
                     <div id="homepage_content">
                         <h1>Hello!</h1>
