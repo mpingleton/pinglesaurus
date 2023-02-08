@@ -171,6 +171,22 @@ div.panel {
     -webkit-backdrop-filter: blur(8px);
 }
 
+div.badge {
+    display: block;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 5px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    background-size: cover;
+    background-image: url('/images/gradient-bar.png');
+}
+
+a.badge {
+    text-decoration: none;
+}
+
 #homepage_wrapper {
     display: flex;
     flex-direction: row;
@@ -185,4 +201,18 @@ div.panel {
     display: block;
     width: 400px;
     height: 400px;
+}
+
+div.homepage_badges_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+div.homepage_badges {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
