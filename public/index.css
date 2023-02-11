@@ -216,3 +216,61 @@ div.homepage_badges {
     flex-direction: row;
     align-items: center;
 }
+
+a.project_link {
+    text-decoration: none;
+    color: lightgray;
+}
+
+div.project_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+div.project_icon {
+    display: flex;
+    justify-content: center;
+}
+
+a.project_link {
+    text-decoration: none;
+    color: lightgray;
+}
+
+div.project_content {
+    margin-left: 10px;
+    width: 100%;
+}
+
+div.project_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.project_platform_badges {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+img.project_icon {
+    display: block;
+    width: 150px;
+    height: auto;
+}
+
+div.project_badges_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+div.project_badges {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

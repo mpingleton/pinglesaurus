@@ -1,0 +1,18 @@
+[
+    {
+        "id": "3",
+        "name": "Test Project",
+        "iconUrl": "test.png",
+        "versionLabel": "A.0.1",
+        "platforms": ["Android", "iOS", "macOS"],
+        "shortDescription": "This is a test project!!!"
+    },
+    {
+        "id": "1",
+        "name": "Another Test Project",
+        "iconUrl": "test.png",
+        "versionLabel": "1.0.1",
+        "platforms": ["Android", "Windows"],
+        "shortDescription": "This is yet another test project!!!"
+    }
+]
