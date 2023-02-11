@@ -13,8 +13,8 @@ function Home() {
                     <div id="homepage_content">
                         <h1>Hello!</h1>
                         <p>
-                                My name is Michael Pingleton.  I am a software developer who is well versed in web, desktop, and mobile development alike.
-                                I am familiar with several different programming languages, technologies, and platforms:
+                            My name is Michael Pingleton.  I am a software developer who is well versed in web, desktop, and mobile development alike.
+                            I am familiar with several different programming languages, technologies, and platforms:
                         </p>
                         <div className="homepage_badges_wrapper">
                             <div className="homepage_badges">
