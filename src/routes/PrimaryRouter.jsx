@@ -7,6 +7,7 @@ import {
 
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
+import ProjectProfile from "../pages/ProjectProfile";
 import Projects from "../pages/Projects";
 import Privacy from "../pages/Privacy";
 
@@ -17,6 +18,10 @@ function PrimaryRouter() {
                 <Route
                     path="/"
                     element={<MainLayout title="Home"><Home /></MainLayout>}
+                />
+                <Route
+                    path="/projects/id/:projectId"
+                    element={<MainLayout title="Project"><ProjectProfile /></MainLayout>}
                 />
                 <Route
                     path="/projects"

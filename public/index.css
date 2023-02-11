@@ -274,3 +274,90 @@ div.project_badges {
     flex-direction: row;
     align-items: center;
 }
+
+div.project_screenshot_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+div.project_screenshot_description_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+div.project_screenshot_controls_wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+img.project_screenshot_image {
+    display: block;
+    width: 300px;
+    height: auto;
+}
+
+div.project_links_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+div.project_links_repositories {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+
+div.project_links_downloads {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+    color: lightgrey;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url('/images/gradient-bar.png');
+    background-color: black;
+    border-radius: 5px;
+    border-style: none;
+    animation-name: button_deselect;
+    animation-duration: 0.15s;
+}
+
+button:hover {
+    background-image: url('/images/gradient-bar_hover.png');
+    animation-name: button_select;
+    animation-duration: 0.15s;
+}
+
+@keyframes button_select {
+    0% {
+        background-image: url('/images/gradient-bar.png');
+    }
+    100% {
+        background-image: url('/images/gradient-bar_hover.png');
+    }
+}
+
+@keyframes button_deselect {
+    0% {
+        background-image: url('/images/gradient-bar_hover.png');
+    }
+    100% {
+        background-image: url('/images/gradient-bar.png');
+    }
+}
