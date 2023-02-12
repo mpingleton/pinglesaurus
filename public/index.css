@@ -330,6 +330,7 @@ button {
     color: lightgrey;
     padding-left: 20px;
     padding-right: 20px;
+    background-size: 100% 100%;
     background-image: url('/images/gradient-bar.png');
     background-color: black;
     border-radius: 5px;
