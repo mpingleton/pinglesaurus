@@ -5,7 +5,27 @@
         "iconUrl": "test.png",
         "versionLabel": "A.0.1",
         "platforms": ["Android", "iOS", "macOS"],
-        "shortDescription": "This is a test project!!!"
+        "technologies": ["React", "NodeJS"],
+        "programmingLanguages": ["Kotlin", "Swift"],
+        "repositoryLinks": [
+            {
+                "url": "https://www.github.com/mpingleton",
+                "description": "Github"
+            },
+            {
+                "url": "https://www.github.com/mpingleton",
+                "description": "Github 2"
+            }
+        ],
+        "downloadLinks": [],
+        "shortDescription": "This is a test project!!!",
+        "longDescription": "This is a long description describing the capabilities and features of the project!",
+        "screenshots": [
+            {
+                "imageUrl": "/images/pinglesaurus.png",
+                "description": "This is a pinglesaur."
+            }
+        ]
     },
     {
         "id": "1",
@@ -13,6 +33,12 @@
         "iconUrl": "test.png",
         "versionLabel": "1.0.1",
         "platforms": ["Android", "Windows"],
-        "shortDescription": "This is yet another test project!!!"
+        "technologies": ["React", "NodeJS"],
+        "programmingLanguages": ["Kotlin", "Swift", "Java", "C++"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "This is yet another test project!!!",
+        "longDescription": "This is a long description describing the capabilities and features of the project!",
+        "screenshots": []
     }
 ]
