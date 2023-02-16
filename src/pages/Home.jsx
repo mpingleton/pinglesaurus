@@ -2,22 +2,22 @@ import React from 'react';
 import Panel from '../components/Panel';
 import Badge from '../components/Badge';
 
-function Home() {
+function Home(props) {
     return (
         <div className="homepage">
-            <Panel>
-                <div id="homepage_wrapper">
+            <Panel isMobile={props.isMobile}>
+                <div id={props.isMobile === true ? "homepage_mobile_wrapper" : "homepage_wrapper"}>
                     <div id="homepage_picture">
-                        <img id="homepage_pinglesaurus" src="/images/pinglesaurus.png" />
+                        <img id={props.isMobile === true ? "homepage_mobile_pinglesaurus" : "homepage_pinglesaurus"} src="/images/pinglesaurus.png" />
                     </div>
                     <div id="homepage_content">
-                        <h1>Hello!</h1>
+                        <center><h1>Hello!</h1></center>
                         <p>
                             My name is Michael Pingleton.  I am a software developer who is well versed in web, desktop, and mobile development alike.
                             I am familiar with several different programming languages, technologies, and platforms:
                         </p>
-                        <div className="homepage_badges_wrapper">
-                            <div className="homepage_badges">
+                        <div className={props.isMobile === true ? "homepage_mobile_badges_wrapper" : "homepage_badges_wrapper"}>
+                            <div className={props.isMobile === true ? "homepage_mobile_badges" : "homepage_badges"}>
                                 <Badge badgeColor="black" textColor="lightgray" text="C" />
                                 <Badge badgeColor="black" textColor="lightgray" text="C++" />
                                 <Badge badgeColor="black" textColor="lightgray" text="Java" />
@@ -28,7 +28,7 @@ function Home() {
                                 <Badge badgeColor="black" textColor="lightgray" text="HTML" />
                                 <Badge badgeColor="black" textColor="lightgray" text="CSS" />
                             </div>
-                            <div className="homepage_badges">
+                            <div className={props.isMobile === true ? "homepage_mobile_badges" : "homepage_badges"}>
                                 <Badge badgeColor="black" textColor="lightgray" text="React" />
                                 <Badge badgeColor="black" textColor="lightgray" text="NodeJS" />
                                 <Badge badgeColor="black" textColor="lightgray" text="Vulkan" />
@@ -37,7 +37,7 @@ function Home() {
                                 <Badge badgeColor="black" textColor="lightgray" text="Prisma ORM" />
                                 <Badge badgeColor="black" textColor="lightgray" text="ExpressJS" />
                             </div>
-                            <div className="homepage_badges">
+                            <div className={props.isMobile === true ? "homepage_mobile_badges" : "homepage_badges"}>
                                 <Badge badgeColor="black" textColor="lightgray" text="iOS" />
                                 <Badge badgeColor="black" textColor="lightgray" text="Android" />
                                 <Badge badgeColor="black" textColor="lightgray" text="Windows" />

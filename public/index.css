@@ -296,6 +296,23 @@ div.panel {
     -webkit-backdrop-filter: blur(8px);
 }
 
+div.mobile_panel {
+    display: block;
+    box-sizing: border-box;
+    width: 95%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
 div.badge {
     display: block;
     box-sizing: border-box;
@@ -317,6 +334,11 @@ a.badge {
     flex-direction: row;
 }
 
+#homepage_mobile_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 #homepage_picture {
     display: flex;
     justify-content: center;
@@ -326,6 +348,12 @@ a.badge {
     display: block;
     width: 400px;
     height: 400px;
+}
+
+#homepage_mobile_pinglesaurus {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 div.homepage_badges_wrapper {
@@ -339,6 +367,19 @@ div.homepage_badges_wrapper {
 div.homepage_badges {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+div.homepage_mobile_badges_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+div.homepage_mobile_badges {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
