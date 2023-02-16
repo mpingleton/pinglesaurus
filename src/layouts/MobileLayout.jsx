@@ -7,11 +7,11 @@ function MobileLayout(props) {
     const linkPage = (
         <div className="mobilelayout_linkpage">
                 <ul className="mobilelayout_linkpage_item">
-                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/">Home</a></li>
-                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/projects">Projects</a></li>
+                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/mobile">Home</a></li>
+                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/mobile/projects">Projects</a></li>
                     <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="//github.com/mpingleton">GitHub</a></li>
-                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="//www.pinglesaur.us">Desktop</a></li>
-                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/privacy">Privacy Policy</a></li>
+                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/">Desktop</a></li>
+                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/mobile/privacy">Privacy Policy</a></li>
                 </ul>
         </div>
     );
@@ -28,7 +28,7 @@ function MobileLayout(props) {
             </div>
             {isLinkPageVisible ? linkPage : null}
             <div className="mobilelayout_body">
-                {props.element}
+                {props.children}
             </div>
         </div>
     );

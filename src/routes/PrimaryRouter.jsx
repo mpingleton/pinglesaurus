@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
+import MobileLayout from "../layouts/MobileLayout";
 import Home from "../pages/Home";
 import ProjectProfile from "../pages/ProjectProfile";
 import Projects from "../pages/Projects";
@@ -30,6 +31,10 @@ function PrimaryRouter() {
                 <Route
                     path="/privacy"
                     element={<MainLayout title="Privacy Policy"><Privacy /></MainLayout>}
+                />
+                <Route
+                    path="/mobile"
+                    element={<MobileLayout title="Mobile"><Home isMobile={true} /></MobileLayout>}
                 />
             </Routes>
         </BrowserRouter>
