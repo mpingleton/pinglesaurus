@@ -36,6 +36,10 @@ function PrimaryRouter() {
                     path="/mobile"
                     element={<MobileLayout title="Mobile"><Home isMobile={true} /></MobileLayout>}
                 />
+                <Route
+                    path="/mobile/privacy"
+                    element={<MobileLayout title="Privacy Policy"><Privacy isMobile={true} /></MobileLayout>}
+                />
             </Routes>
         </BrowserRouter>
     );

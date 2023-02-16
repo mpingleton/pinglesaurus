@@ -1,10 +1,10 @@
 import React from 'react';
 import Panel from '../components/Panel';
 
-function Privacy() {
+function Privacy(props) {
     return (
         <div className="privacypage">
-            <Panel>
+            <Panel isMobile={props.isMobile}>
                 <center><h1>Privacy Policy</h1></center>
                 <h2>Introduction</h2>
                 <p>
