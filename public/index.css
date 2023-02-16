@@ -15,6 +15,15 @@ div.mainlayout_header {
     background-color: rgba(20, 20, 20, 0.5);
 }
 
+div.mobilelayout_header {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
 div.mainlayout_homebutton {
     position: fixed;
     z-index: 2;
@@ -68,6 +77,114 @@ a.mainlayout_homebutton:hover {
     }
 }
 
+div.mobilelayout_linkbar {
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    background-color:rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+div.mobilelayout_linkbar_item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    background-image: url('/images/gradient-bar.png');
+    background-size: 100% 100%;
+    animation-name: mobilelayout_linkbar_item_deselect;
+    animation-duration: 0.15s;
+}
+
+@keyframes mobilelayout_linkbar_item_deselect {
+    0% {
+        background-image: url('/images/gradient-bar_hover.png');
+    }
+    100% {
+        background-image: url('/images/gradient-bar.png');
+    }
+}
+
+div.mobilelayout_linkbar_item_selected {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    background-image: url('/images/gradient-bar_hover.png');
+    background-size: 100% 100%;
+    animation-name: mobilelayout_linkbar_item_select;
+    animation-duration: 0.15s;
+}
+
+@keyframes mobilelayout_linkbar_item_select {
+    0% {
+        background-image: url('/images/gradient-bar.png');
+    }
+    100% {
+        background-image: url('/images/gradient-bar_hover.png');
+    }
+}
+
+div.mobilelayout_linkpage {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    top: 60px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    animation-name: mobilelayout_linkpage_appear;
+    animation-duration: 0.15s;
+}
+
+@keyframes mobilelayout_linkpage_appear {
+    0% {
+        opacity: 0%;
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+    }
+    100% {
+        opacity: 100%;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+
+ul.mobilelayout_linkpage_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+li.mobilelayout_linkpage_item {
+    display: inline;
+    width: 100%;
+    height: 100%;
+}
+
+a.mobilelayout_linkpage_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    font-size: 20pt;
+    color: lightgray;
+}
+
 div.mainlayout_linkbar_left {
     position: fixed;
     z-index: 2;
@@ -98,6 +215,14 @@ div.mainlayout_body {
     top: 120px;
     width: 100%;
     color: lightgrey;
+}
+
+div.mobilelayout_body {
+    position: absolute;
+    z-index: 1;
+    top: 120px;
+    width: 100%;
+    color: lightgray;
 }
 
 ul.mainlayout_linkbar {
