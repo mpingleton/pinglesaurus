@@ -3,7 +3,7 @@ import Panel from '../components/Panel';
 import Badge from '../components/Badge';
 import projects from '../projects.json';
 
-function Projects() {
+function Projects(props) {
 
     const projectLinks = projects.map((project) => {
         const platformBadges = project.platforms.map((platform) => (
@@ -12,17 +12,17 @@ function Projects() {
 
         return (
             <a className="project_link" href={`/projects/id/${project.id}`}>
-                <Panel>
-                    <div className="project_wrapper">
+                <Panel isMobile={props.isMobile}>
+                    <div className={props.isMobile === true ? "project_mobile_wrapper" : "project_wrapper"}>
                         <div className="project_icon">
                             <img className="project_icon" src={project.iconUrl} />
                         </div>
                         <div className="project_content">
-                            <div className="project_title">
+                            <div className={props.isMobile === true ? "project_mobile_title" : "project_title"}>
                                 <h1>{project.name}</h1>
                                 <Badge badgeColor="#555555" textColor="#EEEEEE" text={project.versionLabel} />
                             </div>
-                            <div className="project_platform_badges">
+                            <div className={props.isMobile === true ? "project_mobile_platform_badges" : "project_platform_badges"}>
                                 {platformBadges}
                             </div>
                             <p>{project.shortDescription}</p>
@@ -35,7 +35,7 @@ function Projects() {
 
     return (
         <div className="projectspage">
-            <Panel>
+            <Panel isMobile={props.isMobile}>
                 <center><h1>Projects</h1></center>
             </Panel>
             {projectLinks}

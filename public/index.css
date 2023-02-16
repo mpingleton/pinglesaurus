@@ -393,6 +393,11 @@ div.project_wrapper {
     flex-direction: row;
 }
 
+div.project_mobile_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 div.project_icon {
     display: flex;
     justify-content: center;
@@ -419,6 +424,19 @@ div.project_platform_badges {
     display: flex;
     flex-direction: row;
     justify-content: left;
+}
+
+div.project_mobile_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.project_mobile_platform_badges {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 img.project_icon {
