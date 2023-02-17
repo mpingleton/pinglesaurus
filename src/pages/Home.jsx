@@ -48,7 +48,6 @@ function Home(props) {
                         </div>
                         <p>
                             On this site, you will be able to see some of the projects that I am working on by clicking the 'Projects' tab.
-                            Although I am not looking for employment or collaboration opportunities at the moment, you can send me a message by clicking the 'Contact' tab.
                         </p>
                     </div>
                 </div>
