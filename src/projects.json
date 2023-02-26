@@ -2,7 +2,7 @@
     {
         "id": "1",
         "name": "ProGraph Calculator",
-        "iconUrl": "test.png",
+        "iconUrl": "/images/projects/1/icon.png",
         "versionLabel": "1.0",
         "platforms": ["iOS", "Android"],
         "technologies": [],
@@ -18,23 +18,45 @@
         "longDescription": "Graph equations and points, as well as analyze them.",
         "screenshots": [
             {
-                "imageUrl": "/images/pinglesaurus.png",
-                "description": "This is a pinglesaur."
+                "imageUrl": "/images/projects/1/screenshots/1.png",
+                "description": "Graph tab showing sin(x) and cos(x) graphs on iOS."
+            },
+            {
+                "imageUrl": "/images/projects/1/screenshots/2.png",
+                "description": "Equations tab showing sin(x) and cos(x) graphs on iOS."
+            },
+            {
+                "imageUrl": "/images/projects/1/screenshots/3.png",
+                "description": "Graph tab showing a tan(x) graph on iOS."
+            },
+            {
+                "imageUrl": "/images/projects/1/screenshots/4.png",
+                "description": "Equations tab showing a tan(x) graph on iOS."
+            },
+            {
+                "imageUrl": "/images/projects/1/screenshots/5.png",
+                "description": "Equation editor showing basic keys on iOS."
+            },
+            {
+                "imageUrl": "/images/projects/1/screenshots/6.png",
+                "description": "Points tab showing points on iOS."
+            },
+            {
+                "imageUrl": "/images/projects/1/screenshots/7.png",
+                "description": "Find Axis Crossings analyzer showing the results of an analysis on a graph on iOS."
+            },
+            {
+                "imageUrl": "/images/projects/1/screenshots/8.png",
+                "description": "Graph tab showing sin(x) and cos(x) graphs on iOS."
+            },
+            {
+                "imageUrl": "/images/projects/1/screenshots/9.png",
+                "description": "Graph of a blue circle on iOS."
+            },
+            {
+                "imageUrl": "/images/projects/1/screenshots/10.png",
+                "description": "Graph of a red circle on iOS."
             }
         ]
-    },
-    {
-        "id": "2",
-        "name": "Another Test Project",
-        "iconUrl": "test.png",
-        "versionLabel": "1.0.1",
-        "platforms": ["Android", "Windows"],
-        "technologies": ["React", "NodeJS"],
-        "programmingLanguages": ["Kotlin", "Swift", "Java", "C++"],
-        "repositoryLinks": [],
-        "downloadLinks": [],
-        "shortDescription": "This is yet another test project!!!",
-        "longDescription": "This is a long description describing the capabilities and features of the project!",
-        "screenshots": []
     }
 ]
