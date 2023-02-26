@@ -11,7 +11,7 @@ function Projects(props) {
         ));
 
         return (
-            <a className="project_link" href={`/projects/id/${project.id}`}>
+            <a className="project_link" href={props.isMobile === true ? `/mobile/projects/id/${project.id}` : `/projects/id/${project.id}`}>
                 <Panel isMobile={props.isMobile}>
                     <div className={props.isMobile === true ? "project_mobile_wrapper" : "project_wrapper"}>
                         <div className="project_icon">
