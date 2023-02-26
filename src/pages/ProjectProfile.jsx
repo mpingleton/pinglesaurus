@@ -4,7 +4,7 @@ import Panel from "../components/Panel";
 import Badge from "../components/Badge";
 import projects from "../projects.json";
 
-function ProjectProfile() {
+function ProjectProfile(props) {
     const { projectId } = useParams();
     const [selectedScreenshotIndex, setSelectedScreenshotIndex] = useState(0);
 
@@ -12,14 +12,14 @@ function ProjectProfile() {
     if (projectArray.length === 0) {
         return (
             <div className="projectprofilepage">
-                <Panel><center><h1>Project not found.</h1></center></Panel>
+                <Panel isMobile={props.isMobile}><center><h1>Project not found.</h1></center></Panel>
             </div>
         );
     }
     else if (projectArray.length > 1) {
         return (
             <div className="projectprofilepage">
-                <Panel><center><h1>Internal error.</h1></center></Panel>
+                <Panel isMobile={props.isMobile}><center><h1>Internal error.</h1></center></Panel>
             </div>
         );
     }
@@ -46,13 +46,13 @@ function ProjectProfile() {
     ));
 
     const panelProjectWrapper = (
-        <Panel>
-            <div className="project_wrapper">
+        <Panel isMobile={props.isMobile}>
+            <div className={props.isMobile === true ? "project_mobile_wrapper" : "project_wrapper"}>
                 <div className="project_icon">
                     <img className="project_icon" src={project.iconUrl} />
                 </div>
-                <div className="project_content">
-                    <div className="project_title">
+                <div className={props.isMobile === true ? "project_mobile_content" : "project_content"}>
+                    <div className={props.isMobile === true ? "project_mobile_title" : "project_title"}>
                         <h1>{project.name}</h1>
                         <Badge badgeColor="#555555" textColor="#EEEEEE" text={project.versionLabel} />
                     </div>
@@ -64,7 +64,7 @@ function ProjectProfile() {
     );
 
     const panelProjectBadgesWrapper = (
-        <Panel>
+        <Panel isMobile={props.isMobile}>
             <div className="project_badges_wrapper">
                 <div className="project_badges">
                     {platformBadges}
@@ -80,10 +80,10 @@ function ProjectProfile() {
     );
 
     const panelProjectScreenshotWrapper = project.screenshots.length > 0 ? (
-        <Panel>
-            <div className="project_screenshot_wrapper">
+        <Panel isMobile={props.isMobile}>
+            <div className={props.isMobile === true ? "project_mobile_screenshot_wrapper" : "project_screenshot_wrapper"}>
                 <div className="project_screenshot_image">
-                    <img className="project_screenshot_image" src={project.screenshots[selectedScreenshotIndex].imageUrl} />
+                    <img className={props.isMobile === true ? "project_mobile_screenshot_image" : "project_screenshot_image"} src={project.screenshots[selectedScreenshotIndex].imageUrl} />
                 </div>
                 <div className="project_screenshot_description_wrapper">
                     <p>{project.screenshots[selectedScreenshotIndex].description}</p>
@@ -106,7 +106,7 @@ function ProjectProfile() {
     ) : null;
 
     const panelProjectLinksWrapper = (
-        <Panel>
+        <Panel isMobile={props.isMobile}>
             <div className="project_links_wrapper">
                 <div className="project_links_repositories">
                     {repositoryLinks}

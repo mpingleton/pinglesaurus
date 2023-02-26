@@ -37,6 +37,10 @@ function PrimaryRouter() {
                     element={<MobileLayout title="Home"><Home isMobile={true} /></MobileLayout>}
                 />
                 <Route
+                    path="/mobile/projects/id/:projectId"
+                    element={<MobileLayout title="Project"><ProjectProfile isMobile={true} /></MobileLayout>}
+                />
+                <Route
                     path="/mobile/projects"
                     element={<MobileLayout title="Projects"><Projects isMobile={true} /></MobileLayout>}
                 />

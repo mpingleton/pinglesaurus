@@ -415,9 +415,20 @@ div.project_content {
     width: 100%;
 }
 
+div.project_mobile_content {
+    width: 100%;
+}
+
 div.project_title {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.project_mobile_title {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
@@ -466,6 +477,11 @@ div.project_screenshot_wrapper {
     flex-direction: row;
 }
 
+div.project_mobile_screenshot_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 div.project_screenshot_description_wrapper {
     display: flex;
     flex-direction: column;
@@ -484,6 +500,12 @@ div.project_screenshot_controls_wrapper {
 img.project_screenshot_image {
     display: block;
     width: 300px;
+    height: auto;
+}
+
+img.project_mobile_screenshot_image {
+    display: block;
+    width: 100%;
     height: auto;
 }
 
