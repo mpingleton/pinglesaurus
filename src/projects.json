@@ -1,25 +1,21 @@
 [
     {
-        "id": "3",
-        "name": "Test Project",
+        "id": "1",
+        "name": "ProGraph Calculator",
         "iconUrl": "test.png",
-        "versionLabel": "A.0.1",
-        "platforms": ["Android", "iOS", "macOS"],
-        "technologies": ["React", "NodeJS"],
+        "versionLabel": "1.0",
+        "platforms": ["iOS", "Android"],
+        "technologies": [],
         "programmingLanguages": ["Kotlin", "Swift"],
-        "repositoryLinks": [
+        "repositoryLinks": [],
+        "downloadLinks": [
             {
-                "url": "https://www.github.com/mpingleton",
-                "description": "Github"
-            },
-            {
-                "url": "https://www.github.com/mpingleton",
-                "description": "Github 2"
+                "url": "//apps.apple.com/gb/app/prograph-calculator/id1629338359",
+                "description": "Apple App Store"
             }
         ],
-        "downloadLinks": [],
-        "shortDescription": "This is a test project!!!",
-        "longDescription": "This is a long description describing the capabilities and features of the project!",
+        "shortDescription": "Graph equations and points.",
+        "longDescription": "Graph equations and points, as well as analyze them.",
         "screenshots": [
             {
                 "imageUrl": "/images/pinglesaurus.png",
@@ -28,7 +24,7 @@
         ]
     },
     {
-        "id": "1",
+        "id": "2",
         "name": "Another Test Project",
         "iconUrl": "test.png",
         "versionLabel": "1.0.1",
