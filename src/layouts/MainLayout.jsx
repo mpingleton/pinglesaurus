@@ -15,7 +15,7 @@ function MainLayout(props) {
             </div>
             <div className="mainlayout_linkbar_right">
                 <ul class="mainlayout_linkbar">
-                    <li class="mainlayout_linkbar_item"><a class="mainlayout_linkbar_item" href="//mobile.pinglesaur.us">Mobile</a></li>
+                    <li class="mainlayout_linkbar_item"><a class="mainlayout_linkbar_item" href="/mobile">Mobile</a></li>
                     <li class="mainlayout_linkbar_item"><a class="mainlayout_linkbar_item" href="/privacy">Privacy Policy</a></li>
                 </ul>
             </div>
