@@ -135,7 +135,7 @@ div.mobile_panel {
     border-color: gray;
     border-style: solid;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
