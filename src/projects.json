@@ -58,5 +58,33 @@
                 "description": "Graph of a red circle on iOS."
             }
         ]
+    },
+    {
+        "id": "2",
+        "name": "ERD Tools",
+        "iconUrl": "/images/projects/1/icon.png",
+        "versionLabel": "DEV",
+        "platforms": ["macOS"],
+        "technologies": [],
+        "programmingLanguages": ["Swift"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "Easily create entity relationship diagrams.",
+        "longDescription": "This is a macOS program which can create entity relationship diagrams.",
+        "screenshots": []
+    },
+    {
+        "id": "3",
+        "name": "Bibliography Generator",
+        "iconUrl": "/images/projects/1/icon.png",
+        "versionLabel": "DEV",
+        "platforms": ["macOS"],
+        "technologies": [],
+        "programmingLanguages": ["Swift"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "Create bibliography and works cited pages.",
+        "longDescription": "A macOS program which can automatically format bibliography and works cited pages to either MLA or APA specifications.",
+        "screenshots": []
     }
 ]
