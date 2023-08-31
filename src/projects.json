@@ -86,5 +86,19 @@
         "shortDescription": "Create bibliography and works cited pages.",
         "longDescription": "A macOS program which can automatically format bibliography and works cited pages to either MLA or APA specifications.",
         "screenshots": []
+    },
+    {
+        "id": "4",
+        "name": "Cybermyelin",
+        "iconUrl": "/images/projects/1/icon.png",
+        "versionLabel": "DEV",
+        "platforms": ["Windows", "Linux", "macOS"],
+        "technologies": [],
+        "programmingLanguages": ["C"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "Modern artificial intelligence engine.",
+        "longDescription": "Modern artificial intelligence engine.",
+        "screenshots": []
     }
 ]
