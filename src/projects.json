@@ -100,5 +100,19 @@
         "shortDescription": "Modern artificial intelligence engine.",
         "longDescription": "Modern artificial intelligence engine.",
         "screenshots": []
+    },
+    {
+        "id": "5",
+        "name": "Cyberbase",
+        "iconUrl": "/images/projects/1/icon.png",
+        "versionLabel": "DEV",
+        "platforms": ["Web"],
+        "technologies": [],
+        "programmingLanguages": ["JavaScript"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "Next-generation ITSM solution.",
+        "longDescription": "Next-generation ITSM solution.",
+        "screenshots": []
     }
 ]
