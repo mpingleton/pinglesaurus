@@ -71,7 +71,12 @@
         "downloadLinks": [],
         "shortDescription": "Easily create entity relationship diagrams.",
         "longDescription": "This is a macOS program which can create entity relationship diagrams.",
-        "screenshots": []
+        "screenshots": [
+            {
+                "imageUrl": "/images/projects/2/screenshots/1.png",
+                "description": "Screenshot of an early development version of ERD Tools showing 2 entities."
+            }
+        ]
     },
     {
         "id": "3",
