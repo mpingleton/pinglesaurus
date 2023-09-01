@@ -62,7 +62,7 @@
     {
         "id": "2",
         "name": "ERD Tools",
-        "iconUrl": "/images/projects/1/icon.png",
+        "iconUrl": "/images/question.png",
         "versionLabel": "In Development",
         "platforms": ["macOS"],
         "technologies": [],
@@ -81,7 +81,7 @@
     {
         "id": "3",
         "name": "Bibliography Generator",
-        "iconUrl": "/images/projects/1/icon.png",
+        "iconUrl": "/images/question.png",
         "versionLabel": "In Development",
         "platforms": ["macOS"],
         "technologies": [],
@@ -95,7 +95,7 @@
     {
         "id": "4",
         "name": "Cybermyelin",
-        "iconUrl": "/images/projects/1/icon.png",
+        "iconUrl": "/images/question.png",
         "versionLabel": "In Development",
         "platforms": ["Windows", "Linux", "macOS"],
         "technologies": ["CUDA"],
@@ -109,7 +109,7 @@
     {
         "id": "5",
         "name": "Cyberbase",
-        "iconUrl": "/images/projects/1/icon.png",
+        "iconUrl": "/images/question.png",
         "versionLabel": "In Development",
         "platforms": ["Web"],
         "technologies": ["React", "NodeJS", "Prisma ORM"],
