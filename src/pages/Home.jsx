@@ -37,6 +37,7 @@ function Home(props) {
                                     <Badge badgeColor="black" textColor="lightgray" text="Sequelize" />
                                     <Badge badgeColor="black" textColor="lightgray" text="Prisma ORM" />
                                     <Badge badgeColor="black" textColor="lightgray" text="ExpressJS" />
+                                    <Badge badgeColor="black" textColor="lightgray" text="CUDA" />
                                 </div>
                                 <div className={props.isMobile === true ? "homepage_mobile_badges" : "homepage_badges"}>
                                     <Badge badgeColor="black" textColor="lightgray" text="iOS" />

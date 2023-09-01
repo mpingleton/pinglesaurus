@@ -3,7 +3,7 @@
         "id": "1",
         "name": "ProGraph Calculator",
         "iconUrl": "/images/projects/1/icon.png",
-        "versionLabel": "1.0",
+        "versionLabel": "1.1",
         "platforms": ["iOS", "Android"],
         "technologies": [],
         "programmingLanguages": ["Kotlin", "Swift"],
@@ -58,5 +58,66 @@
                 "description": "Graph of a red circle on iOS."
             }
         ]
+    },
+    {
+        "id": "2",
+        "name": "ERD Tools",
+        "iconUrl": "/images/question.png",
+        "versionLabel": "In Development",
+        "platforms": ["macOS"],
+        "technologies": [],
+        "programmingLanguages": ["Swift"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "Easily create entity relationship diagrams.",
+        "longDescription": "This is a macOS program which can create entity relationship diagrams.",
+        "screenshots": [
+            {
+                "imageUrl": "/images/projects/2/screenshots/1.png",
+                "description": "Screenshot of an early development version of ERD Tools showing 2 entities."
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Bibliography Generator",
+        "iconUrl": "/images/question.png",
+        "versionLabel": "In Development",
+        "platforms": ["macOS"],
+        "technologies": [],
+        "programmingLanguages": ["Swift"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "Create bibliography and works cited pages.",
+        "longDescription": "A macOS program which can automatically format bibliography and works cited pages to either MLA or APA specifications.",
+        "screenshots": []
+    },
+    {
+        "id": "4",
+        "name": "Cybermyelin",
+        "iconUrl": "/images/question.png",
+        "versionLabel": "In Development",
+        "platforms": ["Windows", "Linux", "macOS"],
+        "technologies": ["CUDA"],
+        "programmingLanguages": ["C"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "Modern artificial intelligence engine.",
+        "longDescription": "Modern artificial intelligence engine.",
+        "screenshots": []
+    },
+    {
+        "id": "5",
+        "name": "Cyberbase",
+        "iconUrl": "/images/question.png",
+        "versionLabel": "In Development",
+        "platforms": ["Web"],
+        "technologies": ["React", "NodeJS", "Prisma ORM"],
+        "programmingLanguages": ["JavaScript"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "Next-generation ITSM solution.",
+        "longDescription": "Next-generation ITSM solution.",
+        "screenshots": []
     }
 ]
