@@ -260,7 +260,11 @@ div.project_platform_badges {
 img.project_icon {
     display: block;
     width: 150px;
-    height: auto;
+    height: 150px;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
 }
 
 div.project_badges_wrapper {
