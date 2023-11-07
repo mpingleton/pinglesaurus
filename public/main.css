@@ -99,6 +99,7 @@ div.mainlayout_body {
     z-index: 1;
     top: 120px;
     width: 100%;
+    padding-bottom: 16px;
     color: lightgrey;
 }
 
@@ -234,17 +235,20 @@ div.project_icon {
     justify-content: center;
 }
 
-a.project_link {
-    text-decoration: none;
-    color: lightgray;
-}
-
 div.project_content {
     margin-left: 10px;
+    margin-right: 10px;
     width: 100%;
 }
 
 div.project_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.project_description {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

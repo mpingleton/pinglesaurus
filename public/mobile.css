@@ -120,6 +120,7 @@ div.mobilelayout_body {
     z-index: 1;
     top: 120px;
     width: 100%;
+    padding-bottom: 16px;
     color: lightgray;
 }
 
@@ -170,7 +171,8 @@ div.project_mobile_wrapper {
 }
 
 div.project_mobile_content {
-    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 div.project_mobile_title {
@@ -183,7 +185,12 @@ div.project_mobile_title {
 div.project_mobile_title {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
+}
+
+div.project_mobile_description {
+    display: flex;
+    flex-direction: column-reverse;
     align-items: center;
 }
 
