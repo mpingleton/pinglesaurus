@@ -17,15 +17,17 @@ function Projects(props) {
                         <div className="project_icon">
                             <img className="project_icon" src={project.iconUrl} />
                         </div>
-                        <div className="project_content">
+                        <div className={props.isMobile === true ? "project_mobile_content" : "project_content"}>
                             <div className={props.isMobile === true ? "project_mobile_title" : "project_title"}>
                                 <h1>{project.name}</h1>
                                 <Badge badgeColor="#555555" textColor="#EEEEEE" text={project.versionLabel} />
                             </div>
-                            <div className={props.isMobile === true ? "project_mobile_platform_badges" : "project_platform_badges"}>
-                                {platformBadges}
+                            <div className={props.isMobile === true ? "project_mobile_description" : "project_description"}>
+                                <p>{project.shortDescription}</p>
+                                <div className={props.isMobile === true ? "project_mobile_platform_badges" : "project_platform_badges"}>
+                                    {platformBadges}
+                                </div>
                             </div>
-                            <p>{project.shortDescription}</p>
                         </div>
                     </div>
                 </Panel>

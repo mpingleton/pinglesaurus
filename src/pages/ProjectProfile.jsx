@@ -105,7 +105,7 @@ function ProjectProfile(props) {
         </Panel>
     ) : null;
 
-    const panelProjectLinksWrapper = (
+    const panelProjectLinksWrapper = project.downloadLinks.length > 0 || project.repositoryLinks.length > 0 ? (
         <Panel isMobile={props.isMobile}>
             <div className="project_links_wrapper">
                 <div className="project_links_repositories">
@@ -116,7 +116,7 @@ function ProjectProfile(props) {
                 </div>
             </div>
         </Panel>
-    );
+    ) : null;
 
     return (
         <div className="projectprofilepage">

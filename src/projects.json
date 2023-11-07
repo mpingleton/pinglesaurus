@@ -12,6 +12,10 @@
             {
                 "url": "//apps.apple.com/us/app/prograph-calculator/id1629338359",
                 "description": "Apple App Store"
+            },
+            {
+                "url": "//play.google.com/store/apps/details?id=us.pingyx.prographcalculator",
+                "description": "Google Play Store"
             }
         ],
         "shortDescription": "Graph equations and points.",
@@ -94,7 +98,7 @@
     },
     {
         "id": "4",
-        "name": "Cybermyelin",
+        "name": "Myelin",
         "iconUrl": "/images/question.png",
         "versionLabel": "In Development",
         "platforms": ["Windows", "Linux", "macOS"],
@@ -103,7 +107,7 @@
         "repositoryLinks": [],
         "downloadLinks": [],
         "shortDescription": "Modern artificial intelligence engine.",
-        "longDescription": "Modern artificial intelligence engine.",
+        "longDescription": "",
         "screenshots": []
     },
     {
@@ -117,7 +121,21 @@
         "repositoryLinks": [],
         "downloadLinks": [],
         "shortDescription": "Next-generation ITSM solution.",
-        "longDescription": "Next-generation ITSM solution.",
+        "longDescription": "",
+        "screenshots": []
+    },
+    {
+        "id": "6",
+        "name": "SAMS (Small Aircraft Mission Scheduler)",
+        "iconUrl": "/images/question.png",
+        "versionLabel": "In Development",
+        "platforms": ["Web"],
+        "technologies": ["React", "NodeJS", "Prisma ORM"],
+        "programmingLanguages": ["JavaScript"],
+        "repositoryLinks": [],
+        "downloadLinks": [],
+        "shortDescription": "Schedule drone missions and track operator & asset readiness.",
+        "longDescription": "",
         "screenshots": []
     }
 ]
