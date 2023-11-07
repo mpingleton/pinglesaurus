@@ -12,6 +12,10 @@
             {
                 "url": "//apps.apple.com/us/app/prograph-calculator/id1629338359",
                 "description": "Apple App Store"
+            },
+            {
+                "url": "//play.google.com/store/apps/details?id=us.pingyx.prographcalculator",
+                "description": "Google Play Store"
             }
         ],
         "shortDescription": "Graph equations and points.",
