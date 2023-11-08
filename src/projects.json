@@ -127,7 +127,7 @@
     {
         "id": "6",
         "name": "SAMS (Small Aircraft Mission Scheduler)",
-        "iconUrl": "/images/question.png",
+        "iconUrl": "/images/projects/6/icon.png",
         "versionLabel": "In Development",
         "platforms": ["Web"],
         "technologies": ["React", "NodeJS", "Prisma ORM"],
