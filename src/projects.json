@@ -112,7 +112,7 @@
     },
     {
         "id": "5",
-        "name": "Cyberbase",
+        "name": "CyberBase",
         "iconUrl": "/images/question.png",
         "versionLabel": "In Development",
         "platforms": ["Web"],
