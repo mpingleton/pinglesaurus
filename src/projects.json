@@ -99,7 +99,7 @@
     {
         "id": "4",
         "name": "Myelin",
-        "iconUrl": "/images/question.png",
+        "iconUrl": "/images/projects/4/icon.png",
         "versionLabel": "In Development",
         "platforms": ["Windows", "Linux", "macOS"],
         "technologies": ["CUDA"],
