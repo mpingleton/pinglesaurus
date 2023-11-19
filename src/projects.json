@@ -3,7 +3,7 @@
         "id": "1",
         "name": "ProGraph Calculator",
         "iconUrl": "/images/projects/1/icon.png",
-        "versionLabel": "1.1",
+        "versionLabel": "1.2",
         "platforms": ["iOS", "Android"],
         "technologies": [],
         "programmingLanguages": ["Kotlin", "Swift"],
