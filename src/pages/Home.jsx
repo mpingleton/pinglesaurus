@@ -25,6 +25,7 @@ function Home(props) {
                                     <Badge badgeColor="black" textColor="lightgray" text="Kotlin" />
                                     <Badge badgeColor="black" textColor="lightgray" text="Swift" />
                                     <Badge badgeColor="black" textColor="lightgray" text="JavaScript" />
+                                    <Badge badgeColor="black" textColor="lightgray" text="TypeScript" />
                                     <Badge badgeColor="black" textColor="lightgray" text="Python" />
                                     <Badge badgeColor="black" textColor="lightgray" text="HTML" />
                                     <Badge badgeColor="black" textColor="lightgray" text="CSS" />
