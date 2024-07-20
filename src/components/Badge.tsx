@@ -1,4 +1,4 @@
-function Badge(props) {
+function Badge(props: { badgeColor: string, textColor: string, text: string }) {
     return (
         <div className="badge" style={{
             backgroundColor: props.badgeColor, color: props.textColor
@@ -8,4 +8,4 @@ function Badge(props) {
     );
 }
 
-export default Badge;
+export default Badge
