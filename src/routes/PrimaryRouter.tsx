@@ -18,19 +18,19 @@ function PrimaryRouter() {
             <Routes>
                 <Route
                     path="/"
-                    element={<MainLayout title="Home"><Home /></MainLayout>}
+                    element={<MainLayout title="Home"><Home isMobile={false} /></MainLayout>}
                 />
                 <Route
                     path="/projects/id/:projectId"
-                    element={<MainLayout title="Project"><ProjectProfile /></MainLayout>}
+                    element={<MainLayout title="Project"><ProjectProfile isMobile={false} /></MainLayout>}
                 />
                 <Route
                     path="/projects"
-                    element={<MainLayout title="Projects"><Projects /></MainLayout>}
+                    element={<MainLayout title="Projects"><Projects isMobile={false} /></MainLayout>}
                 />
                 <Route
                     path="/privacy"
-                    element={<MainLayout title="Privacy Policy"><Privacy /></MainLayout>}
+                    element={<MainLayout title="Privacy Policy"><Privacy isMobile={false} /></MainLayout>}
                 />
                 <Route
                     path="/mobile"
