@@ -1,6 +1,6 @@
 import React from "react"
 
-function MainLayout(props: { title: string, children: React.ReactElement }) {
+function MainLayout(props: { title: string, children: React.ReactElement | React.ReactElement[] }) {
     document.title=`${props.title} - Pinglesaur.us`
 
     return (
@@ -10,7 +10,7 @@ function MainLayout(props: { title: string, children: React.ReactElement }) {
             </div>
             <div className="mainlayout_linkbar_left">
                 <ul className="mainlayout_linkbar">
-                    <li className="mainlayout_linkbar_item"><a className="mainlayout_linkbar_item" href="/projects">Projects</a></li>
+                    <li className="mainlayout_linkbar_item"><a className="mainlayout_linkbar_item" href="/src/pages/Projects">Projects</a></li>
                     <li className="mainlayout_linkbar_item"><a className="mainlayout_linkbar_item" href="//github.com/mpingleton">GitHub</a></li>
                 </ul>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-function MobileLayout(props: { title: string, children: React.ReactElement }) {
+function MobileLayout(props: { title: string, children: React.ReactElement | React.ReactElement[]  }) {
     document.title=`${props.title} - Pinglesaur.us`
     const [isLinkPageVisible, setLinkPageVisible] = useState(false)
 
