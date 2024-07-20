@@ -1,7 +1,7 @@
-import React from 'react';
-import Panel from '../components/Panel';
+import React from "react"
+import Panel from "../components/Panel"
 
-function Privacy(props) {
+function Privacy(props: { isMobile: boolean }) {
     return (
         <div className="privacypage">
             <Panel isMobile={props.isMobile}>
@@ -46,7 +46,7 @@ function Privacy(props) {
                 </p>
             </Panel>
         </div>
-    );
+    )
 }
 
-export default Privacy;
+export default Privacy
