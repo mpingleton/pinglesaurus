@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react"
 
-function MobileLayout(props) {
-    document.title=`${props.title} - Pinglesaur.us`;
-    const [isLinkPageVisible, setLinkPageVisible] = useState(false);
+function MobileLayout(props: { title: string, children: React.ReactElement }) {
+    document.title=`${props.title} - Pinglesaur.us`
+    const [isLinkPageVisible, setLinkPageVisible] = useState(false)
 
     const linkPage = (
         <div className="mobilelayout_linkpage">
@@ -31,7 +31,7 @@ function MobileLayout(props) {
                 {props.children}
             </div>
         </div>
-    );
+    )
 }
 
-export default MobileLayout;
+export default MobileLayout
