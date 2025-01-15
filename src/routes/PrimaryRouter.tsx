@@ -1,18 +1,14 @@
-import React from "react";
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-} from "react-router-dom";
+import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import MainLayout from "../layouts/MainLayout";
-import MobileLayout from "../layouts/MobileLayout";
-import Home from "../pages/Home";
-import ProjectProfile from "../pages/ProjectProfile";
-import Projects from "../pages/Projects";
-import Privacy from "../pages/Privacy";
+import MainLayout from "../layouts/MainLayout"
+import MobileLayout from "../layouts/MobileLayout"
+import Home from "../pages/Home"
+import ProjectProfile from "../pages/ProjectProfile"
+import Projects from "../pages/Projects"
+import Privacy from "../pages/Privacy"
 
-function PrimaryRouter() {
+export default function PrimaryRouter() {
     return (
         <BrowserRouter>
             <Routes>
@@ -52,5 +48,3 @@ function PrimaryRouter() {
         </BrowserRouter>
     );
 }
-
-export default PrimaryRouter;
