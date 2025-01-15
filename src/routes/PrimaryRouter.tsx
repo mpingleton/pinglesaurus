@@ -14,7 +14,7 @@ export default function PrimaryRouter() {
             <Routes>
                 <Route
                     path="/"
-                    element={<MainLayout title="Home"><Home /></MainLayout>}
+                    element={<MainLayout title="Home"><Home isMobile={false} /></MainLayout>}
                 />
                 <Route
                     path="/projects/id/:projectId"
