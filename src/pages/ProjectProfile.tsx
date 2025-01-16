@@ -2,58 +2,57 @@ import React, { useState } from "react"
 import { useParams } from "react-router-dom"
 import Panel from "../components/Panel"
 import Badge from "../components/Badge"
-
 import projects from "../projects.json"
 
-function ProjectProfile(props: { isMobile: boolean }) {
+export default function ProjectProfile(props: { isMobile: boolean}) {
     const { projectId } = useParams()
-    const [selectedScreenshotIndex, setSelectedScreenshotIndex] = useState(0)
+    const [selectedScreenshotIndex, setSelectedScreenshotIndex] = useState<number>(0)
 
-    const projectArray: any = projects.filter((project) => project.id === projectId);
+    const projectArray = projects.filter((project) => project.id === projectId);
     if (projectArray.length === 0) {
         return (
             <div className="projectprofilepage">
                 <Panel isMobile={props.isMobile}><center><h1>Project not found.</h1></center></Panel>
             </div>
-        )
+        );
     }
     else if (projectArray.length > 1) {
         return (
             <div className="projectprofilepage">
                 <Panel isMobile={props.isMobile}><center><h1>Internal error.</h1></center></Panel>
             </div>
-        )
+        );
     }
-    const project = projectArray[0]
+    const project = projectArray[0];
 
-    const platformBadges = project.platforms.map((p: any) => (
+    const platformBadges = project.platforms.map((p) => (
         <Badge badgeColor="#333333" textColor="#EEEEEE" text={p} />
-    ))
+    ));
 
-    const technologyBadges = project.technologies.map((t: any) => (
+    const technologyBadges = project.technologies.map((t) => (
         <Badge badgeColor="#333333" textColor="#EEEEEE" text={t} />
-    ))
+    ));
 
-    const programmingLanguageBadges = project.programmingLanguages.map((l: any) => (
+    const programmingLanguageBadges = project.programmingLanguages.map((l) => (
         <Badge badgeColor="#333333" textColor="#EEEEEE" text={l} />
-    ))
+    ));
 
-    const repositoryLinks = project.repositoryLinks.map((repositoryLink: any) => (
+    const repositoryLinks = project.repositoryLinks.map((repositoryLink) => (
         <a className="badge" href={repositoryLink.url}><Badge badgeColor="#222222" textColor="#FFFFFF" text={repositoryLink.description} /></a>
-    ))
+    ));
 
-    const downloadLinks = project.downloadLinks.map((downloadLink: any) => (
+    const downloadLinks = project.downloadLinks.map((downloadLink) => (
         <a className="badge" href={downloadLink.url}><Badge badgeColor="#222222" textColor="#FFFFFF" text={downloadLink.description} /></a>
-    ))
+    ));
 
     const panelProjectWrapper = (
         <Panel isMobile={props.isMobile}>
-            <div className={props.isMobile ? "project_mobile_wrapper" : "project_wrapper"}>
+            <div className={props.isMobile === true ? "project_mobile_wrapper" : "project_wrapper"}>
                 <div className="project_icon">
                     <img className="project_icon" src={project.iconUrl} />
                 </div>
-                <div className={props.isMobile ? "project_mobile_content" : "project_content"}>
-                    <div className={props.isMobile ? "project_mobile_title" : "project_title"}>
+                <div className={props.isMobile === true ? "project_mobile_content" : "project_content"}>
+                    <div className={props.isMobile === true ? "project_mobile_title" : "project_title"}>
                         <h1>{project.name}</h1>
                         <Badge badgeColor="#555555" textColor="#EEEEEE" text={project.versionLabel} />
                     </div>
@@ -62,7 +61,7 @@ function ProjectProfile(props: { isMobile: boolean }) {
                 </div>
             </div>
         </Panel>
-    )
+    );
 
     const panelProjectBadgesWrapper = (
         <Panel isMobile={props.isMobile}>
@@ -78,13 +77,13 @@ function ProjectProfile(props: { isMobile: boolean }) {
                 </div>
             </div>
         </Panel>
-    )
+    );
 
     const panelProjectScreenshotWrapper = project.screenshots.length > 0 ? (
         <Panel isMobile={props.isMobile}>
-            <div className={props.isMobile ? "project_mobile_screenshot_wrapper" : "project_screenshot_wrapper"}>
+            <div className={props.isMobile === true ? "project_mobile_screenshot_wrapper" : "project_screenshot_wrapper"}>
                 <div className="project_screenshot_image">
-                    <img className={props.isMobile ? "project_mobile_screenshot_image" : "project_screenshot_image"} src={project.screenshots[selectedScreenshotIndex].imageUrl} />
+                    <img className={props.isMobile === true ? "project_mobile_screenshot_image" : "project_screenshot_image"} src={project.screenshots[selectedScreenshotIndex].imageUrl} />
                 </div>
                 <div className="project_screenshot_description_wrapper">
                     <p>{project.screenshots[selectedScreenshotIndex].description}</p>
@@ -104,7 +103,7 @@ function ProjectProfile(props: { isMobile: boolean }) {
                 </div>
             </div>
         </Panel>
-    ) : null
+    ) : null;
 
     const panelProjectLinksWrapper = project.downloadLinks.length > 0 || project.repositoryLinks.length > 0 ? (
         <Panel isMobile={props.isMobile}>
@@ -117,7 +116,7 @@ function ProjectProfile(props: { isMobile: boolean }) {
                 </div>
             </div>
         </Panel>
-    ) : null
+    ) : null;
 
     return (
         <div className="projectprofilepage">
@@ -128,5 +127,3 @@ function ProjectProfile(props: { isMobile: boolean }) {
         </div>
     )
 }
-
-export default ProjectProfile

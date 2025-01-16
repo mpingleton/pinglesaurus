@@ -1,11 +1,10 @@
 import React from "react"
 
-function Panel(props: { isMobile: boolean, children: React.ReactElement | React.ReactElement[] }) {
+export default function Panel(props: { isMobile: boolean, children: React.ReactNode }) {
+
     return (
-        <div className={props.isMobile === true ? "mobile_panel" : "panel"}>
+        <div className={props.isMobile ? "mobile_panel" : "panel"}>
             {props.children}
         </div>
     )
 }
-
-export default Panel
