@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import Panel from "../components/Panel";
-import Badge from "../components/Badge";
-import projects from "../projects.json";
+import React, { useState } from "react"
+import { useParams } from "react-router-dom"
+import Panel from "../components/Panel"
+import Badge from "../components/Badge"
+import projects from "../projects.json"
 
-function ProjectProfile(props) {
-    const { projectId } = useParams();
-    const [selectedScreenshotIndex, setSelectedScreenshotIndex] = useState(0);
+export default function ProjectProfile(props: { isMobile: boolean}) {
+    const { projectId } = useParams()
+    const [selectedScreenshotIndex, setSelectedScreenshotIndex] = useState<number>(0)
 
     const projectArray = projects.filter((project) => project.id === projectId);
     if (projectArray.length === 0) {
@@ -125,7 +125,5 @@ function ProjectProfile(props) {
             {panelProjectScreenshotWrapper}
             {panelProjectLinksWrapper}
         </div>
-    );
+    )
 }
-
-export default ProjectProfile;

@@ -18,11 +18,11 @@ export default function PrimaryRouter() {
                 />
                 <Route
                     path="/projects/id/:projectId"
-                    element={<MainLayout title="Project"><ProjectProfile /></MainLayout>}
+                    element={<MainLayout title="Project"><ProjectProfile isMobile={false} /></MainLayout>}
                 />
                 <Route
                     path="/projects"
-                    element={<MainLayout title="Projects"><Projects /></MainLayout>}
+                    element={<MainLayout title="Projects"><Projects isMobile={false} /></MainLayout>}
                 />
                 <Route
                     path="/privacy"

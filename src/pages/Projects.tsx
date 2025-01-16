@@ -1,14 +1,14 @@
-import React from 'react';
-import Panel from '../components/Panel';
-import Badge from '../components/Badge';
-import projects from '../projects.json';
+import React from "react"
+import Panel from "../components/Panel"
+import Badge from "../components/Badge"
+import projects from "../projects.json"
 
-function Projects(props) {
+export default function Projects(props: { isMobile: boolean }) {
 
     const projectLinks = projects.map((project) => {
         const platformBadges = project.platforms.map((platform) => (
             <Badge badgeColor="black" textColor="lightgray" text={platform} />
-        ));
+        ))
 
         return (
             <a className="project_link" href={props.isMobile === true ? `/mobile/projects/id/${project.id}` : `/projects/id/${project.id}`}>
@@ -32,8 +32,8 @@ function Projects(props) {
                     </div>
                 </Panel>
             </a>
-        );
-    });
+        )
+    })
 
     return (
         <div className="projectspage">
@@ -42,7 +42,5 @@ function Projects(props) {
             </Panel>
             {projectLinks}
         </div>
-    );
+    )
 }
-
-export default Projects;  
