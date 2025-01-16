@@ -26,7 +26,7 @@ export default function PrimaryRouter() {
                 />
                 <Route
                     path="/privacy"
-                    element={<MainLayout title="Privacy Policy"><Privacy /></MainLayout>}
+                    element={<MainLayout title="Privacy Policy"><Privacy isMobile={false} /></MainLayout>}
                 />
                 <Route
                     path="/mobile"
