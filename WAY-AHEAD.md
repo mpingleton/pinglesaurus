@@ -95,3 +95,8 @@ These are small time-stamped and text-based updates announcing updates to softwa
 ### Contact
 
 A simple contact form for anyone to submit a small message to me, as well as optionally leave contact information for a reply back.
+
+## Other Potential Ideas
+
+- Background picture different on each page.
+- Background picture would be relevant to the individual project or blog post?
