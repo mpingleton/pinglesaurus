@@ -1,6 +1,17 @@
 import React from "react"
-import Panel from "../components/Panel"
-import Badge from "../components/Badge"
+
+import Panel from "../components/atomic/Panel"
+import Image from "../components/atomic/Image"
+import Badge from "../components/atomic/Badge"
+import TitleText from "../components/atomic/TitleText"
+import BodyText from "../components/atomic/BodyText"
+
+import TitlePanel from "../components/molecular/TitlePanel"
+import LinkPanel from "../components/molecular/LinkPanel"
+import VStack from "../components/atomic/VStack"
+import HStack from "../components/atomic/HStack"
+import XStack from "../components/molecular/XStack"
+
 import projects from "../projects.json"
 
 export default function Projects(props: { isMobile: boolean }) {
@@ -11,36 +22,35 @@ export default function Projects(props: { isMobile: boolean }) {
         ))
 
         return (
-            <a className="project_link" href={props.isMobile === true ? `/mobile/projects/id/${project.id}` : `/projects/id/${project.id}`}>
-                <Panel isMobile={props.isMobile}>
-                    <div className={props.isMobile === true ? "project_mobile_wrapper" : "project_wrapper"}>
-                        <div className="project_icon">
-                            <img className="project_icon" src={project.iconUrl} />
-                        </div>
-                        <div className={props.isMobile === true ? "project_mobile_content" : "project_content"}>
-                            <div className={props.isMobile === true ? "project_mobile_title" : "project_title"}>
-                                <h1>{project.name}</h1>
-                                <Badge badgeColor="#555555" textColor="#EEEEEE" text={project.versionLabel} />
-                            </div>
-                            <div className={props.isMobile === true ? "project_mobile_description" : "project_description"}>
-                                <p>{project.shortDescription}</p>
-                                <div className={props.isMobile === true ? "project_mobile_platform_badges" : "project_platform_badges"}>
-                                    {platformBadges}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Panel>
-            </a>
+            <LinkPanel href={props.isMobile === true ? `/mobile/projects/id/${project.id}` : `/projects/id/${project.id}`}>
+                <XStack horizontal={!props.isMobile} vertical={props.isMobile}>
+                    <HStack width={props.isMobile ? "100%" : "auto"} justifyItems="center" justifyContent="center">
+                        <Image bordered url={project.iconUrl} alt="App Icon" width="150px" height="150px" />
+                    </HStack>
+                    <VStack width={props.isMobile ? "auto" : "100%"}>
+                        <XStack horizontal={!props.isMobile} vertical={props.isMobile}>
+                            <TitleText centered={props.isMobile}>{project.name}</TitleText>
+                            <Badge badgeColor="#555555" textColor="#EEEEEE" text={project.versionLabel} />
+                        </XStack>
+                        <XStack horizontal={!props.isMobile} vertical={props.isMobile}>
+                            <BodyText centered={props.isMobile}>{project.shortDescription}</BodyText>
+                            <HStack
+                                justifyContent={props.isMobile ? "center" : "left"}
+                                justifyItems={props.isMobile ? "center" : "left"}
+                            >
+                                {platformBadges}
+                            </HStack>
+                        </XStack>
+                    </VStack>
+                </XStack>
+            </LinkPanel>
         )
     })
 
     return (
-        <div className="projectspage">
-            <Panel isMobile={props.isMobile}>
-                <center><h1>Projects</h1></center>
-            </Panel>
+        <VStack>
+            <TitlePanel title="Projects" />
             {projectLinks}
-        </div>
+        </VStack>
     )
 }
