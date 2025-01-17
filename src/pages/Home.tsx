@@ -1,6 +1,11 @@
 import React from "react"
 import Panel from "../components/Panel"
 import Badge from "../components/Badge"
+import TitleText from "../components/TitleText"
+import HeaderText from "../components/HeaderText"
+import BodyText from "../components/BodyText"
+import VStack from "../components/VStack"
+import HStack from "../components/HStack"
 
 export default function Home(props: { isMobile: boolean }) {
 
@@ -52,6 +57,9 @@ export default function Home(props: { isMobile: boolean }) {
     const homepageContent = (
         <div id="homepage_content">
             <center>
+                <TitleText>This is some title text!</TitleText>
+                <HeaderText>This is some header text!</HeaderText>
+                <BodyText>Here is some body text!</BodyText>
                 <h1>Hello!</h1>
                 <p>
                     My name is Michael Pingleton. I am a software developer who is well versed in web, desktop, and mobile development alike.
@@ -66,7 +74,7 @@ export default function Home(props: { isMobile: boolean }) {
     )
 
     return (
-        <div className="homepage">
+        <div>
             <Panel isMobile={props.isMobile}>
                 <div id={props.isMobile === true ? "homepage_mobile_wrapper" : "homepage_wrapper"}>
                     {homepagePicture}
