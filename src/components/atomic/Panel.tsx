@@ -7,6 +7,7 @@ export default function Panel(props: { children: React.ReactNode }) {
         boxSizing: "border-box",
         width: "100%",
         margin: "0px",
+        padding: "24px",
         borderWidth: "1px",
         borderColor: "gray",
         borderStyle: "solid",
