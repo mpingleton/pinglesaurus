@@ -15,7 +15,7 @@ export default function MobileAppBarButton(props: {
 
     let backgroundColor = "transparent"
     if (props.highlighted) {
-        backgroundColor = "rgba(0, 70, 90, 0.6)"
+        backgroundColor = "rgba(0, 80, 130, 0.6)"
     }
 
     const stLi: React.CSSProperties = {

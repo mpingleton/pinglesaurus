@@ -8,9 +8,9 @@ export default function Panel(props: { cliccable?: boolean, children: React.Reac
     let backgroundColor = "rgba(0, 0, 0, 0.6)"
     if (props.cliccable) {
         if (isClicc) {
-            backgroundColor = "rgba(0, 30, 50, 0.6)"
+            backgroundColor = "rgba(0, 80, 130, 0.6)"
         } else if (isHover) {
-            backgroundColor = "rgba(0, 50, 70, 0.6)"
+            backgroundColor = "rgba(0, 130, 180, 0.6)"
         }
     }
 
