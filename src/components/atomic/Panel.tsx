@@ -19,7 +19,7 @@ export default function Panel(props: { cliccable?: boolean, children: React.Reac
         boxSizing: "border-box",
         width: "100%",
         margin: "0px",
-        padding: "24px",
+        padding: "20px",
         borderWidth: "1px",
         borderColor: "gray",
         borderStyle: "solid",
