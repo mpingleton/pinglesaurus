@@ -17,7 +17,7 @@ export default function ProfileImage(props: { isMobile: boolean }) {
     } else {
         return (
             <HStack justifyContent="center" justifyItems="center">
-                <Image url={url} alt={alt} width="400px" height="400px" />
+                <Image url={url} alt={alt} width="250px" height="250px" />
             </HStack>
         )
     }
