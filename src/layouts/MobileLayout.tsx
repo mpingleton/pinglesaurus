@@ -1,46 +1,29 @@
 import React, { useState } from "react"
 
-export default function MobileLayout(props: { title: string, children?: React.ReactNode }) {
+import Header from "../components/atomic/Header"
+import MobileAppBar from "../components/atomic/MobileAppBar"
+import MobileAppBarButton from "../components/atomic/MobileAppBarButton"
+import Body from "../components/atomic/Body"
+
+export default function MobileLayout(props: { navId?: string, title: string, children?: React.ReactNode }) {
 
     document.title = `${props.title} - Pinglesaur.us`
 
-    const [isLinkPageVisible, setLinkPageVisible] = useState<boolean>(false)
-
-    const header = (
-        <div className="mobilelayout_header">
-        </div>
-    )
-
-    const linkbar = (
-        <div className="mobilelayout_linkbar">
-            <div className={isLinkPageVisible ? "mobilelayout_linkbar_item_selected" : "mobilelayout_linkbar_item"}
-                 onClick={() => setLinkPageVisible(!isLinkPageVisible)}>
-                <img className="mobilelayout_linkbar_item" src="/images/mobile_homebutton.png"></img>
-            </div>
-        </div>
-    )
-
-    const linkPage = (
-        <div className="mobilelayout_linkpage">
-            <ul className="mobilelayout_linkpage_item">
-                <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item"
-                                                              href="/mobile">Home</a></li>
-                <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/mobile/projects">Projects</a></li>
-                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="//github.com/mpingleton">GitHub</a></li>
-                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/">Desktop</a></li>
-                    <li className="mobilelayout_linkpage_item"><a className="mobilelayout_linkpage_item" href="/mobile/privacy">Privacy Policy</a></li>
-                </ul>
-        </div>
-    );
+    const buttons = [
+        (<MobileAppBarButton title="Home" href="/" highlighted={props.navId === "home"} />),
+        (<MobileAppBarButton title="Software Projects" href="/software" highlighted={props.navId === "software"} />),
+        (<MobileAppBarButton title="3D Printing" href="/3dprinting" highlighted={props.navId === "3dprinting"} />),
+        (<MobileAppBarButton title="Gallery" href="/gallery" highlighted={props.navId === "gallery"} />),
+        (<MobileAppBarButton title="Blog" href="/blog" highlighted={props.navId === "blog"} />),
+        (<MobileAppBarButton title="Updates" href="/updates" highlighted={props.navId === "updates"} />),
+        (<MobileAppBarButton title="Contact" href="/contact" highlighted={props.navId === "contact"} />),
+    ]
 
     return (
-        <div className="mobilelayout">
-            {header}
-            {linkbar}
-            {isLinkPageVisible ? linkPage : null}
-            <div className="mobilelayout_body">
-                {props.children}
-            </div>
-        </div>
+        <>
+            <MobileAppBar buttons={buttons} />
+            <Header />
+            <Body>{props.children}</Body>
+        </>
     );
 }

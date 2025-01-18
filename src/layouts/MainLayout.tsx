@@ -1,47 +1,34 @@
 import React from "react"
 
-export default function MainLayout(props: { title: string, children?: React.ReactNode }) {
+import Header from "../components/atomic/Header"
+import AppBar from "../components/atomic/AppBar"
+import AppBarButton from "../components/atomic/AppBarButton"
+import AppBarHomeButton from "../components/atomic/AppBarHomeButton"
+import Body from "../components/atomic/Body"
+
+export default function MainLayout(props: { navId?: string, title: string, children?: React.ReactNode }) {
 
     document.title = `${props.title} - Pinglesaur.us`
 
-    const header = (
-        <div className="mainlayout_header">
-        </div>
-    )
+    const appBarHome = (<AppBarHomeButton href="/" highlighted={props.navId === "home"} />)
 
-    const linkbarLeft = (
-        <div className="mainlayout_linkbar_left">
-            <ul className="mainlayout_linkbar">
-                <li className="mainlayout_linkbar_item"><a className="mainlayout_linkbar_item" href="/projects">Projects</a></li>
-                <li className="mainlayout_linkbar_item"><a className="mainlayout_linkbar_item" href="//github.com/mpingleton">GitHub</a></li>
-            </ul>
-        </div>
-    )
+    const appBarLeft = [
+        (<AppBarButton title="Software Projects" href="/software" highlighted={props.navId === "software"} />),
+        (<AppBarButton title="3D Printing" href="/3dprinting" highlighted={props.navId === "3dprinting"} />),
+        (<AppBarButton title="Gallery" href="/gallery" highlighted={props.navId === "gallery"} />)
+    ]
 
-    const linkbarRight = (
-        <div className="mainlayout_linkbar_right">
-            <ul className="mainlayout_linkbar">
-                <li className="mainlayout_linkbar_item"><a className="mainlayout_linkbar_item" href="/mobile">Mobile</a></li>
-                <li className="mainlayout_linkbar_item"><a className="mainlayout_linkbar_item" href="/privacy">Privacy Policy</a></li>
-            </ul>
-        </div>
-    )
-
-    const homeButton = (
-        <div className="mainlayout_homebutton">
-            <a className="mainlayout_homebutton" href="/">&nbsp;</a>
-        </div>
-    )
+    const appBarRight = [
+        (<AppBarButton title="Blog" href="/blog" highlighted={props.navId === "blog"} />),
+        (<AppBarButton title="Updates" href="/updates" highlighted={props.navId === "updates"} />),
+        (<AppBarButton title="Contact" href="/contact" highlighted={props.navId === "contact"} />)
+    ]
 
     return (
-        <div className="mainlayout">
-            {header}
-            {linkbarLeft}
-            {linkbarRight}
-            {homeButton}
-            <div className="mainlayout_body">
-                {props.children}
-            </div>
-        </div>
+        <>
+            <Header />
+            <AppBar center={appBarHome} leftSide={appBarLeft} rightSide={appBarRight} />
+            <Body>{props.children}</Body>
+        </>
     )
 }
