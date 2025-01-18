@@ -7,7 +7,7 @@ export default function LinkPanel(props: { href: string, children: React.ReactNo
 
     return (
         <Link href={props.href}>
-            <Panel>{props.children}</Panel>
+            <Panel cliccable>{props.children}</Panel>
         </Link>
     )
 }
