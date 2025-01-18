@@ -28,7 +28,7 @@ export default function MainLayout(props: { navId?: string, title: string, child
         <>
             <Header />
             <AppBar center={appBarHome} leftSide={appBarLeft} rightSide={appBarRight} />
-            <Body>{props.children}</Body>
+            <Body width="92%">{props.children}</Body>
         </>
     )
 }

@@ -1,12 +1,14 @@
 import React from "react"
 
-export default function Body(props: { children: React.ReactNode }) {
+export default function Body(props: { width?: string, children: React.ReactNode }) {
 
     const st: React.CSSProperties = {
         position: "absolute",
         zIndex: 1,
         top: "140px",
-        width: "100%",
+        left: props.width === undefined ? "0px" : `calc(50% - ${props.width} / 2)`,
+        right: "auto",
+        width: props.width === undefined ? "100%" : props.width!,
         paddingBottom: "10px",
         color: "lightgray"
     }
