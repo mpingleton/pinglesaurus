@@ -7,6 +7,7 @@ export default function HStack(props: {
     justifyItems?: string,
     padding?: string,
     gapping?: string,
+    wrap?: boolean,
     children: React.ReactNode
 }) {
 
@@ -18,7 +19,8 @@ export default function HStack(props: {
         justifyContent: props.justifyContent === undefined ? "start" : props.justifyContent!,
         justifyItems: props.justifyItems === undefined ? "start" : props.justifyItems!,
         padding: props.padding === undefined ? "8px" : props.padding!,
-        gap: props.gapping === undefined ? "8px" : props.gapping!
+        gap: props.gapping === undefined ? "8px" : props.gapping!,
+        flexWrap: props.wrap ? "wrap" : "nowrap",
     }
 
     return (<div style={st}>{props.children}</div>)
