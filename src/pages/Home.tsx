@@ -1,4 +1,5 @@
 import React from "react"
+import { isBrowser, isMobile } from "react-device-detect"
 
 import TitleText from "../components/atomic/TitleText"
 import BodyText from "../components/atomic/BodyText"
@@ -10,7 +11,9 @@ import Badge from "../components/atomic/Badge"
 import XStack from "../components/molecular/XStack"
 import ProfileImage from "../components/molecular/ProfileImage"
 
-export default function Home(props: { isMobile: boolean }) {
+import AutomaticLayout from "../layouts/AutomaticLayout"
+
+export default function Home() {
 
     const badgeContent = (
         <VStack width="100%" gapping="2px">
@@ -58,13 +61,15 @@ export default function Home(props: { isMobile: boolean }) {
     )
 
     return (
-        <VStack>
-            <Panel>
-                <XStack vertical={props.isMobile} horizontal={!props.isMobile}>
-                    <ProfileImage isMobile={props.isMobile} />
-                    {homepageContent}
-                </XStack>
-            </Panel>
-        </VStack>
-    );
+        <AutomaticLayout navId="home" title="Home">
+            <VStack>
+                <Panel>
+                    <XStack vertical={isMobile} horizontal={isBrowser}>
+                        <ProfileImage isMobile={isMobile} />
+                        {homepageContent}
+                    </XStack>
+                </Panel>
+            </VStack>
+        </AutomaticLayout>
+    )
 }
