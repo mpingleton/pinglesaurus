@@ -5,7 +5,7 @@ import HStack from "../atomic/HStack"
 
 export default function ProfileImage(props: { isMobile: boolean }) {
 
-    const url = "/images/pinglesaurus.png"
+    const url = "/images/profile.png"
     const alt = "Pinglesaurus"
 
     if (props.isMobile) {
