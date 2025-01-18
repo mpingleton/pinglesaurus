@@ -13,10 +13,16 @@ export default function MobileAppBarButton(props: {
         }
     }
 
+    let backgroundColor = "transparent"
+    if (props.highlighted) {
+        backgroundColor = "rgba(0, 70, 90, 0.6)"
+    }
+
     const stLi: React.CSSProperties = {
         display: "inline",
         width: "100%",
-        height: "100%"
+        height: "100%",
+        backgroundColor
     }
 
     const stA: React.CSSProperties = {
