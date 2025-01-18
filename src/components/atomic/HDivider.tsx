@@ -5,7 +5,7 @@ export default function HDivider() {
     const st: React.CSSProperties = {
         width: "auto",
         height: "1px",
-        backgroundColor: "gray"
+        backgroundColor: "#444444"
     }
 
     return (<div style={st}></div>)
