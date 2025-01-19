@@ -7,8 +7,12 @@ import Image from "../../../common/components/atomic/Image"
 import Panel from "../../../common/components/atomic/Panel"
 
 import XStack from "../../../common/components/molecular/XStack"
+import SectionPanel from "../../../common/components/molecular/SectionPanel"
 
 import SoftwareProject from "../../../classes/SoftwareProject"
+import HStack from "../../../common/components/atomic/HStack";
+import Badge from "../../../common/components/atomic/Badge";
+import HDivider from "../../../common/components/atomic/HDivider";
 
 export default function SoftwareProjectProfile(props: { data: SoftwareProject, isMobile: boolean }) {
 
@@ -31,9 +35,56 @@ export default function SoftwareProjectProfile(props: { data: SoftwareProject, i
         </Panel>
     )
 
+    const downloadPanel = (
+        <SectionPanel title="Download Links">
+            <BodyText centered>Under Construction</BodyText>
+        </SectionPanel>
+    )
+
+    const stackPanel = (
+        <SectionPanel title="Tech Stack">
+            <VStack padding="0px">
+                <BodyText centered>Programming Languages</BodyText>
+                <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
+                    {props.data.languages!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
+                </HStack>
+                <HDivider />
+                <BodyText centered>Platforms</BodyText>
+                <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
+                    {props.data.platforms!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
+                </HStack>
+                <HDivider />
+                <BodyText centered>Frameworks & Libraries</BodyText>
+                <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
+                    {props.data.frameworks!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
+                </HStack>
+            </VStack>
+        </SectionPanel>
+    )
+
+    const updatePanel = (
+        <SectionPanel title="Latest Update">
+            <BodyText centered>Under Construction</BodyText>
+        </SectionPanel>
+    )
+
+    const screenshotPanel = (
+        <SectionPanel title="Screenshots">
+            <BodyText centered>Under Construction</BodyText>
+        </SectionPanel>
+    )
+
     return (
         <VStack padding="0px" width="100%">
             {mainPanel}
+            <XStack horizontal={!props.isMobile} vertical={props.isMobile} padding="0px">
+                <VStack padding="0px" width={props.isMobile ? "100%" : "500px"}>
+                    {downloadPanel}
+                    {updatePanel}
+                    {stackPanel}
+                </VStack>
+                {screenshotPanel}
+            </XStack>
         </VStack>
     )
 }
