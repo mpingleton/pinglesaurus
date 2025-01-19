@@ -6,5 +6,5 @@ export default async function getAllLanguages(ctx: DataContext): Promise<Languag
         throw 1
     }
 
-    return ctx.languages!
+    return ctx.languages!.map((d) => d.clone())
 }

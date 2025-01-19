@@ -6,5 +6,5 @@ export default async function getAllPlatforms(ctx: DataContext): Promise<Platfor
         throw 1
     }
 
-    return ctx.platforms!
+    return ctx.platforms!.map((d) => d.clone())
 }

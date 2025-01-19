@@ -6,5 +6,5 @@ export default async function getAllFrameworks(ctx: DataContext): Promise<Framew
         throw 1
     }
 
-    return ctx.frameworks!
+    return ctx.frameworks!.map((d) => d.clone())
 }
