@@ -114,8 +114,8 @@ export default function Home() {
                 />
                 <SocialMediaPanelButton
                     icon={favIcon}
-                    platform="The Bit Whisperer - Substack"
-                    username="@mnpingleton"
+                    platform="Substack"
+                    username="The Bit Whisperer (@mnpingleton)"
                     onClicc={() => {}}
                 />
                 <SocialMediaPanelButton
