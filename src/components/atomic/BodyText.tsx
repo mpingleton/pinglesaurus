@@ -17,6 +17,7 @@ export default function BodyText(props: {
         fontFamily: "Arial, sans-serif",
         fontSize: "14pt",
         fontWeight: "normal",
+        lineHeight: "1.25",
         margin: "0px",
         padding: "0px",
         width: "100%",

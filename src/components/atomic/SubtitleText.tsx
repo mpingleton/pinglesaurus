@@ -17,7 +17,7 @@ export default function SubtitleText(props: {
         fontFamily: "Arial, sans-serif",
         fontSize: "10pt",
         fontWeight: "normal",
-        color: "#555555",
+        color: "#777777",
         margin: "0px",
         padding: "0px",
         width: "100%",
