@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "ProGraph Calculator",
+    "iconUrl": "/images/projects/1/icon.png",
+    "shortDesc": "Graph equations and points.",
+    "fullDesc": "Graph equations and points, as well as analyze them.",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [4, 5],
+    "platformIds": [4, 5],
+    "frameworkIds": []
+  },
+  {
+    "id": 2,
+    "name": "SAMS",
+    "iconUrl": "/images/projects/2/icon.png",
+    "shortDesc": "Schedule drone missions.",
+    "fullDesc": "Schedule drone missions and track operator & asset readiness.",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [6],
+    "platformIds": [6],
+    "frameworkIds": [6, 7, 4, 5]
+  },
+  {
+    "id": 3,
+    "name": "Myelin",
+    "iconUrl": "/images/projects/3/icon.png",
+    "shortDesc": "Modern artificial intelligence engine.",
+    "fullDesc": "Modern artificial intelligence engine.",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [1],
+    "platformIds": [1, 2, 3],
+    "frameworkIds": [3]
+  }
+]
