@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { isBrowser, isMobile, BrowserView, MobileView } from "react-device-detect"
 
 import AutomaticLayout from "../layouts/AutomaticLayout"
@@ -19,7 +19,51 @@ import SectionPanel from "../components/molecular/SectionPanel"
 import FooterPanel from "../components/molecular/FooterPanel"
 import SocialMediaPanelButton from "../components/molecular/SocialMediaPanelButton"
 
+import DataContext from "../classes/DataContext"
+import Language from "../classes/Language"
+import Platform from "../classes/Platform"
+import Framework from "../classes/Framework"
+
+import initDataContext from "../data/initDataContext"
+import getAllLanguages from "../data/getAllLanguages"
+import getAllPlatforms from "../data/getAllPlatforms"
+import getAllFrameworks from "../data/getAllFrameworks"
+
 export default function Home() {
+
+    const [ctx, setCtx] = useState<DataContext>(new DataContext())
+    const [languages, setLanguages] = useState<Language[] | undefined>(undefined)
+    const [platforms, setPlatforms] = useState<Platform[] | undefined>(undefined)
+    const [frameworks, setFrameworks] = useState<Framework[] | undefined>(undefined)
+
+    useEffect(() => {
+        if (!ctx.isInitialized) {
+            initDataContext()
+                .then((d) => setCtx(d))
+                .catch((err) => console.error(err))
+        } else {
+            getAllLanguages(ctx)
+                .then((d) => setLanguages(d))
+                .catch((err) => console.error(err))
+
+            getAllPlatforms(ctx)
+                .then((d) => setPlatforms(d))
+                .catch((err) => console.error(err))
+
+            getAllFrameworks(ctx)
+                .then((d) => setFrameworks(d))
+                .catch((err) => console.error(err))
+        }
+    }, [ctx])
+
+    // TODO: Make this more appealing.
+    if (!ctx.isInitialized || languages === undefined || platforms === undefined || frameworks === undefined) {
+        return (
+            <AutomaticLayout navId="home" title="Home">
+                <TitleText centered>Loading...</TitleText>
+            </AutomaticLayout>
+        )
+    }
 
     const favIcon = (<Image width="48px" height="48px" alt="icon" url="/images/question.png" bordered />)
 
@@ -36,10 +80,6 @@ export default function Home() {
             Here, you will see the various software projects and 3D prints that I am working on, as well as the general tinkering that I tend to do.
         </BodyText>
     )
-
-    const languages = ["C", "C++", "Java", "Kotlin", "Swift", "JavaScript", "TypeScript"]
-    const platforms = ["Linux", "macOS", "Windows", "Android", "iOS", "Web"]
-    const libraries = ["Vulkan", "OpenGL", "CUDA", "React", "MaterialUI", "ExpressJS", "Prisma ORM"]
 
     const helloPanel = (
         <Panel>
@@ -124,17 +164,17 @@ export default function Home() {
             <VStack>
                 <BodyText centered>Programming Languages</BodyText>
                 <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
-                    {languages.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l} />))}
+                    {languages!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
                 </HStack>
                 <HDivider />
                 <BodyText centered>Platforms</BodyText>
                 <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
-                    {platforms.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l} />))}
+                    {platforms!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
                 </HStack>
                 <HDivider />
                 <BodyText centered>Frameworks & Libraries</BodyText>
                 <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
-                    {libraries.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l} />))}
+                    {frameworks!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
                 </HStack>
             </VStack>
         </SectionPanel>
