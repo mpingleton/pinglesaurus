@@ -1,0 +1,88 @@
+{
+  "languages": [
+    {
+      "id": 1,
+      "name": "C"
+    },
+    {
+      "id": 2,
+      "name": "C++"
+    },
+    {
+      "id": 3,
+      "name": "Java"
+    },
+    {
+      "id": 4,
+      "name": "Kotlin"
+    },
+    {
+      "id": 5,
+      "name": "Swift"
+    },
+    {
+      "id": 6,
+      "name": "TypeScript"
+    },
+    {
+      "id": 7,
+      "name": "JavaScript"
+    }
+  ],
+  "platforms": [
+    {
+      "id": 1,
+      "name": "Linux"
+    },
+    {
+      "id": 2,
+      "name": "macOS"
+    },
+    {
+      "id": 3,
+      "name": "Windows"
+    },
+    {
+      "id": 4,
+      "name": "Android"
+    },
+    {
+      "id": 5,
+      "name": "iOS"
+    },
+    {
+      "id": 6,
+      "name": "Web"
+    }
+  ],
+  "frameworks": [
+    {
+      "id": 1,
+      "name": "Vulkan"
+    },
+    {
+      "id": 2,
+      "name": "OpenGL"
+    },
+    {
+      "id": 3,
+      "name": "CUDA"
+    },
+    {
+      "id": 4,
+      "name": "Express"
+    },
+    {
+      "id": 5,
+      "name": "Prisma ORM"
+    },
+    {
+      "id": 6,
+      "name": "React"
+    },
+    {
+      "id": 7,
+      "name": "MaterialUI"
+    }
+  ]
+}
