@@ -2,6 +2,7 @@ import DataContext from "../classes/DataContext"
 import Language from "../classes/Language"
 import Platform from "../classes/Platform"
 import Framework from "../classes/Framework"
+import SoftwareProject from "../classes/SoftwareProject"
 
 export default async function initDataContext(): Promise<DataContext> {
     let newCtx = new DataContext()
@@ -32,11 +33,24 @@ export default async function initDataContext(): Promise<DataContext> {
             o.parseObject(i)
             return o
         })
-
-        newCtx.isInitialized = true
     } else {
         throw 1
     }
+
+    const resSoftware = await fetch("/software.json")
+    if (resSoftware.status === 200) {
+        const dataObject = await resSoftware.json()
+        
+        newCtx.software = dataObject.map((i: object) => {
+            const o = new SoftwareProject()
+            o.parseObject(i)
+            return o
+        })
+    } else {
+        throw 1
+    }
+
+    newCtx.isInitialized = true
 
     return newCtx
 }
