@@ -1,9 +1,19 @@
 import React, { useState } from "react"
 
-export default function Panel(props: { cliccable?: boolean, children: React.ReactNode }) {
+export default function Panel(props: {
+    cliccable?: boolean,
+    onClicc?: () => void,
+    children: React.ReactNode
+}) {
 
     const [isHover, setHover] = useState<boolean>(false)
     const [isClicc, setClicc] = useState<boolean>(false)
+
+    function handleClick() {
+        if (props.cliccable && props.onClicc) {
+            props.onClicc()
+        }
+    }
 
     let backgroundColor = "rgba(0, 0, 0, 0.6)"
     if (props.cliccable) {
@@ -36,6 +46,7 @@ export default function Panel(props: { cliccable?: boolean, children: React.Reac
             onMouseLeave={() => setHover(false)}
             onMouseDown={() => setClicc(true)}
             onMouseUp={() => setClicc(false)}
+            onClick={handleClick}
         >
             {props.children}
         </div>)
