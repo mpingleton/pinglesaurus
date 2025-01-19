@@ -5,7 +5,7 @@ import SubtitleText from "../atomic/SubtitleText"
 import HStack from "../atomic/HStack"
 import VStack from "../atomic/VStack"
 
-import PanelButton from "./PanelButton"
+import PanelButton from "../atomic/PanelButton"
 
 export default function SocialMediaPanelButton(props: {
     icon: React.ReactNode,

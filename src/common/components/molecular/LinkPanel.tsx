@@ -3,11 +3,15 @@ import React from "react"
 import Link from "../atomic/Link"
 import Panel from "../atomic/Panel"
 
-export default function LinkPanel(props: { href: string, children: React.ReactNode }) {
+export default function LinkPanel(props: {
+    href: string,
+    onClicc?: () => void,
+    children: React.ReactNode
+}) {
 
     return (
         <Link href={props.href}>
-            <Panel cliccable>{props.children}</Panel>
+            <Panel cliccable onClicc={props.onClicc}>{props.children}</Panel>
         </Link>
     )
 }
