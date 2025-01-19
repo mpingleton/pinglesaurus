@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserView, MobileView } from "react-device-detect"
+import { isBrowser, isMobile, BrowserView, MobileView } from "react-device-detect"
 
 import AutomaticLayout from "../layouts/AutomaticLayout"
 
@@ -13,6 +13,7 @@ import TitleText from "../components/atomic/TitleText"
 import BodyText from "../components/atomic/BodyText"
 import Image from "../components/atomic/Image"
 
+import XStack from "../components/molecular/XStack"
 import ProfileImage from "../components/molecular/ProfileImage"
 import SectionPanel from "../components/molecular/SectionPanel"
 import FooterPanel from "../components/molecular/FooterPanel"
@@ -93,6 +94,31 @@ export default function Home() {
         </SectionPanel>
     )
 
+    const devPages = (
+        <SectionPanel title="Developer Pages">
+            <XStack horizontal={isBrowser} vertical={isMobile} padding="0px">
+                <SocialMediaPanelButton
+                    icon={favIcon}
+                    platform="App Store"
+                    username="Michael Pingleton"
+                    onClicc={() => {}}
+                />
+                <SocialMediaPanelButton
+                    icon={favIcon}
+                    platform="Play Store"
+                    username="Pinglesaurus"
+                    onClicc={() => {}}
+                />
+                <SocialMediaPanelButton
+                    icon={favIcon}
+                    platform="Steam"
+                    username="Nuclear Silicon"
+                    onClicc={() => {}}
+                />
+            </XStack>
+        </SectionPanel>
+    )
+
     const stackPanel = (
         <SectionPanel title="Tech Stack">
             <VStack>
@@ -132,7 +158,10 @@ export default function Home() {
                 <VStack>
                     <HStack padding="0px">
                         <Box width="600px">{linkPanel}</Box>
-                        <Box width="80%">{helloPanel}</Box>
+                        <VStack width="80%" padding="0px">
+                            {helloPanel}
+                            {devPages}
+                        </VStack>
                         <Box width="50%">{stackPanel}</Box>
                     </HStack>
                     <HStack padding="0px">
@@ -146,6 +175,7 @@ export default function Home() {
                 <VStack>
                     {helloPanel}
                     {linkPanel}
+                    {devPages}
                     {stackPanel}
                     {updatePanel}
                     {galleryPanel}
