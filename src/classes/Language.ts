@@ -3,6 +3,14 @@ export default class Language {
     id: number
     name: string
 
+    clone() {
+        const o = new Language()
+        o.id = this.id
+        o.name = this.name
+
+        return o
+    }
+
     parseObject(input: any) {
         this.id = input.id
         this.name = input.name
