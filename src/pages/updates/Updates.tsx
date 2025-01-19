@@ -1,8 +1,8 @@
 import React from "react"
 
-import AutomaticLayout from "../layouts/AutomaticLayout"
+import AutomaticLayout from "../../common/layouts/AutomaticLayout"
 
-import TitleText from "../components/atomic/TitleText"
+import TitleText from "../../common/components/atomic/TitleText"
 
 export default function Updates() {
 

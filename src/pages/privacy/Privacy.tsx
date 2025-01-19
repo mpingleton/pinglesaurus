@@ -1,11 +1,11 @@
 import React from "react"
 
-import AutomaticLayout from "../layouts/AutomaticLayout"
+import AutomaticLayout from "../../common/layouts/AutomaticLayout"
 
-import VStack from "../components/atomic/VStack"
+import VStack from "../../common/components/atomic/VStack"
 
-import TitlePanel from "../components/molecular/TitlePanel"
-import HeaderContentPanel from "../components/molecular/HeaderContentPanel"
+import TitlePanel from "../../common/components/molecular/TitlePanel"
+import HeaderContentPanel from "../../common/components/molecular/HeaderContentPanel"
 
 export default function Privacy() {
 

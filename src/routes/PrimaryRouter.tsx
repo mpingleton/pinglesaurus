@@ -1,14 +1,14 @@
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Home from "../pages/Home"
-import SoftwareProjects from "../pages/SoftwareProjects"
-import Prints from "../pages/Prints"
-import Gallery from "../pages/Gallery"
-import Blog from "../pages/Blog"
-import Updates from "../pages/Updates"
-import Contacts from "../pages/Contact"
-import Privacy from "../pages/Privacy"
+import Home from "../pages/home/Home"
+import SoftwareProjects from "../pages/software/SoftwareProjects"
+import Prints from "../pages/prints/Prints"
+import Gallery from "../pages/gallery/Gallery"
+import Blog from "../pages/blog/Blog"
+import Updates from "../pages/updates/Updates"
+import Contacts from "../pages/contact/Contact"
+import Privacy from "../pages/privacy/Privacy"
 
 export default function PrimaryRouter() {
     return (
