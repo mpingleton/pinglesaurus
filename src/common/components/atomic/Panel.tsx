@@ -29,7 +29,7 @@ export default function Panel(props: {
         boxSizing: "border-box",
         width: "100%",
         margin: "0px",
-        padding: "20px",
+        padding: "14px",
         borderWidth: "1px",
         borderColor: "gray",
         borderStyle: "solid",
