@@ -28,6 +28,7 @@ export default function MobileAppBarButton(props: {
     const stA: React.CSSProperties = {
         display: "flex",
         alignItems: "center",
+        fontFamily: "Arial, sans-serif",
         justifyContent: "center",
         height: "100%",
         textDecoration: "none",

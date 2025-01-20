@@ -5,8 +5,14 @@ import AppBar from "../components/atomic/AppBar"
 import AppBarButton from "../components/atomic/AppBarButton"
 import AppBarHomeButton from "../components/atomic/AppBarHomeButton"
 import Body from "../components/atomic/Body"
+import Background from "../components/atomic/Background";
 
-export default function MainLayout(props: { navId?: string, title: string, children?: React.ReactNode }) {
+export default function MainLayout(props: {
+    navId?: string,
+    background?: string,
+    title: string,
+    children?: React.ReactNode
+}) {
 
     document.title = `${props.title} - Pinglesaur.us`
 
@@ -26,6 +32,7 @@ export default function MainLayout(props: { navId?: string, title: string, child
 
     return (
         <>
+            <Background background={props.background ? props.background : props.navId} isMobile={false} />
             <Header />
             <AppBar center={appBarHome} leftSide={appBarLeft} rightSide={appBarRight} />
             <Body width="92%">{props.children}</Body>

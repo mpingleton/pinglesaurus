@@ -1,11 +1,17 @@
-import React, { useState } from "react"
+import React from "react"
 
+import Background from "../components/atomic/Background"
 import Header from "../components/atomic/Header"
 import MobileAppBar from "../components/atomic/MobileAppBar"
 import MobileAppBarButton from "../components/atomic/MobileAppBarButton"
 import Body from "../components/atomic/Body"
 
-export default function MobileLayout(props: { navId?: string, title: string, children?: React.ReactNode }) {
+export default function MobileLayout(props: {
+    navId?: string,
+    background?: string,
+    title: string,
+    children?: React.ReactNode
+}) {
 
     document.title = `${props.title} - Pinglesaur.us`
 
@@ -21,6 +27,7 @@ export default function MobileLayout(props: { navId?: string, title: string, chi
 
     return (
         <>
+            <Background background={props.background ? props.background : props.navId} isMobile={true} />
             <MobileAppBar buttons={buttons} />
             <Header />
             <Body>{props.children}</Body>

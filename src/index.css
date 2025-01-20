@@ -1,3 +1,98 @@
 body {
-  margin: 0px;
+  margin: 0;
+  background-color: #000033;
+}
+
+@keyframes mainlayout_background_appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mainlayout_homebutton_mouseover {
+  0% {
+    background-image: url('/public/images/homebutton.png');
+  }
+  100% {
+    background-image: url('/public/images/homebutton_hover.png');
+  }
+}
+
+@keyframes mainlayout_homebutton_mouseout {
+  0% {
+    background-image: url('/public/images/homebutton_hover.png');
+  }
+  100% {
+    background-image: url('/public/images/homebutton.png');
+  }
+}
+
+@keyframes mainlayout_linkbar_item_mouseover {
+  0% {
+    background-image: url('/public/images/gradient-bar.png');
+  }
+  100% {
+    background-image: url('/public/images/gradient-bar_hover.png');
+  }
+}
+
+@keyframes mainlayout_linkbar_item_mouseout {
+  0% {
+    background-image: url('/public/images/gradient-bar_hover.png');
+  }
+  100% {
+    background-image: url('/public/images/gradient-bar.png');
+  }
+}
+
+@keyframes button_select {
+  0% {
+    background-image: url('/public/images/gradient-bar.png');
+  }
+  100% {
+    background-image: url('/public/images/gradient-bar_hover.png');
+  }
+}
+
+@keyframes button_deselect {
+  0% {
+    background-image: url('/public/images/gradient-bar_hover.png');
+  }
+  100% {
+    background-image: url('/public/images/gradient-bar.png');
+  }
+}
+
+@keyframes mobilelayout_linkbar_item_deselect {
+  0% {
+    background-image: url('/public/images/gradient-bar_hover.png');
+  }
+  100% {
+    background-image: url('/public/images/gradient-bar.png');
+  }
+}
+
+@keyframes mobilelayout_linkbar_item_select {
+  0% {
+    background-image: url('/public/images/gradient-bar.png');
+  }
+  100% {
+    background-image: url('/public/images/gradient-bar_hover.png');
+  }
+}
+
+@keyframes mobilelayout_linkpage_appear {
+  0% {
+    opacity: 0%;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+  }
+  100% {
+    opacity: 100%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
 }

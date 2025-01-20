@@ -9,6 +9,8 @@ export default function Badge(props: { badgeColor: string, textColor: string, te
         margin: "5px",
         width: "fit-content",
         height: "fit-content",
+        fontFamily: "Arial, sans-serif",
+        fontSize: "12pt",
         borderRadius: "5px",
         backgroundSize: "cover",
         backgroundImage: "url('/images/gradient-bar.png')",

@@ -30,6 +30,7 @@ export default function AppBarButton(props: {
     const stA: React.CSSProperties = {
         display: "block",
         textAlign: "center",
+        fontFamily: "Arial, sans-serif",
         fontSize: "14pt",
         lineHeight: "60px",
         textDecoration: "none",
