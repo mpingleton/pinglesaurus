@@ -105,7 +105,7 @@ export default function Home() {
     )
 
     const linkPanel = (
-        <SectionPanel title="Links">
+        <SectionPanel title="Social Media">
             <VStack padding="0px">
                 <SocialMediaPanelButton
                     icon={favIcon}
@@ -116,6 +116,12 @@ export default function Home() {
                     icon={favIcon}
                     platform="Substack"
                     username="The Bit Whisperer (@mnpingleton)"
+                    onClicc={() => {}}
+                />
+                <SocialMediaPanelButton
+                    icon={favIcon}
+                    platform="GitHub"
+                    username="@mpingleton"
                     onClicc={() => {}}
                 />
                 <SocialMediaPanelButton
