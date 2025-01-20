@@ -34,5 +34,17 @@
     "languageIds": [1],
     "platformIds": [1, 2, 3],
     "frameworkIds": [3]
+  },
+  {
+    "id": 4,
+    "name": "Voice Engine",
+    "iconUrl": "/images/question.png",
+    "shortDesc": "A simple call manager.",
+    "fullDesc": "A simple call manager for VoIP telephones.",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [3],
+    "platformIds": [1, 2],
+    "frameworkIds": []
   }
 ]
