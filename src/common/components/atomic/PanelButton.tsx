@@ -11,10 +11,15 @@ export default function PanelButton(props: { onClicc?: () => void, children: Rea
     }
 
     let backgroundColor = "transparent"
+    let backgroundImage = undefined
+    let animationName = "panelbutton_mouseout"
     if (isClicc) {
-        backgroundColor = "rgba(0, 80, 130, 0.6)"
+        backgroundColor = "rgba(0, 50, 100, 0.6)"
+        animationName = "panelbutton_mousedown"
     } else if (isHover) {
-        backgroundColor = "rgba(0, 130, 180, 0.6)"
+        backgroundColor = "rgba(0, 50, 100, 0.6)"
+        backgroundImage = "url('/images/hover.png')"
+        animationName = "panelbutton_mouseover"
     }
 
     const st: React.CSSProperties = {
@@ -22,7 +27,11 @@ export default function PanelButton(props: { onClicc?: () => void, children: Rea
         borderStyle: "none",
         borderRadius: "5px",
         borderWidth: "1px",
-        backgroundColor
+        backgroundColor,
+        backgroundImage,
+        backgroundSize: "100% 100%",
+        animationName,
+        animationDuration: "0.2s"
     }
 
     return (

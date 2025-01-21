@@ -16,11 +16,19 @@ export default function Panel(props: {
     }
 
     let backgroundColor = "rgba(0, 0, 0, 0.6)"
+    let backgroundImage = undefined
+    let animationName = undefined
     if (props.cliccable) {
+        backgroundImage = "url('/images/gradient-bar.png')"
+        animationName = "panel_mouseout"
+
         if (isClicc) {
-            backgroundColor = "rgba(0, 80, 130, 0.6)"
+            backgroundColor = "rgba(0, 50, 100, 0.6)"
+            animationName = "panel_mousedown"
         } else if (isHover) {
-            backgroundColor = "rgba(0, 130, 180, 0.6)"
+            backgroundColor = "rgba(0, 50, 100, 0.6)"
+            backgroundImage = "url('/images/gradient-bar_hover.png')"
+            animationName = "panel_mouseover"
         }
     }
 
@@ -35,8 +43,12 @@ export default function Panel(props: {
         borderStyle: "solid",
         borderRadius: "10px",
         backgroundColor,
+        backgroundImage,
+        backgroundSize: "100% 100%",
         backdropFilter: "blur(8px)",
-        WebkitBackdropFilter: "blur(8px)"
+        WebkitBackdropFilter: "blur(8px)",
+        animationName,
+        animationDuration: "0.2s"
     }
 
     return (
