@@ -8,7 +8,6 @@ import Panel from "../../common/components/atomic/Panel"
 import VStack from "../../common/components/atomic/VStack"
 import HStack from "../../common/components/atomic/HStack"
 import VDivider from "../../common/components/atomic/VDivider"
-import TitleText from "../../common/components/atomic/TitleText"
 
 import SoftwareProjectPanelButton from "./components/SoftwareProjectPanelButton"
 import SoftwareProjectProfile from "./layouts/SoftwareProjectProfile"
@@ -37,13 +36,8 @@ export default function SoftwareProjects() {
         }
     }, [ctx])
 
-    // TODO: Make this more appealing.
     if (!ctx.isInitialized || software === undefined) {
-        return (
-            <AutomaticLayout navId="software" title="Software Projects">
-                <TitleText centered>Loading...</TitleText>
-            </AutomaticLayout>
-        )
+        return (<AutomaticLayout loading navId="software" title="Software Projects" />)
     }
 
     const softwareList = software.map((d, i) => (
@@ -53,26 +47,32 @@ export default function SoftwareProjects() {
         />
     ))
 
+    const desktopLayout = (
+        <HStack>
+            <VStack padding="0px" width="400px">{softwareList}</VStack>
+            <VDivider />
+            {indexSelected === undefined ?
+                (<HStack padding="0px" width="100%"><Panel>
+                    <BodyText centered>Select a project on the left</BodyText>
+                </Panel></HStack>) :
+                (<SoftwareProjectProfile data={software[indexSelected!]} isMobile={false} />)}
+        </HStack>
+    )
+
+    const mobileLayout = (
+        <HStack>
+            {indexSelected === undefined ?
+                (<VStack padding="0px" width="100%">{softwareList}</VStack>) :
+                (<SoftwareProjectProfile data={software[indexSelected!]} isMobile={true} />)}
+        </HStack>
+    )
+
     return (
-        <AutomaticLayout navId="software" title="Software Projects">
-            <BrowserView>
-                <HStack>
-                    <VStack padding="0px" width="400px">{softwareList}</VStack>
-                    <VDivider />
-                    {indexSelected === undefined ?
-                        (<HStack padding="0px" width="100%"><Panel>
-                            <BodyText centered>Select a project on the left</BodyText>
-                        </Panel></HStack>) :
-                        (<SoftwareProjectProfile data={software[indexSelected!]} isMobile={false} />)}
-                </HStack>
-            </BrowserView>
-            <MobileView>
-                <HStack>
-                    {indexSelected === undefined ?
-                        (<VStack padding="0px" width="100%">{softwareList}</VStack>) :
-                        (<SoftwareProjectProfile data={software[indexSelected!]} isMobile={true} />)}
-                </HStack>
-            </MobileView>
-        </AutomaticLayout>
+        <AutomaticLayout
+            navId="software"
+            title="Software Projects"
+            desktopLayout={desktopLayout}
+            mobileLayout={mobileLayout}
+        />
     )
 }

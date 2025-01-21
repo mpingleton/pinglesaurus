@@ -2,14 +2,18 @@ import React from "react"
 
 import Background from "../components/atomic/Background"
 import Header from "../components/atomic/Header"
+import VStack from "../components/atomic/VStack"
 import MobileAppBar from "../components/atomic/MobileAppBar"
 import MobileAppBarButton from "../components/atomic/MobileAppBarButton"
 import Body from "../components/atomic/Body"
+import Panel from "../components/atomic/Panel"
+import HeaderText from "../components/atomic/HeaderText"
 
 export default function MobileLayout(props: {
     navId?: string,
     background?: string,
     title: string,
+    loading?: boolean,
     children?: React.ReactNode
 }) {
 
@@ -25,12 +29,20 @@ export default function MobileLayout(props: {
         (<MobileAppBarButton title="Contact" href="/contact" highlighted={props.navId === "contact"} />),
     ]
 
+    const loadingPanel = (
+        <VStack justifyContent="center" justifyItems="center">
+            <Panel>
+                <HeaderText centered>Loading...</HeaderText>
+            </Panel>
+        </VStack>
+    )
+
     return (
         <>
             <Background background={props.background ? props.background : props.navId} isMobile={true} />
             <MobileAppBar buttons={buttons} />
             <Header />
-            <Body>{props.children}</Body>
+            <Body>{props.loading ? loadingPanel : props.children}</Body>
         </>
     );
 }

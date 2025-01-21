@@ -24,16 +24,21 @@ export default function Privacy() {
     const p4Title = "Cookies"
     const p4Content = "The pinglesaur.us website does not make use of cookies."
 
+    const desktopLayout = (
+        <VStack>
+            <TitlePanel title="Privacy Policy" />
+            <HeaderContentPanel header={titleIntroduction} content={contentIntroduction} />
+            <HeaderContentPanel header={p1Title} content={p1Content} />
+            <HeaderContentPanel header={p2Title} content={p2Content} />
+            <HeaderContentPanel header={p3Title} content={p3Content} />
+            <HeaderContentPanel header={p4Title} content={p4Content} />
+        </VStack>
+    )
+
     return (
-        <AutomaticLayout title="Privacy Policy">
-            <VStack>
-                <TitlePanel title="Privacy Policy" />
-                <HeaderContentPanel header={titleIntroduction} content={contentIntroduction} />
-                <HeaderContentPanel header={p1Title} content={p1Content} />
-                <HeaderContentPanel header={p2Title} content={p2Content} />
-                <HeaderContentPanel header={p3Title} content={p3Content} />
-                <HeaderContentPanel header={p4Title} content={p4Content} />
-            </VStack>
-        </AutomaticLayout>
+        <AutomaticLayout
+            title="Privacy Policy"
+            desktopLayout={desktopLayout}
+        />
     )
 }

@@ -9,7 +9,7 @@ export default function Body(props: { width?: string, children: React.ReactNode 
         left: props.width === undefined ? "0px" : `calc(50% - ${props.width} / 2)`,
         right: "auto",
         width: props.width === undefined ? "100%" : props.width!,
-        paddingBottom: "10px",
+        minHeight: "calc(100vh - 140px)",
         color: "lightgray"
     }
 

@@ -56,13 +56,8 @@ export default function Home() {
         }
     }, [ctx])
 
-    // TODO: Make this more appealing.
     if (!ctx.isInitialized || languages === undefined || platforms === undefined || frameworks === undefined) {
-        return (
-            <AutomaticLayout navId="home" title="Home">
-                <TitleText centered>Loading...</TitleText>
-            </AutomaticLayout>
-        )
+        return (<AutomaticLayout loading navId="home" title="Home" />)
     }
 
     const favIcon = (<Image width="48px" height="48px" alt="icon" url="/images/question.png" bordered />)
@@ -198,36 +193,42 @@ export default function Home() {
         </SectionPanel>
     )
 
-    return (
-        <AutomaticLayout navId="home" title="Home">
-            <BrowserView>
-                <VStack>
-                    <HStack padding="0px">
-                        <Box width="600px">{linkPanel}</Box>
-                        <VStack width="80%" padding="0px">
-                            {helloPanel}
-                            {devPages}
-                        </VStack>
-                        <Box width="50%">{stackPanel}</Box>
-                    </HStack>
-                    <HStack padding="0px">
-                        {updatePanel}
-                        <Box width="50%">{galleryPanel}</Box>
-                    </HStack>
-                    <FooterPanel />
-                </VStack>
-            </BrowserView>
-            <MobileView>
-                <VStack>
+    const desktopLayout = (
+        <VStack height="100%">
+            <HStack padding="0px">
+                <Box width="600px">{linkPanel}</Box>
+                <VStack width="80%" padding="0px">
                     {helloPanel}
-                    {linkPanel}
                     {devPages}
-                    {stackPanel}
-                    {updatePanel}
-                    {galleryPanel}
-                    <FooterPanel />
                 </VStack>
-            </MobileView>
-        </AutomaticLayout>
+                <Box width="50%">{stackPanel}</Box>
+            </HStack>
+            <HStack padding="0px">
+                {updatePanel}
+                <Box width="50%">{galleryPanel}</Box>
+            </HStack>
+            <FooterPanel />
+        </VStack>
+    )
+
+    const mobileLayout = (
+        <VStack>
+            {helloPanel}
+            {linkPanel}
+            {devPages}
+            {stackPanel}
+            {updatePanel}
+            {galleryPanel}
+            <FooterPanel />
+        </VStack>
+    )
+
+    return (
+        <AutomaticLayout
+            navId="home"
+            title="Home"
+            desktopLayout={desktopLayout}
+            mobileLayout={mobileLayout}
+        />
     )
 }
