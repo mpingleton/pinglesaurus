@@ -207,7 +207,6 @@ export default function Home() {
                 {updatePanel}
                 <Box width="50%">{galleryPanel}</Box>
             </HStack>
-            <FooterPanel />
         </VStack>
     )
 
@@ -219,7 +218,6 @@ export default function Home() {
             {stackPanel}
             {updatePanel}
             {galleryPanel}
-            <FooterPanel />
         </VStack>
     )
 

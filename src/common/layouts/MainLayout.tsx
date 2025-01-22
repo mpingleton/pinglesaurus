@@ -9,7 +9,8 @@ import Body from "../components/atomic/Body"
 import Background from "../components/atomic/Background"
 import Panel from "../components/atomic/Panel"
 import VStack from "../components/atomic/VStack"
-import Box from "../components/atomic/Box"
+
+import FooterPanel from "../components/molecular/FooterPanel"
 
 export default function MainLayout(props: {
     navId?: string,
@@ -48,7 +49,9 @@ export default function MainLayout(props: {
             <Background background={props.background ? props.background : props.navId} isMobile={false} />
             <Header />
             <AppBar center={appBarHome} leftSide={appBarLeft} rightSide={appBarRight} />
-            <Body width="92%">{props.loading ? loadingPanel : props.children}</Body>
+            <Body width="92%" footer={<VStack><FooterPanel /></VStack>}>
+                {props.loading ? loadingPanel : props.children}
+            </Body>
         </>
     )
 }

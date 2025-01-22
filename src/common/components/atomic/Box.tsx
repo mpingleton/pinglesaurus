@@ -3,7 +3,7 @@ import React from "react"
 export default function Box(props: {
     width?: string,
     height?: string,
-    children: React.ReactNode
+    children?: React.ReactNode
 }) {
 
     const st: React.CSSProperties = {

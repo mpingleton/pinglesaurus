@@ -8,6 +8,7 @@ import MobileAppBarButton from "../components/atomic/MobileAppBarButton"
 import Body from "../components/atomic/Body"
 import Panel from "../components/atomic/Panel"
 import HeaderText from "../components/atomic/HeaderText"
+import FooterPanel from "../components/molecular/FooterPanel"
 
 export default function MobileLayout(props: {
     navId?: string,
@@ -42,7 +43,9 @@ export default function MobileLayout(props: {
             <Background background={props.background ? props.background : props.navId} isMobile={true} />
             <MobileAppBar buttons={buttons} />
             <Header />
-            <Body>{props.loading ? loadingPanel : props.children}</Body>
+            <Body footer={<VStack><FooterPanel /></VStack>}>
+                {props.loading ? loadingPanel : props.children}
+            </Body>
         </>
     );
 }
