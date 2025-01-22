@@ -135,6 +135,7 @@ export default function Home() {
         </SectionPanel>
     )
 
+    /*
     const devPages = (
         <SectionPanel title="Developer Pages">
             <XStack horizontal={isBrowser} vertical={isMobile} padding="0px">
@@ -159,6 +160,7 @@ export default function Home() {
             </XStack>
         </SectionPanel>
     )
+     */
 
     const stackPanel = (
         <SectionPanel title="Tech Stack">
@@ -199,7 +201,6 @@ export default function Home() {
                 <Box width="600px">{linkPanel}</Box>
                 <VStack width="80%" padding="0px">
                     {helloPanel}
-                    {devPages}
                 </VStack>
                 <Box width="50%">{stackPanel}</Box>
             </HStack>
@@ -214,7 +215,6 @@ export default function Home() {
         <VStack>
             {helloPanel}
             {linkPanel}
-            {devPages}
             {stackPanel}
             {updatePanel}
             {galleryPanel}
