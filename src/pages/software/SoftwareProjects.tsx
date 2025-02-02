@@ -55,7 +55,11 @@ export default function SoftwareProjects() {
                 (<HStack padding="0px" width="100%"><Panel>
                     <BodyText centered>Select a project on the left</BodyText>
                 </Panel></HStack>) :
-                (<SoftwareProjectProfile data={software[indexSelected!]} isMobile={false} />)}
+                (<SoftwareProjectProfile
+                    data={software[indexSelected!]}
+                    isMobile={false}
+                    onBackClicc={() => setIndexSelected(undefined)}
+                />)}
         </HStack>
     )
 
@@ -63,7 +67,11 @@ export default function SoftwareProjects() {
         <HStack>
             {indexSelected === undefined ?
                 (<VStack padding="0px" width="100%">{softwareList}</VStack>) :
-                (<SoftwareProjectProfile data={software[indexSelected!]} isMobile={true} />)}
+                (<SoftwareProjectProfile
+                    data={software[indexSelected!]}
+                    isMobile={true}
+                    onBackClicc={() => setIndexSelected(undefined)}
+                />)}
         </HStack>
     )
 

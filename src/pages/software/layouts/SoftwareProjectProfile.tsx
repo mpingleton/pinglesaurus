@@ -5,16 +5,21 @@ import HeaderText from "../../../common/components/atomic/HeaderText"
 import BodyText from "../../../common/components/atomic/BodyText"
 import Image from "../../../common/components/atomic/Image"
 import Panel from "../../../common/components/atomic/Panel"
+import PanelButton from "../../../common/components/atomic/PanelButton"
+import HStack from "../../../common/components/atomic/HStack"
+import Badge from "../../../common/components/atomic/Badge"
+import HDivider from "../../../common/components/atomic/HDivider"
 
 import XStack from "../../../common/components/molecular/XStack"
 import SectionPanel from "../../../common/components/molecular/SectionPanel"
 
 import SoftwareProject from "../../../classes/SoftwareProject"
-import HStack from "../../../common/components/atomic/HStack";
-import Badge from "../../../common/components/atomic/Badge";
-import HDivider from "../../../common/components/atomic/HDivider";
 
-export default function SoftwareProjectProfile(props: { data: SoftwareProject, isMobile: boolean }) {
+export default function SoftwareProjectProfile(props: {
+    data: SoftwareProject,
+    isMobile: boolean,
+    onBackClicc: () => void
+}) {
 
     const mainPanel = (
         <Panel>
@@ -76,6 +81,11 @@ export default function SoftwareProjectProfile(props: { data: SoftwareProject, i
 
     return (
         <VStack padding="0px" width="100%">
+            {props.isMobile ? (
+                <PanelButton onClicc={() => props.onBackClicc()}>
+                    <HeaderText>Back</HeaderText>
+                </PanelButton>
+            ) : undefined}
             {mainPanel}
             <XStack horizontal={!props.isMobile} vertical={props.isMobile} padding="0px">
                 <VStack padding="0px" width={props.isMobile ? "100%" : "500px"}>
