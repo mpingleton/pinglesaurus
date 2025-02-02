@@ -2,11 +2,11 @@ import React from "react"
 
 import AutomaticLayout from "../../common/layouts/AutomaticLayout"
 
-import TitleText from "../../common/components/atomic/TitleText"
+import UnderConstructionPanel from "../../common/components/molecular/UnderConstructionPanel"
 
 export default function Gallery() {
 
-    const desktopLayout= (<TitleText centered>Gallery (Under Construction)</TitleText>)
+    const desktopLayout= (<UnderConstructionPanel />)
 
     return (
         <AutomaticLayout
