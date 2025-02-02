@@ -12,7 +12,7 @@ export default function FooterPanel() {
 
     const copyrightText = (<SubtleText centered={isMobile}>Copyright &copy; 2025 Michael Pingleton</SubtleText>)
 
-    const complianceInfo = (<Link href="/compliance"><SubtleText centered>Compliance</SubtleText></Link>)
+    // const complianceInfo = (<Link href="/compliance"><SubtleText centered>Compliance</SubtleText></Link>)
     const privacyPolicy = (<Link href="/privacy"><SubtleText centered>Privacy</SubtleText></Link>)
 
     return (
@@ -22,8 +22,6 @@ export default function FooterPanel() {
                     <HStack padding="0px" justifyContent="space-between">
                         {copyrightText}
                         <HStack width="100%" gapping="24px" padding="0px" justifyContent="end">
-                            <VDivider />
-                            {complianceInfo}
                             <VDivider />
                             {privacyPolicy}
                             <VDivider />
@@ -36,8 +34,6 @@ export default function FooterPanel() {
                     <VStack gapping="24px">
                         {copyrightText}
                         <HStack width="100%" padding="0px" justifyContent="space-evenly">
-                            {complianceInfo}
-                            <VDivider />
                             {privacyPolicy}
                         </HStack>
                     </VStack>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { isBrowser, isMobile, BrowserView, MobileView } from "react-device-detect"
+import { BrowserView, MobileView } from "react-device-detect"
 
 import AutomaticLayout from "../../common/layouts/AutomaticLayout"
 
@@ -13,10 +13,8 @@ import TitleText from "../../common/components/atomic/TitleText"
 import BodyText from "../../common/components/atomic/BodyText"
 import Image from "../../common/components/atomic/Image"
 
-import XStack from "../../common/components/molecular/XStack"
 import ProfileImage from "../../common/components/molecular/ProfileImage"
 import SectionPanel from "../../common/components/molecular/SectionPanel"
-import FooterPanel from "../../common/components/molecular/FooterPanel"
 import SocialMediaPanelButton from "../../common/components/molecular/SocialMediaPanelButton"
 
 import DataContext from "../../classes/DataContext"
@@ -204,22 +202,29 @@ export default function Home() {
                 </VStack>
                 <Box width="50%">{stackPanel}</Box>
             </HStack>
-            <HStack padding="0px">
-                {updatePanel}
-                <Box width="50%">{galleryPanel}</Box>
-            </HStack>
+
         </VStack>
     )
+
+    /*
+    <HStack padding="0px">
+        {updatePanel}
+        <Box width="50%">{galleryPanel}</Box>
+    </HStack>
+    */
 
     const mobileLayout = (
         <VStack>
             {helloPanel}
             {linkPanel}
             {stackPanel}
-            {updatePanel}
-            {galleryPanel}
         </VStack>
     )
+
+    /*
+    {updatePanel}
+    {galleryPanel}
+    */
 
     return (
         <AutomaticLayout
