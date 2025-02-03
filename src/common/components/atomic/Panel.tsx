@@ -3,6 +3,8 @@ import React, { useState } from "react"
 export default function Panel(props: {
     cliccable?: boolean,
     onClicc?: () => void,
+    width?: string,
+    height?: string,
     children: React.ReactNode
 }) {
 
@@ -35,7 +37,8 @@ export default function Panel(props: {
     const st: React.CSSProperties = {
         display: "block",
         boxSizing: "border-box",
-        width: "100%",
+        width: props.width === undefined ? "100%" : props.width!,
+        height: props.height === undefined ? undefined : props.height!,
         margin: "0px",
         padding: "14px",
         borderWidth: "1px",
