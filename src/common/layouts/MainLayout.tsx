@@ -17,6 +17,7 @@ export default function MainLayout(props: {
     background?: string,
     title: string,
     loading?: boolean,
+    modals?: React.ReactNode,
     children?: React.ReactNode
 }) {
 
@@ -46,6 +47,7 @@ export default function MainLayout(props: {
 
     return (
         <>
+            {props.modals}
             <Background background={props.background ? props.background : props.navId} isMobile={false} />
             <Header />
             <AppBar center={appBarHome} leftSide={appBarLeft} rightSide={appBarRight} />

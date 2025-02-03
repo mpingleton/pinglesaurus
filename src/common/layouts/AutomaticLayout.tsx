@@ -10,6 +10,7 @@ export default function AutomaticLayout(props: {
     title: string,
     desktopLayout?: React.ReactNode,
     mobileLayout?: React.ReactNode,
+    modals?: React.ReactNode,
     loading?: boolean
 }) {
 
@@ -30,6 +31,7 @@ export default function AutomaticLayout(props: {
                 navId={props.navId}
                 background={props.background}
                 title={props.title}
+                modals={props.modals}
             >
                 {props.mobileLayout ? props.mobileLayout! : props.desktopLayout!}
             </MobileLayout>
@@ -51,6 +53,7 @@ export default function AutomaticLayout(props: {
                 navId={props.navId}
                 background={props.background}
                 title={props.title}
+                modals={props.modals}
             >
                 {props.desktopLayout!}
             </MainLayout>

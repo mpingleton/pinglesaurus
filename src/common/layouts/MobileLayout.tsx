@@ -15,6 +15,7 @@ export default function MobileLayout(props: {
     background?: string,
     title: string,
     loading?: boolean,
+    modals?: React.ReactNode,
     children?: React.ReactNode
 }) {
 
@@ -40,6 +41,7 @@ export default function MobileLayout(props: {
 
     return (
         <>
+            {props.modals}
             <Background background={props.background ? props.background : props.navId} isMobile={true} />
             <MobileAppBar buttons={buttons} />
             <Header />
