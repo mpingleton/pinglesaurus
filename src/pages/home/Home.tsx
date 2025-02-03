@@ -59,6 +59,10 @@ export default function Home() {
     }
 
     const favIcon = (<Image width="48px" height="48px" alt="icon" url="/images/question.png" bordered />)
+    const instagramIcon = (<Image width="48px" height="48px" alt="icon" url="/images/instagram.png" />)
+    const linkedinIcon = (<Image height="48px" alt="icon" url="/images/linkedin.png" />)
+    const substackIcon = (<Image width="48px" height="48px" alt="icon" url="/images/thebitwhisperer.png" bordered />)
+    const githubIcon = (<Image width="48px" height="48px" alt="icon" url="/images/github.png" backing bordered />)
 
     const hello = (<TitleText centered>Hello!</TitleText>)
     const selfIntro = (
@@ -101,18 +105,18 @@ export default function Home() {
         <SectionPanel title="Social Media">
             <VStack padding="0px">
                 <SocialMediaPanelButton
-                    icon={favIcon}
+                    icon={linkedinIcon}
                     platform="LinkedIn"
                     onClicc={() => {}}
                 />
                 <SocialMediaPanelButton
-                    icon={favIcon}
+                    icon={substackIcon}
                     platform="Substack"
                     username="The Bit Whisperer (@mnpingleton)"
                     onClicc={() => {}}
                 />
                 <SocialMediaPanelButton
-                    icon={favIcon}
+                    icon={githubIcon}
                     platform="GitHub"
                     username="@mpingleton"
                     onClicc={() => {}}
@@ -124,7 +128,7 @@ export default function Home() {
                     onClicc={() => {}}
                 />
                 <SocialMediaPanelButton
-                    icon={favIcon}
+                    icon={instagramIcon}
                     platform="Instagram"
                     username="@pinglesaurus"
                     onClicc={() => {}}
