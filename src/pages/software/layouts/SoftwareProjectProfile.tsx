@@ -5,15 +5,12 @@ import HeaderText from "../../../common/components/atomic/HeaderText"
 import BodyText from "../../../common/components/atomic/BodyText"
 import Image from "../../../common/components/atomic/Image"
 import Panel from "../../../common/components/atomic/Panel"
-import PanelButton from "../../../common/components/atomic/PanelButton"
-import HStack from "../../../common/components/atomic/HStack"
-import Badge from "../../../common/components/atomic/Badge"
-import HDivider from "../../../common/components/atomic/HDivider"
 
 import XStack from "../../../common/components/molecular/XStack"
 import SectionPanel from "../../../common/components/molecular/SectionPanel"
 
 import SoftwareProject from "../../../classes/SoftwareProject"
+import TechStackPanel from "../../../common/components/molecular/TechStackPanel"
 
 export default function SoftwareProjectProfile(props: {
     data: SoftwareProject,
@@ -47,24 +44,11 @@ export default function SoftwareProjectProfile(props: {
     )
 
     const stackPanel = (
-        <SectionPanel title="Tech Stack">
-            <VStack padding="0px">
-                <BodyText centered>Programming Languages</BodyText>
-                <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
-                    {props.data.languages!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
-                </HStack>
-                <HDivider />
-                <BodyText centered>Platforms</BodyText>
-                <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
-                    {props.data.platforms!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
-                </HStack>
-                <HDivider />
-                <BodyText centered>Frameworks & Libraries</BodyText>
-                <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
-                    {props.data.frameworks!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
-                </HStack>
-            </VStack>
-        </SectionPanel>
+        <TechStackPanel
+            languages={props.data.languages!}
+            platforms={props.data.platforms!}
+            frameworks={props.data.frameworks!}
+        />
     )
 
     const updatePanel = (

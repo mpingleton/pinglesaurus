@@ -6,9 +6,7 @@ import AutomaticLayout from "../../common/layouts/AutomaticLayout"
 import Box from "../../common/components/atomic/Box"
 import VStack from "../../common/components/atomic/VStack"
 import HStack from "../../common/components/atomic/HStack"
-import HDivider from "../../common/components/atomic/HDivider"
 import Panel from "../../common/components/atomic/Panel"
-import Badge from "../../common/components/atomic/Badge"
 import TitleText from "../../common/components/atomic/TitleText"
 import BodyText from "../../common/components/atomic/BodyText"
 import Image from "../../common/components/atomic/Image"
@@ -16,6 +14,7 @@ import Image from "../../common/components/atomic/Image"
 import ProfileImage from "../../common/components/molecular/ProfileImage"
 import SectionPanel from "../../common/components/molecular/SectionPanel"
 import SocialMediaPanelButton from "../../common/components/molecular/SocialMediaPanelButton"
+import TechStackPanel from "../../common/components/molecular/TechStackPanel"
 
 import DataContext from "../../classes/DataContext"
 import Language from "../../classes/Language"
@@ -165,24 +164,11 @@ export default function Home() {
      */
 
     const stackPanel = (
-        <SectionPanel title="Tech Stack">
-            <VStack>
-                <BodyText centered>Programming Languages</BodyText>
-                <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
-                    {languages!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
-                </HStack>
-                <HDivider />
-                <BodyText centered>Platforms</BodyText>
-                <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
-                    {platforms!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
-                </HStack>
-                <HDivider />
-                <BodyText centered>Frameworks & Libraries</BodyText>
-                <HStack wrap gapping="2px" padding="0px" justifyItems="center" justifyContent="center">
-                    {frameworks!.map((l) => (<Badge badgeColor="black" textColor="lightgray" text={l.name} />))}
-                </HStack>
-            </VStack>
-        </SectionPanel>
+        <TechStackPanel
+            languages={languages}
+            platforms={platforms}
+            frameworks={frameworks}
+        />
     )
 
     const galleryPanel = (
