@@ -82,9 +82,9 @@ export default function SoftwareProjectProfile(props: {
     return (
         <VStack padding="0px" width="100%">
             {props.isMobile ? (
-                <PanelButton onClicc={() => props.onBackClicc()}>
-                    <HeaderText>Back</HeaderText>
-                </PanelButton>
+                <Panel cliccable onClicc={props.onBackClicc}>
+                    <BodyText>&#8592; Back</BodyText>
+                </Panel>
             ) : undefined}
             {mainPanel}
             <XStack horizontal={!props.isMobile} vertical={props.isMobile} padding="0px">
