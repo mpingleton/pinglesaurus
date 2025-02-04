@@ -21,7 +21,8 @@ export default function Modal(props: {
         right: "0px",
         backgroundColor: "rgba(0, 0, 0, 0.7)",
         backdropFilter: "blur(4px)",
-        WebkitBackdropFilter: "blur(4px)"
+        WebkitBackdropFilter: "blur(4px)",
+        color: "lightgray"
     }
 
     const modalStyle: React.CSSProperties = {
@@ -31,7 +32,8 @@ export default function Modal(props: {
         top: `calc(50% - ${props.height} / 2)`,
         left: `calc(50% - ${props.width} / 2)`,
         width: props.width,
-        height: props.height
+        height: props.height,
+        color: "lightgray"
     }
 
     return (
