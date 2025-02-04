@@ -14,7 +14,7 @@ export default function SectionPanel(props: {
 
     return (
         <Panel width={props.width} height={props.height}>
-            <VStack gapping="4px" padding="0px">
+            <VStack gapping="4px" padding="0px" height="100%">
                 <HeaderText>{props.title}</HeaderText>
                 <HDivider />
                 {props.children}
