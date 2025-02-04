@@ -22,6 +22,8 @@ export default function Modal(props: {
         backgroundColor: "rgba(0, 0, 0, 0.7)",
         backdropFilter: "blur(4px)",
         WebkitBackdropFilter: "blur(4px)",
+        animationName: "mobilelayout_linkpage_appear",
+        animationDuration: "0.2s",
         color: "lightgray"
     }
 
