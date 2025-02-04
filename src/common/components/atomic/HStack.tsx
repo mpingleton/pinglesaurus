@@ -21,6 +21,7 @@ export default function HStack(props: {
         padding: props.padding === undefined ? "8px" : props.padding!,
         gap: props.gapping === undefined ? "8px" : props.gapping!,
         flexWrap: props.wrap ? "wrap" : "nowrap",
+        overflow: props.wrap ? "wrap" : "clip"
     }
 
     return (<div style={st}>{props.children}</div>)
