@@ -100,6 +100,24 @@ body {
   }
 }
 
+@keyframes panel_focused_mouseover {
+  0% {
+    background-image: url('/public/images/gradient-bar.png');
+  }
+  100% {
+    background-image: url('/public/images/gradient-bar_hover.png');
+  }
+}
+
+@keyframes panel_focused_mouseout {
+  0% {
+    background-image: url('/public/images/gradient-bar_hover.png');
+  }
+  100% {
+    background-image: url('/public/images/gradient-bar.png');
+  }
+}
+
 @keyframes panel_mousedown {
   0% {
     background-color: rgba(0, 50, 100, 0.6);

@@ -2,6 +2,7 @@ import React, { useState } from "react"
 
 export default function Panel(props: {
     cliccable?: boolean,
+    focused?: boolean,
     onClicc?: () => void,
     width?: string,
     height?: string,
@@ -17,12 +18,12 @@ export default function Panel(props: {
         }
     }
 
-    let backgroundColor = "rgba(0, 0, 0, 0.6)"
+    let backgroundColor = props.focused ? "rgba(0, 50, 100, 0.6)" : "rgba(0, 0, 0, 0.6)"
     let backgroundImage = undefined
     let animationName = undefined
     if (props.cliccable) {
         backgroundImage = "url('/images/gradient-bar.png')"
-        animationName = "panel_mouseout"
+        animationName = props.focused ? "panel_focused_mouseout" : "panel_mouseout"
 
         if (isClicc) {
             backgroundColor = "rgba(0, 50, 100, 0.6)"
@@ -30,7 +31,7 @@ export default function Panel(props: {
         } else if (isHover) {
             backgroundColor = "rgba(0, 50, 100, 0.6)"
             backgroundImage = "url('/images/gradient-bar_hover.png')"
-            animationName = "panel_mouseover"
+            animationName = props.focused ? "panel_focused_mouseover" : "panel_mouseover"
         }
     }
 
