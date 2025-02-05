@@ -1,13 +1,12 @@
 import React from "react"
+import { isMobile, isBrowser } from "react-device-detect"
 
-import Box from "../atomic/Box"
-import Panel from "../atomic/Panel"
 import VStack from "../atomic/VStack"
-import HStack from "../atomic/HStack"
 import BodyText from "../atomic/BodyText"
 import SubtleText from "../atomic/SubtleText"
 
 import ConfirmationModal from "./ConfirmationModal"
+import XStack from "./XStack"
 
 export default function RedirectModal(props: {
     isOpen: boolean,
@@ -26,20 +25,29 @@ export default function RedirectModal(props: {
             onProceed={props.onProceed}
             isMobile={props.isMobile}
         >
-            <HStack padding="0px" width="100%">
-                <VStack
-                    width={props.isMobile ? "48px" : "100px"}
+            <XStack
+                padding="0px"
+                width="100%"
+                horizontal={isBrowser}
+                vertical={isMobile}
+                justifyItems="center"
+                justifyContent="center"
+            >
+                <XStack
+                    width={props.isMobile ? "auto" : "100px"}
                     height={props.isMobile ? "48px" : "100px"}
+                    horizontal={isBrowser}
+                    vertical={isMobile}
                     justifyItems="center"
                     justifyContent="center"
                 >
                     {props.siteIcon}
-                </VStack>
+                </XStack>
                 <VStack wrap>
                     <BodyText centered>{`You will be redirected to ${props.siteName}, an external website.  Proceed?`}</BodyText>
                     <SubtleText centered>{props.siteUrl}</SubtleText>
                 </VStack>
-            </HStack>
+            </XStack>
         </ConfirmationModal>
     )
 }
