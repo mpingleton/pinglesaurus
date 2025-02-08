@@ -1,5 +1,6 @@
 import React from "react"
 
+import TitleText from "../../../common/components/atomic/TitleText"
 import VStack from "../../../common/components/atomic/VStack"
 import HeaderText from "../../../common/components/atomic/HeaderText"
 import BodyText from "../../../common/components/atomic/BodyText"
@@ -24,7 +25,7 @@ export default function BlogPostDisplay(props: {
             ) : undefined}
             <Panel>
                 <VStack padding="0px" width="100%" gapping="16px">
-                    <HeaderText centered>{props.data.title}</HeaderText>
+                    <TitleText centered>{props.data.title}</TitleText>
                     <BodyText centered>{props.data.subtitle}</BodyText>
                     {props.data.sections!.map((s) => (<BlogPostDisplaySection data={s} />))}
                 </VStack>

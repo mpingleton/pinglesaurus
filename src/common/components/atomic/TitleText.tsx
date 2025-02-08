@@ -15,7 +15,7 @@ export default function HeaderText(props: {
 
     const st: React.CSSProperties = {
         fontFamily: "Arial, sans-serif",
-        fontSize: "28pt",
+        fontSize: "24pt",
         fontWeight: "bold",
         margin: "0px",
         padding: "0px",

@@ -1,6 +1,7 @@
 import React from "react"
 
 import VStack from "../../../common/components/atomic/VStack"
+import TitleText from "../../../common/components/atomic/TitleText"
 import HeaderText from "../../../common/components/atomic/HeaderText"
 import BodyText from "../../../common/components/atomic/BodyText"
 import Image from "../../../common/components/atomic/Image"
@@ -30,7 +31,7 @@ export default function SoftwareProjectProfile(props: {
                     alt={props.data.name}
                 />
                 <VStack>
-                    <HeaderText centered={props.isMobile}>{props.data.name}</HeaderText>
+                    <TitleText centered={props.isMobile}>{props.data.name}</TitleText>
                     <BodyText centered={props.isMobile}>{props.data.fullDesc}</BodyText>
                 </VStack>
             </XStack>
