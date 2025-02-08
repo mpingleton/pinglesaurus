@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "published": "2025-02-08T15:24:18+0000",
+  "title": "Test",
+  "subtitle": "This is a test article!",
+  "particles": [
+    {
+      "type": "PARAGRAPH_PARTICLE",
+      "text": "This is a test paragraph!"
+    },
+    {
+      "type": "PARAGRAPH_PARTICLE",
+      "text": "This is another test paragraph!"
+    }
+  ]
+}

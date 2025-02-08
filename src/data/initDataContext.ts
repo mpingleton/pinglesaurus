@@ -3,6 +3,7 @@ import Language from "../classes/Language"
 import Platform from "../classes/Platform"
 import Framework from "../classes/Framework"
 import SoftwareProject from "../classes/SoftwareProject"
+import BlogPost from "../classes/BlogPost"
 
 export default async function initDataContext(): Promise<DataContext> {
     let newCtx = new DataContext()
@@ -45,6 +46,19 @@ export default async function initDataContext(): Promise<DataContext> {
             const o = new SoftwareProject()
             o.parseObject(i)
             return o
+        })
+    } else {
+        throw 1
+    }
+
+    const resBlog = await fetch("/blog/list.json")
+    if (resBlog.status === 200) {
+        const dataObject = await resBlog.json()
+
+        newCtx.blogPosts = dataObject.map((i: object) => {
+            const p = new BlogPost()
+            p.parseObject(i)
+            return p
         })
     } else {
         throw 1

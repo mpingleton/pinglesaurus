@@ -1,0 +1,30 @@
+{
+  "id": 2,
+  "published": "2025-02-08T15:24:18+0000",
+  "title": "Test 2",
+  "subtitle": "This is a another test article!",
+  "particles": [
+    {
+      "type": "PARAGRAPH_PARTICLE",
+      "text": "This is a test paragraph!"
+    },
+    {
+      "type": "IMAGE_PARTICLE",
+      "url": "/images/question.png",
+      "caption": "This is a test image"
+    },
+    {
+      "type": "IMAGE_PARTICLE",
+      "url": "/images/question.png",
+      "caption": "This is another test image"
+    },
+    {
+      "type": "PARAGRAPH_PARTICLE",
+      "text": "This is a test paragraph! Hello"
+    },
+    {
+      "type": "PARAGRAPH_PARTICLE",
+      "text": "This is a test paragraph! Hello"
+    }
+  ]
+}
