@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "ProGraph Calculator",
-    "iconUrl": "/images/projects/1/icon.png",
+    "iconUrl": "/software/1/icon.png",
     "shortDesc": "Graph equations and points.",
     "fullDesc": "Graph equations and points, as well as analyze them.",
     "downloads": [],
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "SAMS",
-    "iconUrl": "/images/projects/2/icon.png",
+    "iconUrl": "/software/2/icon.png",
     "shortDesc": "Schedule drone missions.",
     "fullDesc": "Schedule drone missions and track operator & asset readiness.",
     "downloads": [],
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Myelin",
-    "iconUrl": "/images/projects/3/icon.png",
+    "iconUrl": "/software/3/icon.png",
     "shortDesc": "Modern ANN engine.",
     "fullDesc": "Modern artificial neural networking (ANN) engine.",
     "downloads": [],

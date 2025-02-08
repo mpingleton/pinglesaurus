@@ -38,7 +38,7 @@ export default async function initDataContext(): Promise<DataContext> {
         throw 1
     }
 
-    const resSoftware = await fetch("/software.json")
+    const resSoftware = await fetch("/software/list.json")
     if (resSoftware.status === 200) {
         const dataObject = await resSoftware.json()
         

@@ -1,0 +1,12 @@
+{
+  "id": 3,
+  "name": "Myelin",
+  "iconUrl": "/software/3/icon.png",
+  "shortDesc": "Modern ANN engine.",
+  "fullDesc": "Modern artificial neural networking (ANN) engine.",
+  "downloads": [],
+  "repositories": [],
+  "languageIds": [1],
+  "platformIds": [1, 2, 3],
+  "frameworkIds": [3]
+}

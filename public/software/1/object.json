@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "name": "ProGraph Calculator",
+  "iconUrl": "/software/1/icon.png",
+  "shortDesc": "Graph equations and points.",
+  "fullDesc": "Graph equations and points, as well as analyze them.",
+  "downloads": [],
+  "repositories": [],
+  "languageIds": [4, 5],
+  "platformIds": [4, 5],
+  "frameworkIds": []
+}

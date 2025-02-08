@@ -10,16 +10,5 @@ export default async function getAllSoftwareProjects(ctx: DataContext): Promise<
         throw 1
     }
 
-    const softwarePromises = ctx.software!.map(async (d) => {
-        const o = d.clone()
-
-        o.languages = await Promise.all(o.languageIds.map((i) => getLanguageById(ctx, i)))
-        o.platforms = await Promise.all(o.platformIds.map((i) => getPlatformById(ctx, i)))
-        o.frameworks = await Promise.all(o.frameworkIds.map((i) => getFrameworkById(ctx, i)))
-
-        return o
-    })
-
-
-    return await Promise.all(softwarePromises)
+    return ctx.software!.map((d) => d.clone())
 }

@@ -16,6 +16,7 @@ import DataContext from "../../classes/DataContext"
 import SoftwareProject from "../../classes/SoftwareProject"
 
 import initDataContext from "../../data/initDataContext"
+import getSoftwareProjectById from "../../data/getSoftwareProjectById"
 import getAllSoftwareProjects from "../../data/getAllSoftwareProjects"
 
 export default function SoftwareProjects() {
@@ -23,6 +24,7 @@ export default function SoftwareProjects() {
     const [ctx, setCtx] = useState<DataContext>(new DataContext())
     const [software, setSoftware] = useState<SoftwareProject[] | undefined>(undefined)
     const [indexSelected, setIndexSelected] = useState<number | undefined>(undefined)
+    const [objectSelected, setObjectSelected] = useState<SoftwareProject | undefined>(undefined)
 
     useEffect(() => {
         if (!ctx.isInitialized) {
@@ -35,6 +37,16 @@ export default function SoftwareProjects() {
                 .catch((err) => console.error(err))
         }
     }, [ctx])
+
+    useEffect(() => {
+        if (indexSelected === undefined) {
+            setObjectSelected(undefined)
+        } else {
+            getSoftwareProjectById(ctx, software[indexSelected].id)
+                .then((d) => setObjectSelected(d))
+                .catch((err) => console.log(err))
+        }
+    }, [indexSelected])
 
     if (!ctx.isInitialized || software === undefined) {
         return (<AutomaticLayout loading navId="software" title="Software Projects" />)
@@ -51,12 +63,12 @@ export default function SoftwareProjects() {
         <HStack>
             <VStack padding="0px" width="400px">{softwareList}</VStack>
             <VDivider />
-            {indexSelected === undefined ?
+            {objectSelected === undefined ?
                 (<HStack padding="0px" width="100%"><Panel>
                     <BodyText centered>Select a project on the left</BodyText>
                 </Panel></HStack>) :
                 (<SoftwareProjectProfile
-                    data={software[indexSelected!]}
+                    data={objectSelected!}
                     isMobile={false}
                     onBackClicc={() => setIndexSelected(undefined)}
                 />)}
@@ -65,10 +77,10 @@ export default function SoftwareProjects() {
 
     const mobileLayout = (
         <HStack>
-            {indexSelected === undefined ?
+            {objectSelected === undefined ?
                 (<VStack padding="0px" width="100%">{softwareList}</VStack>) :
                 (<SoftwareProjectProfile
-                    data={software[indexSelected!]}
+                    data={objectSelected!}
                     isMobile={true}
                     onBackClicc={() => setIndexSelected(undefined)}
                 />)}

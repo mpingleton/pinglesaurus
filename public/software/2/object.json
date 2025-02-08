@@ -1,0 +1,12 @@
+{
+  "id": 2,
+  "name": "SAMS",
+  "iconUrl": "/software/2/icon.png",
+  "shortDesc": "Schedule drone missions.",
+  "fullDesc": "Schedule drone missions and track operator & asset readiness.",
+  "downloads": [],
+  "repositories": [],
+  "languageIds": [6],
+  "platformIds": [6],
+  "frameworkIds": [6, 7, 4, 5]
+}
