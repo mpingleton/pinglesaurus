@@ -1,30 +1,40 @@
 {
   "id": 2,
   "published": "2025-02-08T15:24:18+0000",
-  "title": "Test 2",
+  "title": "This Is Another Test Article",
   "subtitle": "This is a another test article!",
-  "particles": [
+  "sections": [
     {
-      "type": "PARAGRAPH_PARTICLE",
-      "text": "This is a test paragraph!"
+      "title": "Section 1",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "This is a test paragraph!"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "url": "/images/question.png",
+          "caption": "This is a test image"
+        }
+      ]
     },
     {
-      "type": "IMAGE_PARTICLE",
-      "url": "/images/question.png",
-      "caption": "This is a test image"
-    },
-    {
-      "type": "IMAGE_PARTICLE",
-      "url": "/images/question.png",
-      "caption": "This is another test image"
-    },
-    {
-      "type": "PARAGRAPH_PARTICLE",
-      "text": "This is a test paragraph! Hello"
-    },
-    {
-      "type": "PARAGRAPH_PARTICLE",
-      "text": "This is a test paragraph! Hello"
+      "title": "Section Two",
+      "particles": [
+        {
+          "type": "IMAGE_PARTICLE",
+          "url": "/images/question.png",
+          "caption": "This is another test image"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "This is a test paragraph! Hello"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "This is a test paragraph! Hello"
+        }
+      ]
     }
   ]
 }
