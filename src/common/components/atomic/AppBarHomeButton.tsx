@@ -13,10 +13,10 @@ export default function AppBarHomeButton(props: {
         }
     }
 
-    let background = "url('images/homebutton.png')"
+    let background = "url('/images/homebutton.png')"
     let animation = "mainlayout_homebutton_mouseout"
     if (props.highlighted || isHover) {
-        background = "url('images/homebutton_hover.png')"
+        background = "url('/images/homebutton_hover.png')"
         animation = "mainlayout_homebutton_mouseover"
     }
 
