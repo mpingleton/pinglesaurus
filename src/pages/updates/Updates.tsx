@@ -29,6 +29,10 @@ export default function Updates() {
         }
     }, [ctx])
 
+    if (!ctx.isInitialized || updates === undefined) {
+        return (<AutomaticLayout loading navId="updates" title="Updates" />)
+    }
+
     const updatePanels = updates!.map((u) => (<UpdatePanel data={u} />))
 
     return (
