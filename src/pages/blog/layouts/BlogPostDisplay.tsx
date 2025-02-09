@@ -2,7 +2,7 @@ import React from "react"
 
 import TitleText from "../../../common/components/atomic/TitleText"
 import VStack from "../../../common/components/atomic/VStack"
-import HeaderText from "../../../common/components/atomic/HeaderText"
+import SubtitleText from "../../../common/components/atomic/SubtitleText"
 import BodyText from "../../../common/components/atomic/BodyText"
 import Panel from "../../../common/components/atomic/Panel"
 
@@ -27,6 +27,7 @@ export default function BlogPostDisplay(props: {
                 <VStack padding="0px" width="100%" gapping="16px">
                     <TitleText centered>{props.data.title}</TitleText>
                     <BodyText centered>{props.data.subtitle}</BodyText>
+                    <SubtitleText centered>{props.data.published.toLocaleDateString()}</SubtitleText>
                     {props.data.sections!.map((s) => (<BlogPostDisplaySection data={s} />))}
                 </VStack>
             </Panel>
