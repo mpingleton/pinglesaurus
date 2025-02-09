@@ -4,6 +4,7 @@ import Platform from "../classes/Platform"
 import Framework from "../classes/Framework"
 import SoftwareProject from "../classes/SoftwareProject"
 import BlogPost from "../classes/BlogPost"
+import Update from "../classes/Update"
 
 export default async function initDataContext(): Promise<DataContext> {
     let newCtx = new DataContext()
@@ -59,6 +60,19 @@ export default async function initDataContext(): Promise<DataContext> {
             const p = new BlogPost()
             p.parseObject(i)
             return p
+        })
+    } else {
+        throw 1
+    }
+
+    const resUpdate = await fetch("/updates/list.json")
+    if (resUpdate.status === 200) {
+        const dataObject = await resUpdate.json()
+
+        newCtx.updates = dataObject.map((i: object) => {
+            const o = new Update()
+            o.parseObject(i)
+            return o
         })
     } else {
         throw 1
