@@ -1,19 +1,43 @@
 {
   "id": 1,
-  "published": "2025-02-08T15:24:18+0000",
-  "title": "Test",
-  "subtitle": "This is a test article!",
+  "published": "2025-02-01T18:00:00+0000",
+  "title": "Introduction to \"The Bit Whisperer\"",
+  "subtitle": "",
   "sections": [
     {
-      "title": "This Section",
+      "title": "",
       "particles": [
         {
           "type": "PARAGRAPH_PARTICLE",
-          "text": "This is a test paragraph!"
+          "text": "Welcome to The Bit Whisperer, a publication in which we’ll explore various STEM topics together by means of creative pursuit. I started this publication for a few different reasons. I want to inspire and educate fellow nerds who have “the knack.” Such is best done through exploration driven by curiosity. “The knack” can be extremely difficult to quantify, but you know it when you see it. There are several different types of topics which you’ll find here, ranging from hardware to software, to mathematics, philosophy, and even art!"
         },
         {
           "type": "PARAGRAPH_PARTICLE",
-          "text": "This is another test paragraph!"
+          "text": "Technological innovation is a collaborative effort among all of us. I want to encourage dialogue around responsible innovation and implementation of new technologies into our everyday lives. As such, some of the material you will see here will be theoretical and philosophical in nature. Technology should be developed with the aim to help people; it should augment our human capabilities, not to replace us. Getting people to talk about this is the best way to ensure that we are working toward a brighter future."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "I want to educate people on the topic of developing software, designing electrical circuits, 3D printing, and the like. I also want to share the projects that I have been working on with the wider world. I want to gather feedback and ideas from you, dear reader, so that we can explore such ideas together. Some of these projects include a laser-based IP network, 3D printed computer desk, a telephone switch, and some ideas involving traffic signals, etc. Additionally, we’ll explore such wonders as the Apollo 11’s guidance computer and reverse-engineer its software. I will be writing subsequent articles for each of these projects, as well as how new ideas influence the evolution of these projects."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "I’m a rather nostalgic person. There are several projects from my teenage years that I would like to revisit here. One of these projects was a telemetry system that I developed for my school’s NASA Human Exploration Rover Challenge team. Another such project was a simple video game that I developed which used a piece of gym equipment as a controller, which was part of a group project in high school. It was a parody of Flappy Bird which we affectionately referred to as “Flappy Muscles.” I still have the source code for some of these projects and will write more about them in the near future."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "I do have some personal stories from my childhood of when \"the knack\" was in full effect. I was born in Florida, near Cape Canaveral. I lived there for the first four years of my life. Despite only living there until the age of four, I have a surprisingly robust repository of memories from this time and place. My family’s house was located a short distance from the Kennedy Space Center and Cocoa Beach. This meant that I could watch the space shuttle launches from my bedroom window. On a couple occasions, I even saw NASA’s Boeing 747 shuttle-carrier flying over our house! I also remember being fixated on anything mechanical or electrical, and attempting to mentally reverse engineer it until I fully understood how it worked. This included appliances, power tools, computers, and child-safety locks. In hindsight, the rather abnormal abundance of child-safety locks around the house may have been a result of my tinkering antics. Sometimes, I would also build models of electrical circuits out of construction paper. At the age of eleven, I figured out how to write very simple computer software. I remember bringing these pieces of software into school impressing my teachers with what I had created. I also lived most of my life in Dayton, Ohio where I was surrounded by Wright brothers memorabilia. As such, I’ve always been fascinated by aircraft and spacecraft. This is only the tip of the iceberg, and I may write subsequent articles about these childhood stories in more detail. If you can relate to these experiences, you may just have \"the knack\" yourself!"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Another thing I would like to explore here are the artful inventions that revolutionized our world. In my opinion, many inventions can and should be considered works of art, and their inventors considered to be artists. The creative nature of many of the world’s inventions required a similar creative talent that was present in the likes of Pablo Picasso and Leonardo da Vinci. Unfortunately, the artistic nature of these inventions and the creative genius of their inventors often go under-appreciated simply because they are beyond many people’s comprehension."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Most people will look at a painting, read a poem, or listen to a song, and immediately be able to appreciate the artistic intent behind it. One can, by comparison, easily speculate what the artist, poet, or composer was thinking and feeling in pursuit of their works. I believe it takes a special type of nerd to have this type of detailed appreciation for the inventions that revolutionized our world. Most people are familiar with the mere fact that the Wright brothers invented the first powered aircraft, with the fact that Almon Strowger invented the automatic telephone exchange, or with how Nikola Tesla invented the AC motor and the concept of three-phase power transmission. However, too few people have a genuine appreciation for the level of creative thought coupled with problem-solving genius that led these inventors towards their inventions. Most people are only vaguely familiar with the mere fact that such inventors were geniuses. Most people don’t bother to look beyond the surface level of what they can immediately see; they just look an invention as a sort of black box and just call it \"magic.\" These were only a few examples; there are many more like this! I do want to explore more examples of such artistic inventions in detail to give them the appreciation they deserve."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Whether you believe that you have \"the knack\" yourself, want to explore the philosophical side of technological innovation, or are simply curious about any of the above, you are in the right place! I do hope that you’ll consider sticking around to explore this world with me."
         }
       ]
     }
