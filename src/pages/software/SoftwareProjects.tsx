@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { BrowserView, MobileView } from "react-device-detect"
+import { useNavigate } from "react-router-dom"
+import { isMobile } from "react-device-detect"
 
 import AutomaticLayout from "../../common/layouts/AutomaticLayout"
 
@@ -8,6 +9,9 @@ import Panel from "../../common/components/atomic/Panel"
 import VStack from "../../common/components/atomic/VStack"
 import HStack from "../../common/components/atomic/HStack"
 import VDivider from "../../common/components/atomic/VDivider"
+import Image from "../../common/components/atomic/Image"
+
+import RedirectModal from "../../common/components/molecular/RedirectModal"
 
 import SoftwareProjectPanelButton from "./components/SoftwareProjectPanelButton"
 import SoftwareProjectProfile from "./layouts/SoftwareProjectProfile"
@@ -20,11 +24,26 @@ import getSoftwareProjectById from "../../data/getSoftwareProjectById"
 import getAllSoftwareProjects from "../../data/getAllSoftwareProjects"
 
 export default function SoftwareProjects() {
+    const navigate = useNavigate()
+
+    const [isRedirectModalOpen, setRedirectModalOpen] = useState<boolean>(false)
+    const [infoRedirectModalName, setRedirectModalName] = useState<string | undefined>(undefined)
+    const [infoRedirectModalUrl, setRedirectModalUrl] = useState<string | undefined>(undefined)
 
     const [ctx, setCtx] = useState<DataContext>(new DataContext())
     const [software, setSoftware] = useState<SoftwareProject[] | undefined>(undefined)
     const [indexSelected, setIndexSelected] = useState<number | undefined>(undefined)
     const [objectSelected, setObjectSelected] = useState<SoftwareProject | undefined>(undefined)
+
+    function setRedirectModal(name: string, url: string) {
+        setRedirectModalName(name)
+        setRedirectModalUrl(url)
+        setRedirectModalOpen(true)
+    }
+
+    function executeRedirect() {
+        navigate(infoRedirectModalUrl!)
+    }
 
     useEffect(() => {
         if (!ctx.isInitialized) {
@@ -71,6 +90,7 @@ export default function SoftwareProjects() {
                     data={objectSelected!}
                     isMobile={false}
                     onBackClicc={() => setIndexSelected(undefined)}
+                    onDownloadClicc={setRedirectModal}
                 />)}
         </HStack>
     )
@@ -83,9 +103,33 @@ export default function SoftwareProjects() {
                     data={objectSelected!}
                     isMobile={true}
                     onBackClicc={() => setIndexSelected(undefined)}
+                    onDownloadClicc={setRedirectModal}
                 />)}
         </HStack>
     )
+
+    const modals = [
+        (
+            <RedirectModal
+                isOpen={isRedirectModalOpen}
+                onClose={() => setRedirectModalOpen(false)}
+                onProceed={() => executeRedirect()}
+                isMobile={isMobile}
+                siteName={infoRedirectModalName}
+                siteIcon={
+                    <Image
+                        width="48px"
+                        height="48px"
+                        alt="icon"
+                        url="/images/question.png"
+                        bordered
+                        centered
+                    />
+                }
+                siteUrl={infoRedirectModalUrl}
+            />
+        )
+    ]
 
     return (
         <AutomaticLayout
@@ -93,6 +137,7 @@ export default function SoftwareProjects() {
             title="Software Projects"
             desktopLayout={desktopLayout}
             mobileLayout={mobileLayout}
+            modals={modals}
         />
     )
 }

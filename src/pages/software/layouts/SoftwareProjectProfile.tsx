@@ -2,7 +2,6 @@ import React from "react"
 
 import VStack from "../../../common/components/atomic/VStack"
 import TitleText from "../../../common/components/atomic/TitleText"
-import HeaderText from "../../../common/components/atomic/HeaderText"
 import BodyText from "../../../common/components/atomic/BodyText"
 import Image from "../../../common/components/atomic/Image"
 import Panel from "../../../common/components/atomic/Panel"
@@ -10,13 +9,16 @@ import Panel from "../../../common/components/atomic/Panel"
 import XStack from "../../../common/components/molecular/XStack"
 import SectionPanel from "../../../common/components/molecular/SectionPanel"
 
+import DownloadLinkButton from "../components/DownloadLinkButton"
+
 import SoftwareProject from "../../../classes/SoftwareProject"
 import TechStackPanel from "../../../common/components/molecular/TechStackPanel"
 
 export default function SoftwareProjectProfile(props: {
     data: SoftwareProject,
     isMobile: boolean,
-    onBackClicc: () => void
+    onBackClicc: () => void,
+    onDownloadClicc: (name: string, url: string) => void
 }) {
 
     const mainPanel = (
@@ -40,7 +42,9 @@ export default function SoftwareProjectProfile(props: {
 
     const downloadPanel = (
         <SectionPanel title="Download Links">
-            <BodyText centered>Under Construction</BodyText>
+            {props.data.downloads.map((d) => (
+                <DownloadLinkButton data={d} onClicc={props.onDownloadClicc} />
+            ))}
         </SectionPanel>
     )
 
@@ -74,7 +78,7 @@ export default function SoftwareProjectProfile(props: {
             {mainPanel}
             <XStack horizontal={!props.isMobile} vertical={props.isMobile} padding="0px">
                 <VStack padding="0px" width={props.isMobile ? "100%" : "500px"}>
-                    {downloadPanel}
+                    {props.data.downloads.length > 0 ? downloadPanel : undefined}
                     {updatePanel}
                     {stackPanel}
                 </VStack>

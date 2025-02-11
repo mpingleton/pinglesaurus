@@ -4,7 +4,18 @@
   "iconUrl": "/software/1/icon.png",
   "shortDesc": "Graph equations and points.",
   "fullDesc": "Graph equations and points, as well as analyze them.",
-  "downloads": [],
+  "downloads": [
+    {
+      "type": "GOOGLEPLAY",
+      "url": "//play.google.com/store/apps/details?id=us.pingyx.prographcalculator",
+      "description": "Download for Android"
+    },
+    {
+      "type": "APPSTORE",
+      "url": "//apps.apple.com/us/app/prograph-calculator/id1629338359",
+      "description": "Download for iPhone"
+    }
+  ],
   "repositories": [],
   "languageIds": [4, 5],
   "platformIds": [4, 5],
