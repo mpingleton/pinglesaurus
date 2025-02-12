@@ -9,6 +9,7 @@ import Panel from "../../../common/components/atomic/Panel"
 import XStack from "../../../common/components/molecular/XStack"
 import SectionPanel from "../../../common/components/molecular/SectionPanel"
 
+import ScreenshotPanel from "../components/ScreenshotPanel"
 import DownloadLinkButton from "../components/DownloadLinkButton"
 
 import SoftwareProject from "../../../classes/SoftwareProject"
@@ -43,7 +44,10 @@ export default function SoftwareProjectProfile(props: {
     const downloadPanel = (
         <SectionPanel title="Download Links">
             {props.data.downloads.map((d) => (
-                <DownloadLinkButton data={d} onClicc={props.onDownloadClicc} />
+                <DownloadLinkButton
+                    data={d}
+                    onClicc={props.onDownloadClicc}
+                />
             ))}
         </SectionPanel>
     )
@@ -62,12 +66,6 @@ export default function SoftwareProjectProfile(props: {
         </SectionPanel>
     )
 
-    const screenshotPanel = (
-        <SectionPanel title="Screenshots">
-            <BodyText centered>Under Construction</BodyText>
-        </SectionPanel>
-    )
-
     return (
         <VStack padding="0px" width="100%">
             {props.isMobile ? (
@@ -82,7 +80,7 @@ export default function SoftwareProjectProfile(props: {
                     {updatePanel}
                     {stackPanel}
                 </VStack>
-                {screenshotPanel}
+                <ScreenshotPanel data={props.data} isMobile={props.isMobile} />
             </XStack>
         </VStack>
     )
