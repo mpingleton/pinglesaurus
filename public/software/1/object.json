@@ -16,6 +16,48 @@
       "description": "Download for iPhone"
     }
   ],
+  "screenshots": [
+    {
+      "imageUrl": "/software/1/screenshots/1.png",
+      "description": "Graphing sin(x)=y and and cos(x)=y."
+    },
+    {
+      "imageUrl": "/software/1/screenshots/2.png",
+      "description": "Listing of sin(x)=y and and cos(x)=y."
+    },
+    {
+      "imageUrl": "/software/1/screenshots/3.png",
+      "description": "Listing of tan(x)=y."
+    },
+    {
+      "imageUrl": "/software/1/screenshots/4.png",
+      "description": "Listing of tan(x)=y."
+    },
+    {
+      "imageUrl": "/software/1/screenshots/5.png",
+      "description": "Equation editor showing cos(x)=y."
+    },
+    {
+      "imageUrl": "/software/1/screenshots/6.png",
+      "description": "Points."
+    },
+    {
+      "imageUrl": "/software/1/screenshots/7.png",
+      "description": "\"Find Axis Crossings\" analyzer working on sin(x)=y."
+    },
+    {
+      "imageUrl": "/software/1/screenshots/8.png",
+      "description": "Equations and points shown on the graph after the analysis of the equation sin(x)=y."
+    },
+    {
+      "imageUrl": "/software/1/screenshots/9.png",
+      "description": "Graphing a circle in blue."
+    },
+    {
+      "imageUrl": "/software/1/screenshots/10.png",
+      "description": "Graphing a circle in red."
+    }
+  ],
   "repositories": [],
   "languageIds": [4, 5],
   "platformIds": [4, 5],
