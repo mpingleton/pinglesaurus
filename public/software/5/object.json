@@ -2,7 +2,7 @@
   "id": 5,
   "name": "AGC Emulator",
   "iconUrl": "/images/question.png",
-  "shortDesc": "Emulator and assembler for the AGC computer.",
+  "shortDesc": "Emulator for the AGC computer.",
   "fullDesc": "A complete assembler and emulator for the Apollo Guidance Computer (AGC).",
   "downloads": [],
   "repositories": [],
