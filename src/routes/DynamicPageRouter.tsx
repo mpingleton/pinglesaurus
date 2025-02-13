@@ -8,8 +8,7 @@ import Gallery from "../pages/gallery/Gallery"
 import Blog from "../pages/blog/Blog"
 import Updates from "../pages/updates/Updates"
 import Contact from "../pages/contact/Contact"
-
-import AutomaticLayout from "../common/layouts/AutomaticLayout"
+import Privacy from "../pages/privacy/Privacy"
 
 import DataContext from "../classes/DataContext"
 import initDataContext from "../data/initDataContext"
@@ -43,6 +42,8 @@ export default function DynamicPageRouter(props: { onPageId?: string }) {
             setPageId("updates")
         } else if (toUrl === "/contact") {
             setPageId("contact")
+        } else if (toUrl === "/privacy") {
+            setPageId("privacy")
         } else {
             navigate(toUrl)
         }
@@ -62,6 +63,8 @@ export default function DynamicPageRouter(props: { onPageId?: string }) {
         return (<Updates ctx={ctx} navFunc={navFunc} />)
     } else if (pageId === "contact") {
         return (<Contact ctx={ctx} navFunc={navFunc} />)
+    } else if (pageId === "privacy") {
+        return (<Privacy navFunc={navFunc} />)
     }
 
     return null

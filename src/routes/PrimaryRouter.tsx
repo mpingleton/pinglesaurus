@@ -8,10 +8,6 @@ import DynamicPageRouter from "./DynamicPageRouter"
 
 export default function PrimaryRouter() {
 
-    function navFunc(toUrl: string) {
-        // TODO: Figure this out!
-    }
-
     return (
         <BrowserRouter>
             <Routes>
@@ -21,7 +17,7 @@ export default function PrimaryRouter() {
                 <Route path="/blog" element={<DynamicPageRouter onPageId="blog" />} />
                 <Route path="/updates" element={<DynamicPageRouter onPageId="updates" />} />
                 <Route path="/contact" element={<DynamicPageRouter onPageId="contact" />} />
-                <Route path="/privacy" element={<Privacy navFunc={navFunc} />} />
+                <Route path="/privacy" element={<DynamicPageRouter onPageId="privacy" />} />
                 <Route path="/" element={<DynamicPageRouter />} />
             </Routes>
         </BrowserRouter>
