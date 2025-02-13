@@ -24,18 +24,59 @@ export default function MainLayout(props: {
 
     document.title = `${props.title} - Pinglesaur.us`
 
-    const appBarHome = (<AppBarHomeButton href="/" highlighted={props.navId === "home"} />)
+    const appBarHome = (
+        <AppBarHomeButton
+            onClicc={() => props.navFunc("/")}
+            highlighted={props.navId === "home"}
+        />
+    )
 
     const appBarLeft = [
-        (<AppBarButton title="Software Projects" href="/software" highlighted={props.navId === "software"} />),
-        (<AppBarButton title="3D Printing" href="/3dprinting" highlighted={props.navId === "3dprinting"} />),
-        (<AppBarButton title="Gallery" href="/gallery" highlighted={props.navId === "gallery"} />)
+        (
+            <AppBarButton
+                title="Software Projects"
+                onClicc={() => props.navFunc("/software")}
+                highlighted={props.navId === "software"}
+            />
+        ),
+        (
+            <AppBarButton
+                title="3D Printing"
+                onClicc={() => props.navFunc("/3dprinting")}
+                highlighted={props.navId === "3dprinting"}
+            />
+        ),
+        (
+            <AppBarButton
+                title="Gallery"
+                onClicc={() => props.navFunc("/gallery")}
+                highlighted={props.navId === "gallery"}
+            />
+        )
     ]
 
     const appBarRight = [
-        (<AppBarButton title="Blog" href="/blog" highlighted={props.navId === "blog"} />),
-        (<AppBarButton title="Updates" href="/updates" highlighted={props.navId === "updates"} />),
-        (<AppBarButton title="Contact" href="/contact" highlighted={props.navId === "contact"} />)
+        (
+            <AppBarButton
+                title="Blog"
+                onClicc={() => props.navFunc("/blog")}
+                highlighted={props.navId === "blog"}
+            />
+        ),
+        (
+            <AppBarButton
+                title="Updates"
+                onClicc={() => props.navFunc("/updates")}
+                highlighted={props.navId === "updates"}
+            />
+        ),
+        (
+            <AppBarButton
+                title="Contact"
+                onClicc={() => props.navFunc("/contact")}
+                highlighted={props.navId === "contact"}
+            />
+        )
     ]
 
     const loadingPanel = (

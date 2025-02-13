@@ -29,8 +29,23 @@ export default function DynamicPageRouter(props: { onPageId?: string }) {
     }, [ctx])
 
     function navFunc(toUrl: string) {
-        // TODO
-        navigate(toUrl)
+        if (toUrl === "/") {
+            setPageId("home")
+        } else if (toUrl === "/3dprinting") {
+            setPageId("3dprinting")
+        } else if (toUrl === "/software") {
+            setPageId("software")
+        } else if (toUrl === "/blog") {
+            setPageId("blog")
+        } else if (toUrl === "/gallery") {
+            setPageId("gallery")
+        } else if (toUrl === "/updates") {
+            setPageId("updates")
+        } else if (toUrl === "/contact") {
+            setPageId("contact")
+        } else {
+            navigate(toUrl)
+        }
     }
 
     if (pageId === "home") {

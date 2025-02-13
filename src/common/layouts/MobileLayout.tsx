@@ -23,13 +23,55 @@ export default function MobileLayout(props: {
     document.title = `${props.title} - Pinglesaur.us`
 
     const buttons = [
-        (<MobileAppBarButton title="Home" href="/" highlighted={props.navId === "home"} />),
-        (<MobileAppBarButton title="Software Projects" href="/software" highlighted={props.navId === "software"} />),
-        (<MobileAppBarButton title="3D Printing" href="/3dprinting" highlighted={props.navId === "3dprinting"} />),
-        (<MobileAppBarButton title="Gallery" href="/gallery" highlighted={props.navId === "gallery"} />),
-        (<MobileAppBarButton title="Blog" href="/blog" highlighted={props.navId === "blog"} />),
-        (<MobileAppBarButton title="Updates" href="/updates" highlighted={props.navId === "updates"} />),
-        (<MobileAppBarButton title="Contact" href="/contact" highlighted={props.navId === "contact"} />),
+        (
+            <MobileAppBarButton
+                title="Home"
+                onClicc={() => props.navFunc("/")}
+                highlighted={props.navId === "home"}
+            />
+        ),
+        (
+            <MobileAppBarButton
+                title="Software Projects"
+                onClicc={() => props.navFunc("/software")}
+                highlighted={props.navId === "software"}
+            />
+        ),
+        (
+            <MobileAppBarButton
+                title="3D Printing"
+                onClicc={() => props.navFunc("/3dprinting")}
+                highlighted={props.navId === "3dprinting"}
+            />
+        ),
+        (
+            <MobileAppBarButton
+                title="Gallery"
+                onClicc={() => props.navFunc("/gallery")}
+                highlighted={props.navId === "gallery"}
+            />
+        ),
+        (
+            <MobileAppBarButton
+                title="Blog"
+                onClicc={() => props.navFunc("/blog")}
+                highlighted={props.navId === "blog"}
+            />
+        ),
+        (
+            <MobileAppBarButton
+                title="Updates"
+                onClicc={() => props.navFunc("/updates")}
+                highlighted={props.navId === "updates"}
+            />
+        ),
+        (
+            <MobileAppBarButton
+                title="Contact"
+                onClicc={() => props.navFunc("/contact")}
+                highlighted={props.navId === "contact"}
+            />
+        ),
     ]
 
     const loadingPanel = (
