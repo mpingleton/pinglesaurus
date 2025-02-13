@@ -134,12 +134,6 @@ export default function Home(props: {
                     onClicc={() => setRedirectModal("Github", githubIcon, "//github.com/mpingleton")}
                 />
                 <SocialMediaPanelButton
-                    icon={favIcon}
-                    platform="Bluesky"
-                    username="@mnpingleton.bsky.social"
-                    onClicc={() => setRedirectModal("Bluesky", favIcon, "//bsky.app/profile/mnpingleton.bsky.social")}
-                />
-                <SocialMediaPanelButton
                     icon={instagramIcon}
                     platform="Instagram"
                     username="@pinglesaurus"
