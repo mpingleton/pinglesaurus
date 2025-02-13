@@ -12,6 +12,7 @@ import FooterPanel from "../components/molecular/FooterPanel"
 
 export default function MobileLayout(props: {
     navId?: string,
+    navFunc: (toUrl: string) => void,
     background?: string,
     title: string,
     loading?: boolean,

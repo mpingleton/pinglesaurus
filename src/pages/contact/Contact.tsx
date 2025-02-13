@@ -6,8 +6,12 @@ import BodyText from "../../common/components/atomic/BodyText"
 import SectionPanel from "../../common/components/molecular/SectionPanel"
 
 import AutomaticLayout from "../../common/layouts/AutomaticLayout"
+import DataContext from "../../classes/DataContext"
 
-export default function Contact() {
+export default function Contact(props: {
+    ctx: DataContext,
+    navFunc: (toUrl: string) => void
+}) {
 
     const emailIntro1 = "If you wish to inquire about a project, report a bug, make a contribution, or suggest ideas, you may reach out to me at the following email address:"
     const emailIntro2 = "Additionally, when reporting bugs please include details about you encountered the bug and how to reproduce it."
@@ -30,6 +34,7 @@ export default function Contact() {
             navId="contact"
             title="Contact"
             desktopLayout={desktopLayout}
+            navFunc={props.navFunc}
         />
     )
 }

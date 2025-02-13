@@ -14,6 +14,7 @@ import FooterPanel from "../components/molecular/FooterPanel"
 
 export default function MainLayout(props: {
     navId?: string,
+    navFunc: (toUrl: string) => void,
     background?: string,
     title: string,
     loading?: boolean,

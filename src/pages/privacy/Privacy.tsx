@@ -7,7 +7,7 @@ import VStack from "../../common/components/atomic/VStack"
 import TitlePanel from "../../common/components/molecular/TitlePanel"
 import HeaderContentPanel from "../../common/components/molecular/HeaderContentPanel"
 
-export default function Privacy() {
+export default function Privacy(props: { navFunc: (toUrl: string) => void }) {
 
     const titleIntroduction = "Introduction"
     const contentIntroduction = "The purpose of this privacy policy is to inform you of the way your data is collected, processed, and stored while using the pinglesaur.us website. It is important to employ responsible and ethical practices when handling user data."
@@ -39,6 +39,7 @@ export default function Privacy() {
         <AutomaticLayout
             title="Privacy Policy"
             desktopLayout={desktopLayout}
+            navFunc={props.navFunc}
         />
     )
 }

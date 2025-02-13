@@ -9,28 +9,24 @@ import UpdatePanel from "./components/UpdatePanel"
 import DataContext from "../../classes/DataContext"
 import Update from "../../classes/Update"
 
-import initDataContext from "../../data/initDataContext"
 import getAllUpdates from "../../data/getAllUpdates"
 
-export default function Updates() {
-
-    const [ctx, setCtx] = useState<DataContext>(new DataContext())
+export default function Updates(props: {
+    ctx: DataContext,
+    navFunc: (toUrl: string) => void
+}) {
     const [updates, setUpdates] = useState<Update[] | undefined>([])
 
     useEffect(() => {
-        if (!ctx.isInitialized) {
-            initDataContext()
-                .then((d) => setCtx(d))
-                .catch((err) => console.error(err))
-        } else {
-            getAllUpdates(ctx)
+        if (props.ctx.isInitialized) {
+            getAllUpdates(props.ctx)
                 .then((d) => setUpdates(d))
                 .catch((err) => console.error(err))
         }
-    }, [ctx])
+    }, [props.ctx])
 
-    if (!ctx.isInitialized || updates === undefined) {
-        return (<AutomaticLayout loading navId="updates" title="Updates" />)
+    if (!props.ctx.isInitialized || updates === undefined) {
+        return (<AutomaticLayout loading navId="updates" title="Updates" navFunc={props.navFunc} />)
     }
 
     const updatePanels = updates!.map((u) => (<UpdatePanel data={u} />))
@@ -40,6 +36,7 @@ export default function Updates() {
             navId="updates"
             title="Updates"
             desktopLayout={<VStack>{updatePanels}</VStack>}
+            navFunc={props.navFunc}
         />
     )
 }

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
 import { isMobile, BrowserView, MobileView } from "react-device-detect"
 
 import AutomaticLayout from "../../common/layouts/AutomaticLayout"
@@ -23,20 +22,19 @@ import Language from "../../classes/Language"
 import Platform from "../../classes/Platform"
 import Framework from "../../classes/Framework"
 
-import initDataContext from "../../data/initDataContext"
 import getAllLanguages from "../../data/getAllLanguages"
 import getAllPlatforms from "../../data/getAllPlatforms"
 import getAllFrameworks from "../../data/getAllFrameworks"
 
-export default function Home() {
-    const navigate = useNavigate()
-
+export default function Home(props: {
+    ctx: DataContext,
+    navFunc: (toUrl: string) => void
+}) {
     const [isRedirectModalOpen, setRedirectModalOpen] = useState<boolean>(false)
     const [infoRedirectModalName, setRedirectModalName] = useState<string | undefined>(undefined)
     const [infoRedirectModalIcon, setRedirectModalIcon] = useState<React.ReactNode | undefined>(undefined)
     const [infoRedirectModalUrl, setRedirectModalUrl] = useState<string | undefined>(undefined)
 
-    const [ctx, setCtx] = useState<DataContext>(new DataContext())
     const [languages, setLanguages] = useState<Language[] | undefined>(undefined)
     const [platforms, setPlatforms] = useState<Platform[] | undefined>(undefined)
     const [frameworks, setFrameworks] = useState<Framework[] | undefined>(undefined)
@@ -49,31 +47,27 @@ export default function Home() {
     }
 
     function executeRedirect() {
-        navigate(infoRedirectModalUrl!)
+        props.navFunc(infoRedirectModalUrl!)
     }
 
     useEffect(() => {
-        if (!ctx.isInitialized) {
-            initDataContext()
-                .then((d) => setCtx(d))
-                .catch((err) => console.error(err))
-        } else {
-            getAllLanguages(ctx)
+        if (props.ctx.isInitialized) {
+            getAllLanguages(props.ctx)
                 .then((d) => setLanguages(d))
                 .catch((err) => console.error(err))
 
-            getAllPlatforms(ctx)
+            getAllPlatforms(props.ctx)
                 .then((d) => setPlatforms(d))
                 .catch((err) => console.error(err))
 
-            getAllFrameworks(ctx)
+            getAllFrameworks(props.ctx)
                 .then((d) => setFrameworks(d))
                 .catch((err) => console.error(err))
         }
-    }, [ctx])
+    }, [props.ctx])
 
-    if (!ctx.isInitialized || languages === undefined || platforms === undefined || frameworks === undefined) {
-        return (<AutomaticLayout loading navId="home" title="Home" />)
+    if (!props.ctx.isInitialized || languages === undefined || platforms === undefined || frameworks === undefined) {
+        return (<AutomaticLayout loading navId="home" title="Home" navFunc={props.navFunc} />)
     }
 
     const favIcon = (<Image width="48px" height="48px" alt="icon" url="/images/question.png" bordered centered />)
@@ -256,6 +250,7 @@ export default function Home() {
             desktopLayout={desktopLayout}
             mobileLayout={mobileLayout}
             modals={modals}
+            navFunc={props.navFunc}
         />
     )
 }

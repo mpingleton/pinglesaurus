@@ -1,27 +1,28 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Home from "../pages/home/Home"
-import SoftwareProjects from "../pages/software/SoftwareProjects"
-import Prints from "../pages/prints/Prints"
-import Gallery from "../pages/gallery/Gallery"
-import Blog from "../pages/blog/Blog"
-import Updates from "../pages/updates/Updates"
-import Contacts from "../pages/contact/Contact"
 import Privacy from "../pages/privacy/Privacy"
 
+import DynamicPageRouter from "./DynamicPageRouter"
+
 export default function PrimaryRouter() {
+
+    function navFunc(toUrl: string) {
+        // TODO: Figure this out!
+    }
+
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/software" element={<SoftwareProjects />} />
-                <Route path="/3dprinting" element={<Prints />} />
-                <Route path="/gallery" element={<Gallery />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/updates" element={<Updates />} />
-                <Route path="/contact" element={<Contacts />} />
-                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/software" element={<DynamicPageRouter onPageId="software" />} />
+                <Route path="/3dprinting" element={<DynamicPageRouter onPageId="3dprinting" />} />
+                <Route path="/gallery" element={<DynamicPageRouter onPageId="gallery" />} />
+                <Route path="/blog" element={<DynamicPageRouter onPageId="blog" />} />
+                <Route path="/updates" element={<DynamicPageRouter onPageId="updates" />} />
+                <Route path="/contact" element={<DynamicPageRouter onPageId="contact" />} />
+                <Route path="/privacy" element={<Privacy navFunc={navFunc} />} />
+                <Route path="/" element={<DynamicPageRouter />} />
             </Routes>
         </BrowserRouter>
     );

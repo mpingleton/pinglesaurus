@@ -6,6 +6,7 @@ import MobileLayout from "./MobileLayout"
 
 export default function AutomaticLayout(props: {
     navId?: string,
+    navFunc: (toUrl: string) => void,
     background?: string,
     title: string,
     desktopLayout?: React.ReactNode,
@@ -19,6 +20,7 @@ export default function AutomaticLayout(props: {
             return (
                 <MobileLayout
                     navId={props.navId}
+                    navFunc={props.navFunc}
                     background={props.background}
                     title={props.title}
                     loading
@@ -29,6 +31,7 @@ export default function AutomaticLayout(props: {
         return (
             <MobileLayout
                 navId={props.navId}
+                navFunc={props.navFunc}
                 background={props.background}
                 title={props.title}
                 modals={props.modals}
@@ -41,6 +44,7 @@ export default function AutomaticLayout(props: {
             return (
                 <MainLayout
                     navId={props.navId}
+                    navFunc={props.navFunc}
                     background={props.background}
                     title={props.title}
                     loading
@@ -51,6 +55,7 @@ export default function AutomaticLayout(props: {
         return (
             <MainLayout
                 navId={props.navId}
+                navFunc={props.navFunc}
                 background={props.background}
                 title={props.title}
                 modals={props.modals}

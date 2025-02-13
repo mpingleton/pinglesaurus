@@ -6,7 +6,12 @@ import BodyText from "../../common/components/atomic/BodyText"
 import VStack from "../../common/components/atomic/VStack"
 import SectionPanel from "../../common/components/molecular/SectionPanel"
 
-export default function Gallery() {
+import DataContext from "../../classes/DataContext"
+
+export default function Gallery(props: {
+    ctx: DataContext,
+    navFunc: (toUrl: string) => void
+}) {
 
     const desktopLayout= (
         <VStack>
@@ -21,6 +26,7 @@ export default function Gallery() {
             navId="gallery"
             title="Gallery"
             desktopLayout={desktopLayout}
+            navFunc={props.navFunc}
         />
     )
 }

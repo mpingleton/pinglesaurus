@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
 import { isMobile } from "react-device-detect"
 
 import AutomaticLayout from "../../common/layouts/AutomaticLayout"
@@ -19,18 +18,17 @@ import SoftwareProjectProfile from "./layouts/SoftwareProjectProfile"
 import DataContext from "../../classes/DataContext"
 import SoftwareProject from "../../classes/SoftwareProject"
 
-import initDataContext from "../../data/initDataContext"
 import getSoftwareProjectById from "../../data/getSoftwareProjectById"
 import getAllSoftwareProjects from "../../data/getAllSoftwareProjects"
 
-export default function SoftwareProjects() {
-    const navigate = useNavigate()
-
+export default function SoftwareProjects(props: {
+    ctx: DataContext,
+    navFunc: (toUrl: string) => void
+}) {
     const [isRedirectModalOpen, setRedirectModalOpen] = useState<boolean>(false)
     const [infoRedirectModalName, setRedirectModalName] = useState<string | undefined>(undefined)
     const [infoRedirectModalUrl, setRedirectModalUrl] = useState<string | undefined>(undefined)
 
-    const [ctx, setCtx] = useState<DataContext>(new DataContext())
     const [software, setSoftware] = useState<SoftwareProject[] | undefined>(undefined)
     const [indexSelected, setIndexSelected] = useState<number | undefined>(undefined)
     const [objectSelected, setObjectSelected] = useState<SoftwareProject | undefined>(undefined)
@@ -42,33 +40,29 @@ export default function SoftwareProjects() {
     }
 
     function executeRedirect() {
-        navigate(infoRedirectModalUrl!)
+        props.navFunc(infoRedirectModalUrl!)
     }
 
     useEffect(() => {
-        if (!ctx.isInitialized) {
-            initDataContext()
-                .then((d) => setCtx(d))
-                .catch((err) => console.error(err))
-        } else {
-            getAllSoftwareProjects(ctx)
+        if (props.ctx.isInitialized) {
+            getAllSoftwareProjects(props.ctx)
                 .then((d) => setSoftware(d))
                 .catch((err) => console.error(err))
         }
-    }, [ctx])
+    }, [props.ctx])
 
     useEffect(() => {
         if (indexSelected === undefined) {
             setObjectSelected(undefined)
         } else {
-            getSoftwareProjectById(ctx, software[indexSelected].id)
+            getSoftwareProjectById(props.ctx, software[indexSelected].id)
                 .then((d) => setObjectSelected(d))
                 .catch((err) => console.log(err))
         }
     }, [indexSelected])
 
-    if (!ctx.isInitialized || software === undefined) {
-        return (<AutomaticLayout loading navId="software" title="Software Projects" />)
+    if (!props.ctx.isInitialized || software === undefined) {
+        return (<AutomaticLayout loading navId="software" title="Software Projects" navFunc={props.navFunc} />)
     }
 
     const softwareList = software.map((d, i) => (
@@ -138,6 +132,7 @@ export default function SoftwareProjects() {
             desktopLayout={desktopLayout}
             mobileLayout={mobileLayout}
             modals={modals}
+            navFunc={props.navFunc}
         />
     )
 }
