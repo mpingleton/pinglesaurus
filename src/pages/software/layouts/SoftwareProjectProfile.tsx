@@ -77,7 +77,6 @@ export default function SoftwareProjectProfile(props: {
             <XStack horizontal={!props.isMobile} vertical={props.isMobile} padding="0px">
                 <VStack padding="0px" width={props.isMobile ? "100%" : "500px"}>
                     {props.data.downloads.length > 0 ? downloadPanel : undefined}
-                    {updatePanel}
                     {stackPanel}
                 </VStack>
                 <ScreenshotPanel data={props.data} isMobile={props.isMobile} />
