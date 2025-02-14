@@ -12,13 +12,13 @@ import BlogImage from "../../../classes/BlogImage"
 import BlogPostParagraphParticle from "../components/BlogPostParagraphParticle"
 import BlogPostImageParticle from "../components/BlogPostImageParticle"
 
-export default function BlogPostDisplaySection(props: { data: BlogSection }) {
+export default function BlogPostDisplaySection(props: { isMobile: boolean, data: BlogSection }) {
 
     const particles = props.data.particles!.map((p) => {
         if (p.getType() === "PARAGRAPH_PARTICLE") {
-            return (<BlogPostParagraphParticle data={p as BlogParagraph} />)
+            return (<BlogPostParagraphParticle isMobile={props.isMobile} data={p as BlogParagraph} />)
         } else if (p.getType() === "IMAGE_PARTICLE") {
-            return (<BlogPostImageParticle data={p as BlogImage} />)
+            return (<BlogPostImageParticle isMobile={props.isMobile} data={p as BlogImage} />)
         } else {
             return (<BodyText>Error</BodyText>)
         }

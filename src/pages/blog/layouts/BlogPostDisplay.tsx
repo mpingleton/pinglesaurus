@@ -28,7 +28,9 @@ export default function BlogPostDisplay(props: {
                     <TitleText centered>{props.data.title}</TitleText>
                     <BodyText centered>{props.data.subtitle}</BodyText>
                     <SubtitleText centered>{props.data.published.toLocaleDateString()}</SubtitleText>
-                    {props.data.sections!.map((s) => (<BlogPostDisplaySection data={s} />))}
+                    {props.data.sections!.map((s) => (
+                        <BlogPostDisplaySection isMobile={props.isMobile} data={s} />
+                    ))}
                 </VStack>
             </Panel>
         </VStack>

@@ -6,7 +6,7 @@ import BodyText from "../../../common/components/atomic/BodyText"
 
 import BlogParagraph from "../../../classes/BlogParagraph"
 
-export default function BlogPostParagraphParticle(props: { data: BlogParagraph }) {
+export default function BlogPostParagraphParticle(props: { isMobile: boolean, data: BlogParagraph }) {
 
     return (
         <VStack>
