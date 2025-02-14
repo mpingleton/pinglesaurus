@@ -71,13 +71,13 @@ export default function ConfirmationModal(props: {
                     height="100%"
                     width="100%"
                     padding="0px"
-                    justifyContent={props.isMobile ? "space-between" : undefined}
-                    justifyItems={props.isMobile ? "space-between" : undefined}
+                    justifyContent="space-between"
+                    justifyItems="space-between"
                 >
                     <VStack justifyContent="center" justifyItems="center">
                         {props.children}
                     </VStack>
-                    {props.isMobile ? undefined : (<Box height="100%" />)}
+                    {props.isMobile ? undefined : undefined}
                     <HStack padding="0px" width="100%" justifyContent="right" justifyItems="right">
                         {isLoading ? loading : buttons}
                     </HStack>

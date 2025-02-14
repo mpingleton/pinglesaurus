@@ -93,9 +93,9 @@ export default function Home(props: {
     const helloPanel = (
         <Panel>
             <BrowserView>
-                <HStack justifyItems="center" justifyContent="center">
+                <HStack>
                     <ProfileImage isMobile={false} />
-                    <VStack width="100%" justifyItems="center" justifyContent="center" gapping="30px">
+                    <VStack width="65%" justifyItems="space-evenly" justifyContent="space-evenly" gapping="30px">
                         {hello}
                         {selfIntro}
                         {siteIntro}
