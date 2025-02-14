@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 export default function PanelButton(props: { onClicc?: () => void, children: React.ReactNode }) {
-    const [isHover, setHover] = React.useState<boolean>(false)
+    const [isHover, setHover] = React.useState<boolean | undefined>(undefined)
     const [isClicc, setClicc] = useState<boolean>(false)
 
     function handleClick() {
@@ -12,7 +12,7 @@ export default function PanelButton(props: { onClicc?: () => void, children: Rea
 
     let backgroundColor = "transparent"
     let backgroundImage = undefined
-    let animationName = "panelbutton_mouseout"
+    let animationName = isHover === undefined ? "" : "panelbutton_mouseout"
     if (isClicc) {
         backgroundColor = "rgba(0, 50, 100, 0.6)"
         animationName = "panelbutton_mousedown"

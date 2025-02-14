@@ -9,7 +9,7 @@ export default function Panel(props: {
     children: React.ReactNode
 }) {
 
-    const [isHover, setHover] = useState<boolean>(false)
+    const [isHover, setHover] = useState<boolean | undefined>(undefined)
     const [isClicc, setClicc] = useState<boolean>(false)
 
     function handleClick() {
@@ -23,7 +23,7 @@ export default function Panel(props: {
     let animationName = undefined
     if (props.cliccable) {
         backgroundImage = "url('/images/gradient-bar.png')"
-        animationName = props.focused ? "panel_focused_mouseout" : "panel_mouseout"
+        animationName = props.focused ? "panel_focused_mouseout" : (isHover === undefined ? "" : "panel_mouseout")
 
         if (isClicc) {
             backgroundColor = "rgba(0, 50, 100, 0.6)"

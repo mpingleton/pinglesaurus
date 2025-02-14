@@ -6,7 +6,7 @@ export default function AppBarButton(props: {
     href?: string,
     onClicc?: () => void
 }) {
-    const [isHover, setHover] = useState<boolean>(false)
+    const [isHover, setHover] = useState<boolean | undefined>(undefined)
 
     function handleClick() {
         if (props.onClicc) {
@@ -15,7 +15,7 @@ export default function AppBarButton(props: {
     }
 
     let background = "url('/images/gradient-bar.png')"
-    let animation = "mainlayout_linkbar_item_mouseout"
+    let animation = isHover === undefined ? "" : "mainlayout_linkbar_item_mouseout"
     if (props.highlighted || isHover) {
         background = "url('/images/gradient-bar_hover.png')"
         animation = "mainlayout_linkbar_item_mouseover"

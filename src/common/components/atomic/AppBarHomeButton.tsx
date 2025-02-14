@@ -5,7 +5,7 @@ export default function AppBarHomeButton(props: {
     highlighted?: boolean,
     onClicc?: () => void
 }) {
-    const [isHover, setHover] = useState<boolean>(false)
+    const [isHover, setHover] = useState<boolean | undefined>(undefined)
 
     function handleClick() {
         if (props.onClicc) {
@@ -14,7 +14,7 @@ export default function AppBarHomeButton(props: {
     }
 
     let background = "url('/images/homebutton.png')"
-    let animation = "mainlayout_homebutton_mouseout"
+    let animation = isHover === undefined ? "" : "mainlayout_homebutton_mouseout"
     if (props.highlighted || isHover) {
         background = "url('/images/homebutton_hover.png')"
         animation = "mainlayout_homebutton_mouseover"
