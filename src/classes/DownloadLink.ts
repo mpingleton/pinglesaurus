@@ -1,18 +1,27 @@
 
 export default class DownloadLink {
-    id?: number
+    type: string = ""
     url: string = ""
     description: string = ""
 
+    clone() {
+        const o = new DownloadLink()
+        o.type = this.type
+        o.url = this.url
+        o.description = this.description
+
+        return o
+    }
+
     parseObject(input: any) {
-        this.id = input.id
+        this.type = input.type
         this.url = input.url
         this.description = input.description
     }
 
     objectify(): object {
         return {
-            id: this.id,
+            type: this.type,
             url: this.url,
             description: this.description,
         }

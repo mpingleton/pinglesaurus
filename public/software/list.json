@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "ProGraph Calculator",
+    "iconUrl": "/software/1/icon.png",
+    "shortDesc": "Graph equations and points.",
+    "fullDesc": "Graph equations and points, as well as analyze them.",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [4, 5],
+    "platformIds": [4, 5],
+    "frameworkIds": []
+  },
+  {
+    "id": 2,
+    "name": "SAMS",
+    "iconUrl": "/software/2/icon.png",
+    "shortDesc": "Schedule drone missions.",
+    "fullDesc": "Schedule drone missions and track operator & asset readiness.",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [6],
+    "platformIds": [6],
+    "frameworkIds": [6, 7, 4, 5]
+  },
+  {
+    "id": 3,
+    "name": "Myelin",
+    "iconUrl": "/software/3/icon.png",
+    "shortDesc": "Modern ANN engine.",
+    "fullDesc": "Modern artificial neural networking (ANN) engine.",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [1],
+    "platformIds": [1, 2, 3],
+    "frameworkIds": [3]
+  },
+  {
+    "id": 4,
+    "name": "Voice Engine",
+    "iconUrl": "/images/question.png",
+    "shortDesc": "A simple call manager.",
+    "fullDesc": "A simple call manager for VoIP telephones.",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [3],
+    "platformIds": [1, 2],
+    "frameworkIds": []
+  },
+  {
+    "id": 5,
+    "name": "AGC Emulator",
+    "iconUrl": "/images/question.png",
+    "shortDesc": "Emulator for the AGC computer.",
+    "fullDesc": "A complete assembler and emulator for the Apollo Guidance Computer (AGC).",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [1],
+    "platformIds": [1],
+    "frameworkIds": []
+  }
+]

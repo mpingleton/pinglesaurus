@@ -15,7 +15,7 @@ Change is coming!
 
 When I originally developed the website, I simply wanted a dinky little developer portfolio.  It wasn't much at all.  It's become clear to me that I will need the website to do more than what it is currently doing.  This is even more important as I start to establish a greater online presence and form connections with new people.
 
-## Conversion to TypeScript
+## ~~Conversion to TypeScript~~ (Complete)
 
 Nobody writes in vanilla Javascript anymore; it's simply not a good idea.  It leads to error-prone software which is difficult to debug; it's taxing on the mental health.  I have already moved on to TypeScript in all of my other projects, so its time that I do so here as well.  I see it is an investment in my mental health to be quite frank.  
 
@@ -86,9 +86,7 @@ Each picture will have meta data: date taken, description, parent album, relevan
 
 These are long-form writing posts about the development process, thinking processes, etc, behind the projects that I build.
 
-
-
-### Updates
+### ~~Updates~~ (Complete)
 
 These are small time-stamped and text-based updates announcing updates to software, projects, etc.  The latest ones will also be listed on the home page.
 
@@ -98,5 +96,5 @@ A simple contact form for anyone to submit a small message to me, as well as opt
 
 ## Other Potential Ideas
 
-- Background picture different on each page.
+- ~~Background picture different on each page.~~ (Complete)
 - Background picture would be relevant to the individual project or blog post?

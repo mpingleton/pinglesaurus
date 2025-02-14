@@ -1,0 +1,78 @@
+{
+  "id": 2,
+  "published": "2025-02-01T18:00:00+0000",
+  "title": "Flappy Muscles",
+  "subtitle": "Revisiting an Old Group Project from High School",
+  "sections": [
+    {
+      "title": "",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Recently, I was going through old boxes as I was doing some deep cleaning of the house. Through each item I sorted, a different memory resurfaced. Some of those memories were pleasant, others not so much. Among the items I sorted through, one really stood out: an old flash drive. This was the flash drive which I used to store homework assignments and school projects when I was in high school. I plugged it into my computer and walked down the virtual memory lane. It had all the different types of school projects that I worked on in those years: PowerPoints, Word documents, and the like. However, there were a few rather unusual school projects stored on that flash drive. They were unusual because instead of writing an essay or a slideshow, I had written a piece of software. One of those projects in particular was for a STEM class that I had during senior year called \"design thinking.\" This class was a relatively recent addition to the school’s curriculum at the time. In it, we would discuss certain engineering problems and challenges, both hypothetical and actual. It was a class intended to, as the name suggest, shape students’ thinking patterns around engineering solutions to problems."
+        }
+      ]
+    },
+    {
+      "title": "Design Challenge",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "One of the challenges we were given was to address the obesity epidemic in the United States. The class was split into groups, then let loose to let the brainstorming commence. Our group quickly agreed that one major contributing factor to the obesity epidemic was the fact that exercise simply wasn’t fun. It was boring, tedious, and uncomfortable. Therefore, people just didn’t exercise nearly as much as they should. After we established that idea, we thought of ways to make exercise more entertaining."
+        }
+      ]
+    },
+    {
+      "title": "Solution Concept",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "We soon settled on an idea for a solution: make exercise into a video game. We envisaged a concept which would turn a piece of gym equipment into a video game controller. This concept involved attaching a sensor to a weight stack. As the player completed repetitions on the machine, the sensor would track the movement of the weight stack, then feed the information to a computer which ran the video game. It was rather simple concept and very straightforward to implement; we thought we were on to something."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "We had several ideas for different video games which could be controlled in this manner. However, for the sake of being a school project, we wanted something simple that people were familiar with. We decided that we would make a sort-of parody of Flappy Bird, which we would affectionately call \"Flappy Muscles.\" Flappy Bird had been removed from app stores about a year prior to this point, so it seemed people were still missing it."
+        }
+      ]
+    },
+    {
+      "title": "Implementation and Presentation",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Once we had our concept planned out, it was time to get to work building it. I developed the video game itself, another group member worked on implementing the sensor and microcontroller setup. The video game itself would be written in C++, and graphics rendered using DirectX 9. The controller setup used an Arduino microcontroller and a potentiometer as the sensor. The Arduino would be connected to the computer via the USB-serial connection."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "I remember sitting in a Taco Bell one night, furiously writing the code for the Flappy Muscles video game only a couple nights before the project was due. The entire video game was only 340 lines of code in size. It had graphics that looked as if it was pulled straight off an Atari 2600, but it worked! The other group member had been working on the Arduino and sensor setup, figuring out how to best get the potentiometer, Arduino, and connection to the computer to work. Before long, we connected the sensor to the computer to test the whole thing. Although we didn’t have a piece of gym equipment handy, we could test it by manipulating the sensor manually. The whole thing worked as planned! We were quite thrilled to have a working video game to present to the class."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "A recent screenshot of the \"Flappy Muscles\" game.",
+          "url": "/blog/2/screenshot.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "There was just one problem. As I said before, we didn’t have a piece of gym equipment handy, but we still needed to present the project to the class. Not only did we need to present this project to the class, but we also had to present it to other random students and faculty around the school as per the assignment requirements. This meant moving our setup around the school several times in a single day. Even if we had access to a piece of gym equipment, it would be too heavy to move around the school in this fashion. To overcome this obstacle, we quickly constructed a small wooden mockup which vaguely resembled a bicep curl machine, then attached the sensor to that. The wooden mockup was incredibly crude in its construction, but it was good enough to get the point across and it worked surprisingly well with our video game."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "At this point, it was time to present our project. First, we presented to the rest of the class, then we started moving around the school building and showing random passes-by. As we presented our project at random points in the school’s hallways, students and faculty alike were intrigued by our creation. It received a surprising amount of attention; it seemed as if everyone that walked by wanted to play it."
+        }
+      ]
+    },
+    {
+      "title": "Potential Reconstruction",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "While it’s awesome to have the original source all these years later, that’s about all I have at this point. Unfortunately, I don’t have any of the pictures that we took during the development or presentation of the project, nor do I have any other documentation. I am recounting this story purely from memory at this point. The only proof that I have of this thing ever existing, apart from having its source code, is the screenshot I took while running the game recently. I know several people took pictures as we were presenting, but I don’t have access to any of those pictures, nor do I remember who took them."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "I am planning on reconstructing this concept, exploring new ideas for video games as well as new sensor designs. Our old setup was incredibly crude and not well documented. However, I plan on documenting the reconstruction in more detail and sharing it in subsequent articles here on Substack. If you have any ideas for what you want to see from this reconstruction, feel free to leave a comment here or send me a message."
+        }
+      ]
+    }
+  ]
+}

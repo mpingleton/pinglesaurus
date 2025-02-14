@@ -1,18 +1,23 @@
 
 export default class Screenshot {
-    id?: number
     imageUrl: string = ""
     description: string = ""
 
+    clone() {
+        const o = new Screenshot()
+        o.imageUrl = this.imageUrl
+        o.description = this.description
+
+        return o
+    }
+
     parseObject(input: any) {
-        this.id = input.id
         this.imageUrl = input.imageUrl
         this.description = input.description
     }
 
     objectify(): object {
         return {
-            id: this.id,
             imageUrl: this.imageUrl,
             description: this.description
         }
