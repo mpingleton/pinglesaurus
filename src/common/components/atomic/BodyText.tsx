@@ -3,6 +3,7 @@ import { Property } from "csstype"
 
 export default function BodyText(props: {
     centered?: boolean,
+    justified?: boolean,
     children?: React.ReactNode
 }) {
 
@@ -10,6 +11,10 @@ export default function BodyText(props: {
     if (props.centered !== undefined) {
         if (props.centered) {
             textAlign = "center"
+        }
+    } else if (props.justified) {
+        if (props.justified) {
+            textAlign = "justify"
         }
     }
 

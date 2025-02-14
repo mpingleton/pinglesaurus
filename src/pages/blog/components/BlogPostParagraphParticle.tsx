@@ -10,8 +10,8 @@ export default function BlogPostParagraphParticle(props: { isMobile: boolean, da
 
     return (
         <VStack>
-            <Box width="98%">
-                <BodyText>{props.data.text}</BodyText>
+            <Box width={props.isMobile ? "95%" : "98%"}>
+                <BodyText justified>{props.data.text}</BodyText>
             </Box>
         </VStack>
     )
