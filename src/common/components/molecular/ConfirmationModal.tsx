@@ -71,8 +71,8 @@ export default function ConfirmationModal(props: {
                     height="100%"
                     width="100%"
                     padding="0px"
-                    justifyContent={props.isMobile ? "end" : undefined}
-                    justifyItems={props.isMobile ? "end" : undefined}
+                    justifyContent={props.isMobile ? "space-between" : undefined}
+                    justifyItems={props.isMobile ? "space-between" : undefined}
                 >
                     <VStack justifyContent="center" justifyItems="center">
                         {props.children}
