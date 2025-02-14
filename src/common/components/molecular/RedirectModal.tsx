@@ -24,6 +24,7 @@ export default function RedirectModal(props: {
             onClose={props.onClose}
             onProceed={props.onProceed}
             isMobile={props.isMobile}
+            title="External Redirect"
         >
             <XStack
                 padding="0px"
@@ -44,7 +45,9 @@ export default function RedirectModal(props: {
                     {props.siteIcon}
                 </XStack>
                 <VStack wrap>
-                    <BodyText centered>{`You will be redirected to ${props.siteName}, an external website.  Proceed?`}</BodyText>
+                    <BodyText centered>
+                        {`You will be redirected to ${props.siteName}, an external website.  Proceed?`}
+                    </BodyText>
                     <SubtleText centered>{props.siteUrl}</SubtleText>
                 </VStack>
             </XStack>

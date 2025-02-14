@@ -13,6 +13,7 @@ export default function ConfirmationModal(props: {
     onClose: () => void,
     onProceed: () => void,
     isMobile: boolean,
+    title: string,
     children: React.ReactNode
 }) {
 
@@ -57,18 +58,26 @@ export default function ConfirmationModal(props: {
     )
 
     const width = props.isMobile ? "100%" : "600px"
-    const height = props.isMobile ? "50%" : "275px"
+    const height = props.isMobile ? "45%" : "275px"
 
     return (
         <Modal isOpen={props.isOpen} onClose={handleClose} width={width} height={height}>
             <SectionPanel
-                title="External Redirect"
+                title={props.title}
                 width="100%"
                 height="100%"
             >
-                <VStack height="100%" width="100%" padding="0px">
-                    {props.children}
-                    <Box height="100%" />
+                <VStack
+                    height="100%"
+                    width="100%"
+                    padding="0px"
+                    justifyContent={props.isMobile ? "end" : undefined}
+                    justifyItems={props.isMobile ? "end" : undefined}
+                >
+                    <VStack justifyContent="center" justifyItems="center">
+                        {props.children}
+                    </VStack>
+                    {props.isMobile ? undefined : (<Box height="100%" />)}
                     <HStack padding="0px" width="100%" justifyContent="right" justifyItems="right">
                         {isLoading ? loading : buttons}
                     </HStack>
