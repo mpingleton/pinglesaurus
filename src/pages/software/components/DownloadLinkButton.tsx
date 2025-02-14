@@ -12,7 +12,13 @@ export default function DownloadLinkButton(props: {
 }) {
 
     function handleClicc() {
-        props.onClicc(props.data.type, props.data.url)
+        if (props.data.type === "GOOGLEPLAY") {
+            props.onClicc("the Play Store", props.data.url)
+        } else if (props.data.type === "APPSTORE") {
+            props.onClicc("the App Store", props.data.url)
+        } else {
+            props.onClicc(props.data.type, props.data.url)
+        }
     }
 
     return (
