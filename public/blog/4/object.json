@@ -1,0 +1,190 @@
+{
+  "id": 4,
+  "published": "2025-03-23T06:45:00+0000",
+  "title": "A Quick Tour of the Apollo Guidance Computer",
+  "subtitle": "",
+  "sections": [
+    {
+      "title": "Introduction",
+      "particles": [
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "The Apollo 11 mission was the first time humans set foot on the moon.",
+          "url": "/blog/4/1.jpg"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The Apollo moon landings represented what was perhaps the greatest example of ingenuity, courage, and technological prowess that humanity had to offer.  For several reasons, NASA’s Apollo program has fascinated for as long as I can remember.  The design challenges and technical hurdles encountered by NASA engineers and contractors seemed innumerable, especially given 1960’s technology!  This meant that several radical technological breakthroughs were necessary in order to make the moon landings possible."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "The AGC together with its DSKY interface.",
+          "url": "/blog/4/2.jpg"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Among the most important of these breakthroughs is the Apollo Guidance Computer (AGC): a small 70-pound computer which handled navigation and flight-control for the Apollo spacecraft.  The AGC’s incredible processing capacity, coupled with its small size and light weight, meant it was the most advanced computer of its time.  This was made possible by one invention in particular: the integrated circuit.  The idea of etching electrical circuits onto silicon wafers and packaging them into “integrated circuits” was relatively new and unproven; however, this was exactly the breakthrough that was needed!  Other computers of the era were large enough to suffuse entire rooms within buildings, consumed massive amounts of electricity, and were expensive and difficult to maintain.  In addition, they also lacked the processing capacity necessary to execute the navigation and guidance functions of a spacecraft."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Integrated circuits used to construct the AGC.",
+          "url": "/blog/4/3.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Architecture",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "As mentioned above, the AGC made use of integrated circuits which formed an extensive network of logic gates.  This network of logic gates handled the decoding and execution of program instructions, arithmetic operations, and logic operations.  In all, this network consisted of approximately 5,700 logic gates."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The AGC’s memory was made up of two types: erasable and fixed.  The difference between erasable memory and fixed memory within the AGC is much the same difference between RAM and ROM.  The erasable portion of memory was used to store the results of computations as well as data supplied from external inputs; it was made up approximately 2,000 words of ferrite-core memory.  As the name implies, the erasable memory could be erased and re-written by the software.  The fixed portion of memory was used for program storage, constants, and table data; it was made up of approximately 36,000 words of core-rope memory.  Unlike the erasable memory, the fixed memory couldn’t be modified once it was set; the data was literally woven into the memory."
+        }
+      ]
+    },
+    {
+      "title": "User Interface",
+      "particles": [
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "DSKY Interface.",
+          "url": "/blog/4/4.jpg"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The Display and Keyboard (DSKY) interface was the primary method of interacting with the AGC.  It employed a verb and noun system to express commands and display data.  Here, it was possible to display internal data, load data from an external source, call program routines, change mission phases, and display the status of the system."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "FDAI interface with DSKY below it.",
+          "url": "/blog/4/5.jpg"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "In addition to the DSKY interface, the Flight Data Attitude Indicator (FDAI) also displayed data from the AGC to the crew.  The FDAI would provide the crew of the spacecraft’s orientation and angular rate information from the AGC."
+        }
+      ]
+    },
+    {
+      "title": "Sensor Inputs",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The primary sensor inputs for the AGC were given by the Inertial Subsystem (ISS) and the Optical Subsystem (OSS).  These two systems gathered data about the spacecraft’s position and movement in space, then fed this data into the AGC for processing."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The ISS worked by using gyroscopes and accelerometers to sense changes in the spacecraft’s orientation and velocity respectively.  The system consisted of three Inertial Rate Integrating Gyroscopes (IRIGs) which would sense changes in the spacecraft’s orientation.  In addition, the system also contained three Pulsed-Integrating Pendulous Accelerometers (PIPAs) which would sense changes in the aircraft’s velocity.  The three IRIGs and the three PIPAs were mounted orthogonally to keep track of the spacecraft’s movement in three dimensions."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The OSS worked by taking optical sightings of celestial bodies, from which a fixed reference point could be derived.  It consisted of two parts: a scanning telescope, and a sextant.  The scanning telescope would measure the angle of elevation and azimuth of a single target.  The sextant would measure the angle between two targets.  The measurements taken from the scanning telescope and the sextant would be combined to calculate the position of the spacecraft."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "In summary, the ISS provided data about the spacecraft’s relative movement, while the OSS provided data about the spacecraft’s absolute position.  The measurements taken by these systems were input into the AGC computer to be used for navigation.  Both of these points of data were crucial to the successful navigation of the spacecraft to the moon and back."
+        }
+      ]
+    },
+    {
+      "title": "Control Outputs",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Of course, the AGC used the navigation data, which was calculated from measurements derived from input sensor, to control the movement of the spacecraft.  The AGC had control over portions of the Reaction Jet and Engine Control (RJ/EC) and Thrust Vector Servo Amplifier (TVSA); this effectively made these components outputs of the AGC computer."
+        }
+      ]
+    },
+    {
+      "title": "Software",
+      "particles": [
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Margaret Hamilton standing next to the code that she and her team wrote for the AGC.",
+          "url": "/blog/4/6.jpg"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "To develop the flight control software for the AGC, NASA contracted the MIT Instrumentation Laboratory’s Software Engineering Division, led by Margaret Hamilton.  It is Hamilton and her pioneering work that has been credited with bringing the concept of software engineering into the public consciousness."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The flight control software for the AGC was written entirely in AGC4 assembly language.  Because the AGC computer was a pioneering piece of hardware, it did not confirm to any standard instruction set architecture; it was its own thing.  This meant that the assembly language that the AGC used was unique to it.  Originally, the code was assembled into its binary machine code by the YUL assembler which ran on the Honeywell-1800 computer.  YUL was eventually phased out and replaced with a newer assembler called General Assembler Program (GAP).  Today, all of the source code for the AGC is now in the public domain and is available for download."
+        }
+      ]
+    },
+    {
+      "title": "Emulator Project",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Unfortunately, neither the AGC’s software nor the original assemblers for its source code, will run on modern computers.  This is the reason I’ve been developing an assembler to assemble the AGC’s source code into its machine code form, just as YUL and GAP did before.  In addition, I’ve also been developing an emulator to execute the resulting machine code in a simulation environment.  Although there are a couple other projects which have done something similar, I want to build my own from scratch, simply because I can; it’s more fun that way.  This article is the first in a series where I document the development process of this project and share everything that I’ve learned along the way.  It put it lightly, I’m quite excited for this project!"
+        }
+      ]
+    },
+    {
+      "title": "Links",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://ntrs.nasa.gov/api/citations/20090016290/downloads/20090016290.pdf"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://www.nasa.gov/history/afj/aohindex.html"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://science.nasa.gov/people/margaret-hamilton/"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://www.ibiblio.org/apollo/NARA-SW/E-1077.pdf"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://www.ibiblio.org/apollo/NARA-SW/E-2052.pdf"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://ibiblio.org/apollo/hrst/archive/1029.pdf"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://www.ibiblio.org/apollo/Documents/Users_Guide_GAP_text.pdf"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://www.ibiblio.org/apollo/assembly_language_manual.html#Intro&gsc.tab=0"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://www.ibiblio.org/apollo/assembly_language_manual.html#Intro"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://wehackthemoon.com/tech/how-integrated-circuits-saved-moon-landing"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://wehackthemoon.com/tech/apollo-guidance-computer-agc-computer-engineering-breakthrough"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://github.com/chrislgarry/Apollo-11"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)#/media/File:Margaret_Hamilton_-_restoration.jpg"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "https://publicdomainreview.org/collection/hi-res-images-from-the-apollo-missions"
+        }
+      ]
+    }
+  ]
+}
