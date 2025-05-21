@@ -28,5 +28,11 @@
     "published": "2025-03-30T06:00:00+0000",
     "title": "Neuroplasticity in Artificial Intelligence",
     "subtitle": "An Introduction to Myelin"
+  },
+  {
+    "id": 6,
+    "published": "2025-04-12T12:00:00+0000",
+    "title": "AGC Emulator Project (Part 1)",
+    "subtitle": "Development Roadmap"
   }
 ]
