@@ -1,0 +1,33 @@
+{
+  "id": 5,
+  "published": "2025-03-30T06:00:00+0000",
+  "title": "Neuroplasticity in Artificial Intelligence",
+  "subtitle": "An Introduction to Myelin",
+  "sections": [
+    {
+      "title": "",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Over the past few months, I’ve been engrossed in one particular project.  It’s an artificial neural networking engine which I am calling \"Myelin.\"  There is one primary reason I am developing Myelin: to explore new ideas about how artificial intelligence can work and what it can do.  For a few years now, I’ve ruminated on several whacky ideas in this realm.  Upon doing some research, it seems to me that these ideas remain relatively unexplored and untested.  Indeed, this may be a major opportunity... or such ideas may be so whacky that there’s good reason nobody has tried them; I intend to find out the hard way!"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Although there are several ideas which I’m currently testing out with Myelin, there are two important ones which I will focus on here: arbitrary connection of synapses and neuroplasticity.  In my opinion, these two ideas are important because they overcome certain limitations with today’s most popular neural networking methodologies.  The fixed-geometry nature of traditional neural networks means their capacity for learning is limited; and that setting one up to perform well can be a tricky matter of trial-and-error.  Traditional fixed-geometry neural networks are arranged in layers; the neurons of each layer are connected to the neurons of the neighboring layers.  This isn’t necessarily the case in Myelin; synapses can arbitrarily connect any two neurons within the network together without regard to layering.  This arbitrary connection of neurons can also take place during the learning process, not just when the network is first initialized.  Additionally, new neurons can be added to the network and connected to existing neurons as part of the learning process.  In essence, this means we have an artificial neural network that is capable of neuroplasticity."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "As I was working on this idea of neuroplasticity for Myelin, I came across an article titled \"Can We Build AGI, or Does it Need to Build Itself?\" on the publication \"When Life Gives You a Brain\" by Suzi Travis.  In it, she talks about the clear distinction between development and usage of engineered systems, especially artificial intelligence.  She contrasts this with the nature of how biological systems work; the distinction between development and usage isn’t so blatant.  Her article piqued my interest because it so closely mirrored the ideas I had already been working on.  In Myelin, it is possible to have a neural network consisting only of a set of input neurons and a set of output neurons.  Then, new neurons can be added to the hidden portion of the network while the learning process is taking place; it grows from its initial form as it develops, similarly to how biological systems develop."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Although I’ve had some pretty decent success while testing the concept of neuroplasticity within Myelin, it is still a work in progress.  There is another interesting demonstration of Myelin’s operation: a game called Hexapawn.  It’s basically a scaled-down version of chess on a 3x3 board.  It was invented by Martin Gardner to demonstrate an early concept of artificial intelligence which was based on matchboxes.  The matchbox computer worked by adding and removing colored beads from the matchboxes.  The beads would determine what moves the computer would make based on the moves of its human opponent.  Hexapawn is implemented as a single input layer, a single output layer, and the synapses which connect the two.  The input layer represents all the possible moves that the human player can make.  The output layer represents the moves that the computer can make in response.  The synapses which connect the input layer and the output layer make the actual selection; the weights of these synapses are analogous to the beads within the matchbox computer.  As I began to play Hexapawn against Myelin, I won the first few rounds.  However, only a few rounds later, Myelin began to beat me; winning each game became exponentially more difficult as Myelin learned to play more effectively."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Admittingly, Hexapawn isn’t a great demonstration of Myelin’s true potential; however, it is at least a mildly interesting example of what it can do right now.  Hexapawn also serves as a stepping stone for exploring its implementation in more complex applications where Myelin’s unique capability for neuroplasticity can really shine.  I will cover this exploration of new ideas and applications in future articles."
+        }
+      ]
+    }
+  ]
+}
