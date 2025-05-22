@@ -1,0 +1,94 @@
+{
+  "id": 7,
+  "published": "2025-04-19T12:00:00+0000",
+  "title": "Myelin",
+  "subtitle": "A Small Progress Update",
+  "sections": [
+    {
+      "title": "",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "In a previous article titled Neuroplasticity in Artificial Intelligence, I talked about a neural networking engine which I call \"Myelin.\"  There, I talked about a couple of the ideas that I’ve had for how artificial intelligence could work.  Over the past few weeks since releasing that article, I have been working on implementing those ideas further; I have a small progress update to share."
+        }
+      ]
+    },
+    {
+      "title": "Graphical Viewer",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Somewhere along the way, I realized that I would need a way to visualize neural networks in Myelin in order to demonstrate its unique features.  To execute this task, I developed a graphical viewer.  Indeed, it was the lack of this graphical viewer that prevented me from showing anything about it until now."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Example neural network rendered by the graphical viewer.",
+          "url": "/blog/7/1.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The neurons are illustrated as circles.  The brightness of each circle reflects its activation value; a brighter neuron shows a higher activation value, while a dimmer neuron shows a lower activation value.  Additionally, the synapses are shown as the lines which are drawn between the neurons that they connect.  A synapse’s color reflects its weight.  A positive weight is shown in green while a negative weight is shown in red; the intensity of the color reflects the intensity of the weight of the synapse."
+        }
+      ]
+    },
+    {
+      "title": "Hexapawn",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "I talked before about the game of Hexapawn which I implemented using Myelin.  Its neural network is fairly straightforward: an input layer representing possible moves by the human player, and an output layer representing the moves that the computer can make in response.  After playing a few rounds, the resulting graphical rendition of its neural network looked like this:"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "",
+          "url": "/blog/7/2.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "For viewability’s sake, I rotated the diagram so that the input layer is on the top and the output layer is on the bottom.  After only a few rounds, the network is not well-trained.  This is evident by the fact that the majority of the synapses are still shown in gray, representing a synapse weight of zero.  However, there are a few synapses which do appear to have been trained.  The green synapses represent plays which resulted in a win for the computer, while the red ones represent losing plays."
+        }
+      ]
+    },
+    {
+      "title": "Neuroplasticity",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The above examples show Myelin operating in a way that is similar to how traditional neural networks operate.  However, Myelin can also operate with a rather unique feature: neuroplasticity.  Instead of establishing a fixed-geometry network from the start, it can start with an input layer and an output layer; that’s it!  The training process involves placing synapses between neurons based on example training data.  Afterward, new neurons can be inserted between the input and output layers.  The neural network grows as it learns!  In essence, the area between the input layer and the output layer doesn’t consist of so-called \"hidden layers\", but one giant bundle of neurons.  You only need to care about the input and the output; the area in between doesn’t need to be defined in advance.  You could consider it a black box of sorts."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "A freshly initialized neural network.",
+          "url": "/blog/7/3.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "In this example, I create a simple neural network which consists of four neurons on the input layer, and two neurons on the output layer.  Then, I give the trainer two frames of training data.  The trainer is immediately able to identify some trends between the input layer and output layer, then insert three synapses following the identified trends.  The following two images show the addition of the synapses along with the activation values of the two frames of training data:"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Frame 1",
+          "url": "/blog/7/4.png"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Frame 2",
+          "url": "/blog/7/5.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "After the initial synapses are created, the training process will first involve tweaking the weights of the synapses.  The tweaks of the synapse weights will result in gradual improvements to the accuracy of the neural network, but these improvements will plateau eventually.  This is when it makes sense to start adding new neurons to the network.  In essence, the strategic addition of these neurons allows the network to make sense of trends that it previously couldn’t."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "After adding two new neurons to the network.",
+          "url": "/blog/7/6.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "For the sake of illustrating the fundamental concepts behind Myelin’s operation, these examples are kept rather simplistic.  In future articles, I will demonstrate its capabilities with larger neural networks trained with larger sets of data.  I will also start to demonstrate some real use-cases that Myelin could have, and the advantages that it could have in comparison to traditional neural networks."
+        }
+      ]
+    }
+  ]
+}

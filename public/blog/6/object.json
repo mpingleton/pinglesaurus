@@ -1,0 +1,79 @@
+{
+  "id": 6,
+  "published": "2025-04-12T12:00:00+0000",
+  "title": "AGC Emulator Project (Part 1)",
+  "subtitle": "Development Roadmap",
+  "sections": [
+    {
+      "title": "",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "As I mentioned in the previous article A Quick Tour of the Apollo Guidance Computer, I’ve been working on an emulator which will run the AGC’s original flight control software in a simulated environment on modern computers.  This is a rather exciting project for me; not only is there a lot  potential, but also uncertainty.  Let’s keep one thing in mind here: this is the computer that took humanity to the moon and back multiple times.  I’m also developing this emulator project from scratch, by myself, and in the C programming language.  As it makes intuitive sense, this is going to be a lengthy and time-consuming project with lots of moving parts and a sea of patience required.  With all of this in mind, the experimentation and development of this emulator cannot be effectively covered in a single article; there would simply be too much to talk about.  Therefore, I will cover the development process in a series of articles which I will publish incrementally as I make progress with the project.  The development process will involve several key milestones and components which include the assembler, emulator, DSKY interface, and a simulation environment.  Each component will warrant its own article."
+        }
+      ]
+    },
+    {
+      "title": "Assembler",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The software which ran on the AGC was written entirely in assembly language.  Before the software can be executed on any computer, either real or emulated, it must first be assembled into binary machine code.  This task is performed by a tool called an \"assembler.\"  Given the rather unique nature of the AGC, it is necessary to develop an assembler from scratch as part of this project."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "A screenshot of the AGC4 assembly code.",
+          "url": "/blog/6/1.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Developing such an assembler is surprisingly straightforward.  The assembler will be designed to work in three stages: lexing, pattern-matching, and code-generation.  During the lexing stage, the raw text from the assembly code file will be parsed into tokens.  Tokens represent things like individual opcodes, operands, labels, constants, etc.  Next during the pattern-matching stage, the tokens will be grouped together into patterns.  A pattern of tokens will represent things like whole instructions, labels, and value definitions.  Finally, during the code-generation stage, binary machine code will be generated using information derived from the patterns of tokens."
+        }
+      ]
+    },
+    {
+      "title": "Emulator",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Once we have the software in binary machine code form, it is now possible to start executing it.  The main task of the emulator is to execute the machine code instructions in the same manner that the real AGC would.  To do this, we have to create a virtual implementation of the AGC’s physical hardware.  There are several key aspects of the AGC’s hardware that we need to emulate.  These include, but are not limited to: instruction decoder, logic and arithmetic processing, and memory."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The AGC’s hardware architecture bears few commonalities with modern computers.  For this reason, emulating such hardware on a modern computer is a tricky task.  For example, the memory of the AGC works much differently from modern computers.  The AGC has two types of memory: erasable and fixed.  These are further divided into direct-access and selectable-bank.  Another significant issue is the way the AGC handled signed integers.  These are issues which I will cover in future articles."
+        }
+      ]
+    },
+    {
+      "title": "DSKY Interface",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Once the emulator is working and executing software, we’ll want some way to interact with it.  Of course, we don’t have access to a real DSKY interface; we will need to improvise.  There are a couple plans I have to make this work.  First, I will develop a software-based DSKY interface.  Afterward, I may design and 3D print a working replica of the DSKY interface, then connect to the emulator using an Arduino arrangement."
+        }
+      ]
+    },
+    {
+      "title": "Simulation",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Unfortunately, I don’t have access to a real spacecraft where I can install this emulator.  So instead, I will do the next best thing: develop a simulator.  This might seem like a daunting task on its own; admittingly, it is.  However, the concept is relatively straightforward.  The main task of the simulator is to provide input data to the emulator, in the same manner that the inertial and optical subsystems did for the real AGC.  In addition, the outputs from the emulator will manipulate the simulated environment."
+        }
+      ]
+    },
+    {
+      "title": "Conclusion",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Yes, I’m aware that there are other similar projects to the one I am working on.  However, I want to develop my own project from scratch.  The main reason for doing this is that I want to enjoy the learning experience that comes with developing such a project, then share everything I learn with you here.  It’s more fun that way!  Another reason is that I have my own ideas for what I want to do with this emulator once it’s working.  With other existing projects, exploring such ideas would incredibly cumbersome or even impossible."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Developing this project is a somewhat lofty goal of mine; this is going to be a process-and-a-half on its own!  I’ve already talked about approaching lofty goals in one of my previous articles: Fall in Love With the Process, but Don’t Lose Sight of the End Goal.  The mentality that I describe there is what has carried me through so many of my other challenging goals; it’s the same mentality that will also get me through this one.  Given the sheer irony, I’m trying so desperately to resist the urge to exclaim \"it’s not rocket science!\""
+        }
+      ]
+    }
+  ]
+}

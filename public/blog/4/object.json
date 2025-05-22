@@ -112,7 +112,7 @@
         },
         {
           "type": "PARAGRAPH_PARTICLE",
-          "text": "The flight control software for the AGC was written entirely in AGC4 assembly language.  Because the AGC computer was a pioneering piece of hardware, it did not confirm to any standard instruction set architecture; it was its own thing.  This meant that the assembly language that the AGC used was unique to it.  Originally, the code was assembled into its binary machine code by the YUL assembler which ran on the Honeywell-1800 computer.  YUL was eventually phased out and replaced with a newer assembler called General Assembler Program (GAP).  Today, all of the source code for the AGC is now in the public domain and is available for download."
+          "text": "The flight control software for the AGC was written entirely in AGC4 assembly language. Because the AGC computer was a pioneering piece of hardware, it did not conform to any standard instruction set architecture; it was its own thing. This meant that the assembly language that the AGC used was unique to it. Originally, the code was assembled into its binary machine code form by the YUL assembler which ran on the Honeywell-1800 computer. YUL was eventually phased out and replaced with a newer assembler called General Assembler Program (GAP). Today, all of the source code for the AGC is now in the public domain and is available for download."
         }
       ]
     },

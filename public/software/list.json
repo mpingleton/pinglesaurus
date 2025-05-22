@@ -37,14 +37,14 @@
   },
   {
     "id": 4,
-    "name": "Voice Engine",
+    "name": "CommEngine",
     "iconUrl": "/images/question.png",
-    "shortDesc": "A simple call manager.",
-    "fullDesc": "A simple call manager for VoIP telephones.",
+    "shortDesc": "A unified communications suite.",
+    "fullDesc": "A unified communications suite consisting of a web server, VoIP call manager, etc.",
     "downloads": [],
     "repositories": [],
-    "languageIds": [3],
-    "platformIds": [1, 2],
+    "languageIds": [2],
+    "platformIds": [1],
     "frameworkIds": []
   },
   {
@@ -58,5 +58,17 @@
     "languageIds": [1],
     "platformIds": [1],
     "frameworkIds": []
+  },
+  {
+    "id": 6,
+    "name": "Owl",
+    "iconUrl": "/images/question.png",
+    "shortDesc": "Database",
+    "fullDesc": "A new multi-paradigm database system.",
+    "downloads": [],
+    "repositories": [],
+    "languageIds": [2],
+    "platformIds": [1],
+    "frameworkIds": [3]
   }
 ]
