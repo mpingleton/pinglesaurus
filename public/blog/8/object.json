@@ -1,0 +1,131 @@
+{
+  "id": 8,
+  "published": "2025-05-24T12:00:00+0000",
+  "title": "Exploring a Washing Machine",
+  "subtitle": "",
+  "sections": [
+    {
+      "title": "",
+      "particles": [
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Part of the essence of this publication, The Bit Whisperer, is curiosity and exploration.  In other words, I write for curious minds who want to explore how different things work.  Most of the time, curiosity and exploration go hand-in-hand; curiosity is what drives exploration.  However, there are some occasions where this isn’t the case.  Sometimes, the best opportunities for exploration come at the most inopportune of times."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "This happened to me the other day.  While I had piles of laundry to do, my washing machine stopped working.  More specifically, it refused to start a wash cycle; it displayed a message on the screen: \"please close lid.\"  Even after I had closed the lid, it continued to display this message.  I opened and closed the lid several times, in case it was just a stuck lid-lock mechanism.  Nothing changed; the message was still present, and the washing machine still refused to start the cycle.  Of course, in situations like this, I don’t recommend attempting to bypass safety interlocks in machines.  If it breaks, it’s best to just fix it properly."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "This is when I decided to take the washing machine apart.  Surprisingly, it was relatively straightforward to take apart.  I only had to remove the back panel with a few screws, remove the control panel with a few clips, and lift the top portion.  After this, I was able to access the lid-lock mechanism and its wiring harness.  I removed the lid-lock mechanism and disconnected the wiring harness from the control board."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "I wanted to take the lid-lock mechanism apart to see if there was a stuck piece inside of it.  As I removed the mechanism from the washing machine, I was greeted with three words: \"no serviceable parts.\"  As I read that warning label, I immediately thought of some very wise words I learned years ago from D.W. in the children’s television show Arthur: \"That sign won’t stop me because I can’t read!\""
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "",
+          "url": "/blog/8/sign.jpg"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "Upon opening the mechanism’s case, I discovered that indeed, there were no serviceable parts inside.  It was just another couple of plastic pieces connected to another module; this one being sealed.  Whatever was wrong with the mechanism was inside that sealed module, and I wasn’t going to bother with that.  I decided to simply buy a replacement lid-lock mechanism."
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "As I waited for the new mechanism to arrive in the mail, something else struck my interest.  It was the washing machine’s water level sensor.  What struck me was how simple it was.  It was just a tube, with one end connected to a barometric sensor, and the other end connected to the wash basket.  As the wash basket filled with water, the air which was trapped inside the tube would be compressed.  The sensor would detect this change in air pressure and transmit this data to the control board.  It was an elegantly simple way to measure the water level, yet it was such a genius idea."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "One end of the pressure tube connects to the control board.",
+          "url": "/blog/8/pcb.png"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "The other end connects to the bottom of the wash basket.",
+          "url": "/blog/8/basket.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "I decided to replicate the concept with an Arduino.  I found a similar barometric sensor online which would work with the Arduino.  Setting up the sensor to work with the Arduino was straightforward enough; I only needed to connect 4 pins: +5V, ground, data, and clock.  The clock and data pins from the sensor connected to the Arduino’s digital input 2 and 3 pins respectively.  Afterward, I connected a pressure tube to the sensor while placing the other end of the tube into a coffee cup."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "",
+          "url": "/blog/8/sensor.png"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "",
+          "url": "/blog/8/cupEmpty.png"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "",
+          "url": "/blog/8/setup.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "The software was also very straightforward to implement.  I used the HX711 library to interpret the digital signal coming from the sensor.  There was only a couple of steps here.  In the setup() function, just initialize the serial port and sensor input pins, then zero the pressure reading.  In the loop() function, take the pressure reading from the sensor, then transmit it over the serial port."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "This code obtains the pressure reading from the sensor, then transmits the reading on the serial port.",
+          "url": "/blog/8/code1.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "After writing the code and uploading it to the Arduino, I could see the first pressure readings displayed on the serial monitor.  They seemed to fluctuate by few hundred points.  Then, I filled the cup with water; the pressure readings increased dramatically."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Serial monitor displays the pressure readings while the cup is empty.",
+          "url": "/blog/8/r1.png"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "As the cup is filled, the readings change.",
+          "url": "/blog/8/cupFilled.png"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Pressure readings after the cup is filled.",
+          "url": "/blog/8/r2.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "By these outputs, we can see that the pressure reading hovers around 500 when the cup is empty, and around 485000 when the cup is full.  With this in mind, we can use these values as calibration points.  By comparing the pressure reading to these calibration points, it’s possible to calculate the cup’s fill level as a percentage.  This will require a very small amount of additional code.  First, we need to define the calibration points; these are the emptyPressure and filledPressure integer constants seen in the code.  Next, we make the fill level calculation by dividing the current pressure reading over the difference between the calibration points, then multiplying by 100.  Finally, we transmit the calculated fill level over the serial connection so it may be seen on the serial monitor."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "The additional code calculates the fill level percentage based on the established calibration values.",
+          "url": "/blog/8/code2.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "After compiling the code, I took the readings with an empty cup.  Predictably, the pressure readings hovered around 500, which translated to a fill level of roughly 0%.  As I filled the cup up to the halfway point, the pressure and level readings increased accordingly.  Finally, I filled the cup to the top, and the level showed slightly over 100%.  Of course, I hadn’t overfilled the cup; it was just a slight inaccuracy."
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Readings showing an empty cup.",
+          "url": "/blog/8/r3.png"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Readings change after filling the cup to the halfway point.",
+          "url": "/blog/8/r4.png"
+        },
+        {
+          "type": "IMAGE_PARTICLE",
+          "caption": "Readings change again after filling the cup completely.",
+          "url": "/blog/8/r5.png"
+        },
+        {
+          "type": "PARAGRAPH_PARTICLE",
+          "text": "A few days after placing the order, the new lid-lock mechanism arrived in the mail.  With the new mechanism in hand, I quickly installed it into the washing machine, then put everything back together.  That pesky \"please close lid\" message disappeared, and the washing machine began to work again.  This made me realize something: opportunities for exploration don’t always come at convenient times.  Such valuable opportunities sometimes present themselves in the most unexpected ways at the most unexpected times.  Don’t be afraid to dig in and start exploring!  So, are you a cup half-empty or cup half-full kind of person?"
+        }
+      ]
+    }
+  ]
+}
